@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D13b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="City_Dashboard" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,82 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" misplaced="YES" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="UYt-vS-8f8">
+                                <rect key="frame" x="0.0" y="-5" width="600" height="600"/>
+                                <subviews>
+                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9d-Gz-G8l">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                        <color key="backgroundColor" red="0.98039215690000003" green="0.71764705880000002" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="A0u-16-MWG"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="u2z-fO-SuA" appends="YES" id="XUF-sZ-u7d"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEQ-fb-5xk">
+                                        <rect key="frame" x="0.0" y="200" width="600" height="200"/>
+                                        <color key="backgroundColor" red="0.79978135597063194" green="0.98039215690000003" blue="0.82917060219779348" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="NcL-pZ-fKH"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="cwr-fL-8s7" appends="YES" id="nYB-Op-ccC"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="AQx-Lb-znv">
+                                        <rect key="frame" x="0.0" y="400" width="600" height="200"/>
+                                        <color key="backgroundColor" red="0.43025937582078566" green="0.98039215690000003" blue="0.96540685941649196" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="dpu-18-RxZ"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="HZE-h4-2ym" appends="YES" id="3di-n2-tYM"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="UYt-vS-8f8" secondAttribute="bottom" id="0Py-de-NGK"/>
+                            <constraint firstItem="UYt-vS-8f8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Bep-DZ-0l5"/>
+                            <constraint firstAttribute="trailing" secondItem="UYt-vS-8f8" secondAttribute="trailing" id="ZAe-Kg-ea8"/>
+                            <constraint firstItem="UYt-vS-8f8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="f1v-KA-cA6"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenHeight" destination="NcL-pZ-fKH" id="qrJ-qa-WTy"/>
+                        <outlet property="greenView" destination="EEQ-fb-5xk" id="3Hu-7l-xuc"/>
+                        <outlet property="orangeHeight" destination="A0u-16-MWG" id="Rc4-em-I4m"/>
+                        <outlet property="orangeView" destination="T9d-Gz-G8l" id="DkM-HX-0x2"/>
+                        <outlet property="stacVIew" destination="UYt-vS-8f8" id="hUH-bG-S5K"/>
+                        <outlet property="tealHeight" destination="dpu-18-RxZ" id="gje-sK-GMz"/>
+                        <outlet property="tealView" destination="AQx-Lb-znv" id="VXt-Wl-8uJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="u2z-fO-SuA">
+                    <connections>
+                        <action selector="orangeTap:" destination="BYZ-38-t0r" id="SWp-e8-vde"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="cwr-fL-8s7">
+                    <connections>
+                        <action selector="greenTap:" destination="BYZ-38-t0r" id="yWE-cs-ZTa"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="HZE-h4-2ym">
+                    <connections>
+                        <action selector="tealTap:" destination="BYZ-38-t0r" id="7uc-yZ-lTb"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="245" y="300"/>
         </scene>
     </scenes>
 </document>
