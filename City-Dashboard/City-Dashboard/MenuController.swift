@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuController: UIViewController {
+class MenuController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var menuStack: UIStackView!
     @IBOutlet weak var middleView: UIView!
@@ -18,9 +18,14 @@ class MenuController: UIViewController {
     @IBOutlet weak var botViewHeight: NSLayoutConstraint!
     @IBOutlet weak var topViewHeight: NSLayoutConstraint!
     
+    @IBOutlet weak var middleTable: UITableView!
+    @IBOutlet weak var bottomTable: UITableView!
+    
+    
     var isFirstTap = true
+    var isMiddleHidden = false
     
-    
+    // Animate views
     
     private func changeViewConstraints(firstViewHeight:CGFloat,secondViewHeight:CGFloat, thirdViewHeight:CGFloat) {
         
@@ -31,6 +36,7 @@ class MenuController: UIViewController {
                 self.midViewHeight.constant = secondViewHeight
                 self.topViewHeight.constant = firstViewHeight
                 self.menuStack.distribution = .FillProportionally
+                
             })
             
         } else {
@@ -43,23 +49,65 @@ class MenuController: UIViewController {
         isFirstTap = !isFirstTap
     }
     
+    // Animation buttons
+    
+    
     @IBAction func midViewTap(sender: AnyObject) {
         
         self.changeViewConstraints(50, secondViewHeight: self.view.frame.height - 100, thirdViewHeight: 50)
-        
+        self.bottomTable.hidden = !isFirstTap
     }
     @IBAction func topViewTap(sender: AnyObject) {
         
         
         self.changeViewConstraints(self.view.frame.height - 100, secondViewHeight: 50, thirdViewHeight: 50)
-        
+        self.bottomTable.hidden = !isFirstTap
+        self.middleTable.hidden = !isFirstTap
+        print(isFirstTap)
     }
     
     @IBAction func botViewTap(sender: AnyObject) {
         
         self.changeViewConstraints(50, secondViewHeight: 50, thirdViewHeight: self.view.frame.height - 100)
+       
+        self.middleTable.hidden = !isFirstTap
+  
+    }
+    
+    
+    // Tables
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    
+        switch tableView {
+        case middleTable:
+            let cell = UITableViewCell(style: .Default, reuseIdentifier: "middle")
+            return cell
+        case bottomTable:
+            let cell = UITableViewCell(style: .Default, reuseIdentifier: "bottom")
+            return cell
+        default:
+            let cell = UITableViewCell()
+            return cell
+        }
+        
+        
         
     }
+    
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch tableView {
+        case middleTable:
+            return 2
+        case bottomTable:
+            return 3
+        default:
+            return 0
+        }
+    }
+        
+    
     
     
     override func viewDidLoad() {

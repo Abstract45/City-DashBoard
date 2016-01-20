@@ -47,9 +47,13 @@
                                                         </tableViewCellContentView>
                                                     </tableViewCell>
                                                 </prototypes>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="dOs-nI-fjz"/>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="gc5-xf-KyL"/>
+                                                </connections>
                                             </tableView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.79978135597063194" green="0.98039215690000003" blue="0.82917060219779348" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="1" green="0.3803921569" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="lV5-Ar-6Tk" secondAttribute="trailing" id="BHT-WK-UFm"/>
@@ -78,9 +82,13 @@
                                                         </tableViewCellContentView>
                                                     </tableViewCell>
                                                 </prototypes>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="7rT-9a-vsI"/>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="zFu-3g-bAF"/>
+                                                </connections>
                                             </tableView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.43025937582078566" green="0.98039215690000003" blue="0.96540685941649196" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.43130074969999999" green="0.72251815029999999" blue="0.62363192440000004" alpha="1" colorSpace="calibratedRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="sXy-Eo-nI3" secondAttribute="trailing" id="0w8-3X-Eal"/>
@@ -106,9 +114,11 @@
                     </view>
                     <connections>
                         <outlet property="botViewHeight" destination="dpu-18-RxZ" id="jG2-1q-Wzm"/>
+                        <outlet property="bottomTable" destination="sXy-Eo-nI3" id="KDc-hK-oAY"/>
                         <outlet property="bottomView" destination="AQx-Lb-znv" id="Kf7-dV-3TB"/>
                         <outlet property="menuStack" destination="UYt-vS-8f8" id="9Cw-LH-MV8"/>
                         <outlet property="midViewHeight" destination="NcL-pZ-fKH" id="3kQ-9M-nJ1"/>
+                        <outlet property="middleTable" destination="lV5-Ar-6Tk" id="bOs-Oe-RKg"/>
                         <outlet property="middleView" destination="EEQ-fb-5xk" id="I7q-kx-d7Y"/>
                         <outlet property="topView" destination="T9d-Gz-G8l" id="egP-uB-Hw4"/>
                         <outlet property="topViewHeight" destination="A0u-16-MWG" id="4P1-MT-cr7"/>
