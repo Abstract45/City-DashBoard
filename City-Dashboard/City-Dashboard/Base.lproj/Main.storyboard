@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Menu Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="City_Dashboard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MenuController" customModule="City_Dashboard" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -38,11 +38,11 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
                                                 <color key="backgroundColor" red="1" green="0.3803921569" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="f9d-Te-pCU">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="f9d-Te-pCU">
                                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f9d-Te-pCU" id="Nxk-VR-NaP">
-                                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </tableViewCellContentView>
                                                     </tableViewCell>
@@ -69,11 +69,11 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
                                                 <color key="backgroundColor" red="0.43130074969999999" green="0.72251815029999999" blue="0.62363192440000004" alpha="1" colorSpace="calibratedRGB"/>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="W5s-da-vTY">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="W5s-da-vTY">
                                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W5s-da-vTY" id="qPT-rU-Wel">
-                                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </tableViewCellContentView>
                                                     </tableViewCell>
@@ -105,29 +105,29 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="greenHeight" destination="NcL-pZ-fKH" id="qrJ-qa-WTy"/>
-                        <outlet property="greenView" destination="EEQ-fb-5xk" id="3Hu-7l-xuc"/>
-                        <outlet property="orangeHeight" destination="A0u-16-MWG" id="Rc4-em-I4m"/>
-                        <outlet property="orangeView" destination="T9d-Gz-G8l" id="DkM-HX-0x2"/>
-                        <outlet property="stacVIew" destination="UYt-vS-8f8" id="hUH-bG-S5K"/>
-                        <outlet property="tealHeight" destination="dpu-18-RxZ" id="gje-sK-GMz"/>
-                        <outlet property="tealView" destination="AQx-Lb-znv" id="VXt-Wl-8uJ"/>
+                        <outlet property="botViewHeight" destination="dpu-18-RxZ" id="jG2-1q-Wzm"/>
+                        <outlet property="bottomView" destination="AQx-Lb-znv" id="Kf7-dV-3TB"/>
+                        <outlet property="menuStack" destination="UYt-vS-8f8" id="9Cw-LH-MV8"/>
+                        <outlet property="midViewHeight" destination="NcL-pZ-fKH" id="3kQ-9M-nJ1"/>
+                        <outlet property="middleView" destination="EEQ-fb-5xk" id="I7q-kx-d7Y"/>
+                        <outlet property="topView" destination="T9d-Gz-G8l" id="egP-uB-Hw4"/>
+                        <outlet property="topViewHeight" destination="A0u-16-MWG" id="4P1-MT-cr7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="u2z-fO-SuA">
                     <connections>
-                        <action selector="orangeTap:" destination="BYZ-38-t0r" id="SWp-e8-vde"/>
+                        <action selector="topViewTap:" destination="BYZ-38-t0r" id="ply-C3-sAe"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="cwr-fL-8s7">
                     <connections>
-                        <action selector="greenTap:" destination="BYZ-38-t0r" id="yWE-cs-ZTa"/>
+                        <action selector="midViewTap:" destination="BYZ-38-t0r" id="Gtu-j9-CDh"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="HZE-h4-2ym">
                     <connections>
-                        <action selector="tealTap:" destination="BYZ-38-t0r" id="7uc-yZ-lTb"/>
+                        <action selector="botViewTap:" destination="BYZ-38-t0r" id="yxp-Ba-vKX"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
