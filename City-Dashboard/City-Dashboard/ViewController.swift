@@ -22,87 +22,51 @@ class ViewController: UIViewController {
 
     @IBAction func tealTap(sender: AnyObject) {
         
-        if isFirstTap {
-            
-            UIView.animateWithDuration(1, animations: { () -> Void in
-                self.greenHeight.constant = 0
-                self.orangeHeight.constant = 0
-                self.tealHeight.constant = self.view.frame.height
-                self.stacVIew.distribution = .FillProportionally
-            })
-       
-           
-        } else {
-            UIView.animateWithDuration(1, animations: { () -> Void in
-                self.stacVIew.distribution = .FillEqually
-            })
-        }
-        
-       isFirstTap = !isFirstTap
+      self.changeViewConstraints(50, secondViewHeight: self.view.frame.height - 100, thirdViewHeight: 50)
         
     }
     
-    @IBAction func orangeTap(sender: AnyObject) {
-        
-        if isFirstTap {
-            
-            UIView.animateWithDuration(1, animations: { () -> Void in
-                self.greenHeight.constant = 0
-                self.tealHeight.constant = 0
-                self.orangeHeight.constant = self.view.frame.height
-                self.stacVIew.distribution = .FillProportionally
-            })
+    private func changeViewConstraints(firstViewHeight:CGFloat,secondViewHeight:CGFloat, thirdViewHeight:CGFloat) {
        
-        } else {
-            UIView.animateWithDuration(1, animations: { () -> Void in
-                self.stacVIew.distribution = .FillEqually
-            })
+            if isFirstTap {
+                
+                UIView.animateWithDuration(1, animations: { () -> Void in
+                    self.greenHeight.constant = thirdViewHeight
+                    self.tealHeight.constant = secondViewHeight
+                    self.orangeHeight.constant = firstViewHeight
+                    self.stacVIew.distribution = .FillProportionally
+                })
+                
+            } else {
+                UIView.animateWithDuration(1, animations: { () -> Void in
+                    self.stacVIew.distribution = .FillEqually
+                })
+            
+            
         }
-        
-        
-        
         isFirstTap = !isFirstTap
+    }
+    
+    @IBAction func orangeTap(sender: AnyObject) {
+     
+        
+        self.changeViewConstraints(self.view.frame.height - 100, secondViewHeight: 50, thirdViewHeight: 50)
         
     }
     
     @IBAction func greenTap(sender: AnyObject) {
-        if isFirstTap {
-        UIView.animateWithDuration(1) { () -> Void in
-            self.orangeHeight.constant = 0
-            self.tealHeight.constant = 0
-            self.greenHeight.constant = self.view.frame.height
-            
-            self.stacVIew.distribution = .FillProportionally
-        }
-        }
-        else {
-            UIView.animateWithDuration(1, animations: { () -> Void in
-                 self.stacVIew.distribution = .FillEqually
-            })
-           
-        }
-        isFirstTap = !isFirstTap
+       
+        self.changeViewConstraints(50, secondViewHeight: 50, thirdViewHeight: self.view.frame.height - 100)
+        
     }
     
     
-    
-    
-    
-    
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+      
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-        
-        // Dispose of any resources that can be recreated.
-    }
-
+ 
 
 }
 
