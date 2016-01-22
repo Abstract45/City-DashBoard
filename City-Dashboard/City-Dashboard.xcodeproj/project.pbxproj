@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E84FD0EA1C51D0620031FF33 /* cityNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84FD0E91C51D0620031FF33 /* cityNewsCell.swift */; };
+		E84FD0EC1C51D2420031FF33 /* cityNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E84FD0EB1C51D2420031FF33 /* cityNewsCell.xib */; };
 		E87089231C4C2A6C0051D868 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87089221C4C2A6C0051D868 /* AppDelegate.swift */; };
 		E87089251C4C2A6C0051D868 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87089241C4C2A6C0051D868 /* MenuController.swift */; };
 		E87089281C4C2A6C0051D868 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E87089261C4C2A6C0051D868 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E84FD0E91C51D0620031FF33 /* cityNewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cityNewsCell.swift; sourceTree = "<group>"; };
+		E84FD0EB1C51D2420031FF33 /* cityNewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = cityNewsCell.xib; path = ../cityNewsCell.xib; sourceTree = "<group>"; };
 		E870891F1C4C2A6C0051D868 /* City-Dashboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "City-Dashboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E87089221C4C2A6C0051D868 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E87089241C4C2A6C0051D868 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
@@ -56,9 +60,11 @@
 			children = (
 				E87089221C4C2A6C0051D868 /* AppDelegate.swift */,
 				E87089241C4C2A6C0051D868 /* MenuController.swift */,
+				E84FD0E91C51D0620031FF33 /* cityNewsCell.swift */,
 				E87089261C4C2A6C0051D868 /* Main.storyboard */,
 				E87089291C4C2A6C0051D868 /* Assets.xcassets */,
 				E870892B1C4C2A6C0051D868 /* LaunchScreen.storyboard */,
+				E84FD0EB1C51D2420031FF33 /* cityNewsCell.xib */,
 				E870892E1C4C2A6C0051D868 /* Info.plist */,
 			);
 			path = "City-Dashboard";
@@ -125,6 +131,7 @@
 				E870892D1C4C2A6C0051D868 /* LaunchScreen.storyboard in Resources */,
 				E870892A1C4C2A6C0051D868 /* Assets.xcassets in Resources */,
 				E87089281C4C2A6C0051D868 /* Main.storyboard in Resources */,
+				E84FD0EC1C51D2420031FF33 /* cityNewsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E84FD0EA1C51D0620031FF33 /* cityNewsCell.swift in Sources */,
 				E87089251C4C2A6C0051D868 /* MenuController.swift in Sources */,
 				E87089231C4C2A6C0051D868 /* AppDelegate.swift in Sources */,
 			);

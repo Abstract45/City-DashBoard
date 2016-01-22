@@ -81,10 +81,16 @@ class MenuController: UIViewController, UITableViewDataSource, UITableViewDelega
     
         switch tableView {
         case middleTable:
-            let cell = UITableViewCell(style: .Default, reuseIdentifier: "middle")
-            return cell
+        
+            let cell = middleTable.dequeueReusableCellWithIdentifier("middle")
+            
+            
+           
+            return cell!
         case bottomTable:
-            let cell = UITableViewCell(style: .Default, reuseIdentifier: "bottom")
+            bottomTable.registerNib(UINib.init(nibName: "cityNewsCell", bundle: nil), forCellReuseIdentifier: "news")
+            
+            let cell = bottomTable.dequeueReusableCellWithIdentifier("news") as! cityNewsCell
             return cell
         default:
             let cell = UITableViewCell()
