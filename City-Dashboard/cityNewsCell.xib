@@ -14,7 +14,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="581" height="267.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RDn-U8-QWU">
+                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="RDn-U8-QWU">
                         <rect key="frame" x="11" y="11" width="559" height="245.5"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rMv-df-nXE">
@@ -23,22 +23,34 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sampleNewsImage" translatesAutoresizingMaskIntoConstraints="NO" id="lcV-RC-MqP">
                                         <rect key="frame" x="0.0" y="0.0" width="559" height="190"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Bql-XM-pjn">
+                                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="SGO-Zq-i73">
                                         <rect key="frame" x="0.0" y="190" width="559" height="56"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Bql-XM-pjn">
+                                                <rect key="frame" x="8" y="0.0" width="538" height="56"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55.5" id="8I7-lA-goc"/>
+                                                </constraints>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="This guy is serious about work so lets get down to business so lets do it.">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <font key="NSFont" size="24" name="Avenir-Medium"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="55.5" id="8I7-lA-goc"/>
+                                            <constraint firstAttribute="bottom" secondItem="Bql-XM-pjn" secondAttribute="bottom" id="Ccm-PL-vVP"/>
+                                            <constraint firstAttribute="trailing" secondItem="Bql-XM-pjn" secondAttribute="trailing" constant="13" id="MBQ-GK-CTh"/>
+                                            <constraint firstItem="Bql-XM-pjn" firstAttribute="top" secondItem="SGO-Zq-i73" secondAttribute="top" id="alV-qA-jqn"/>
+                                            <constraint firstItem="Bql-XM-pjn" firstAttribute="leading" secondItem="SGO-Zq-i73" secondAttribute="leading" constant="8" id="zju-42-oOb"/>
                                         </constraints>
-                                        <attributedString key="attributedText">
-                                            <fragment content="This guy is serious about work so lets get down to business so lets do it.">
-                                                <attributes>
-                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <font key="NSFont" size="24" name="Avenir-Medium"/>
-                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="leftToRight" tighteningFactorForTruncation="0.0"/>
-                                                </attributes>
-                                            </fragment>
-                                        </attributedString>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -51,7 +63,7 @@
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="backgroundColor" red="0.14901960780000001" green="0.1450980392" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="RDn-U8-QWU" secondAttribute="trailing" constant="11" id="EeN-Oo-9sB"/>
                     <constraint firstItem="RDn-U8-QWU" firstAttribute="leading" secondItem="HIU-7w-OP8" secondAttribute="leading" constant="11" id="d5O-PB-vCk"/>
@@ -60,6 +72,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="customNewsView" destination="RDn-U8-QWU" id="W1e-7u-fIX"/>
                 <outlet property="imgCityNews" destination="lcV-RC-MqP" id="rZl-b9-DJ0"/>
                 <outlet property="lblCityNews" destination="Bql-XM-pjn" id="vfB-jb-IQi"/>
             </connections>

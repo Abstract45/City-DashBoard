@@ -10,14 +10,23 @@ import UIKit
 
 class cityNewsCell: UITableViewCell {
 
+    @IBOutlet weak var customNewsView: UIView!
     @IBOutlet weak var imgCityNews: UIImageView!
     @IBOutlet weak var lblCityNews: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        customizeView()
         
     }
 
+    
+    func customizeView() {
+        customNewsView.layer.cornerRadius = 5
+        customNewsView.clipsToBounds = true
+        
+              
+    }
+    
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

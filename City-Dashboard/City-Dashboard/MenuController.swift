@@ -56,6 +56,7 @@ class MenuController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         self.changeViewConstraints(50, secondViewHeight: self.view.frame.height - 100, thirdViewHeight: 50)
         self.bottomTable.hidden = !isFirstTap
+        self.middleTable.hidden = false
     }
     @IBAction func topViewTap(sender: AnyObject) {
         
@@ -63,7 +64,8 @@ class MenuController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.changeViewConstraints(self.view.frame.height - 100, secondViewHeight: 50, thirdViewHeight: 50)
         self.bottomTable.hidden = !isFirstTap
         self.middleTable.hidden = !isFirstTap
-        print(isFirstTap)
+        self.topView.hidden = false
+        
     }
     
     @IBAction func botViewTap(sender: AnyObject) {
@@ -71,6 +73,7 @@ class MenuController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.changeViewConstraints(50, secondViewHeight: 50, thirdViewHeight: self.view.frame.height - 100)
        
         self.middleTable.hidden = !isFirstTap
+        self.bottomTable.hidden = false
   
     }
     
