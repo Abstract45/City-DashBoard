@@ -14,7 +14,7 @@ class cityNewsCell: UITableViewCell {
     @IBOutlet weak var lblCityNews: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        lblCityNews.attributedText = [NSAttributedString: ]
+        
         
     }
 
