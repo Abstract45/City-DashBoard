@@ -60,8 +60,8 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="148" id="25A-jp-LDo"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="13"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Avenir-LightOblique" family="Avenir" pointSize="13"/>
+                                                <color key="textColor" red="0.51067313762626265" green="0.51067313762626265" blue="0.51067313762626265" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
