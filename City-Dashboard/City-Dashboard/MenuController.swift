@@ -21,6 +21,8 @@ class MenuController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var middleTable: UITableView!
     @IBOutlet weak var bottomTable: UITableView!
    
+
+   
     
     var isFirstTap = true
     var isMiddleHidden = false
@@ -64,7 +66,7 @@ class MenuController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.changeViewConstraints(self.view.frame.height - 100, secondViewHeight: 50, thirdViewHeight: 50)
         self.bottomTable.hidden = !isFirstTap
         self.middleTable.hidden = !isFirstTap
-        self.topView.hidden = false
+//        self.topView.hidden = false
         
     }
     
@@ -116,12 +118,13 @@ class MenuController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
-    
+  
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
+      
     }
     
     
