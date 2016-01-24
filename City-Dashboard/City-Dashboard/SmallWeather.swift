@@ -73,49 +73,5 @@ class SmallWeatherView: UIView {
     
 }
 
-//import UIKit
-//
-//@IBDesignable class smallWeatherView: UIView {
-//    @IBOutlet weak var Time: UILabel!
-//    
-//    @IBOutlet weak var city: UILabel!
-//    @IBOutlet weak var longDate: UILabel!
-//    var view: UIView!
-//   
-//    @IBOutlet weak var lastUpdate: UILabel!
-//    @IBOutlet weak var amPm: UILabel!
-//    @IBOutlet weak var tempHighLow: UILabel!
-//    @IBOutlet weak var temperature: UILabel!
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//        
-//        xibSetup()
-//    }
-//    
-//    required init?(coder aDecoder: NSCoder) {
-//       super.init(coder: aDecoder)
-//        xibSetup()
-//    }
-//    
-//    //Get xib
-//    
-//    func xibSetup() {
-//        view = loadViewFromNib()
-//        
-//        view.frame = self.bounds
-//        
-//        view.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
-//        addSubview(view)
-//        
-//    }
-//    
-//    func loadViewFromNib() -> UIView {
-//        let bundle = NSBundle(forClass: self.dynamicType)
-//        let nib = UINib(nibName: "smallWeather", bundle: bundle)
-//        let view = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
-//        return view
-//    }
-//    
-//    
-//}
+
 
