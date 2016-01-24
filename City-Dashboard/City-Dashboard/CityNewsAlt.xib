@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15E27e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="news" id="pgc-bO-NhH" customClass="CityNewsAlt" customModule="City_Dashboard" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pgc-bO-NhH" id="PUH-02-me7">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What ISIS wants from women?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TfT-wa-hYc">
+                        <rect key="frame" x="15" y="11" width="221" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="BAG-OT-UwY"/>
+                            <constraint firstAttribute="width" constant="221" id="hSW-ry-9Eh"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="11"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 hour| World" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="940-IT-5MK">
+                        <rect key="frame" x="237" y="15" width="68" height="14.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="68" id="E0R-J0-5We"/>
+                            <constraint firstAttribute="height" constant="14.5" id="J1v-ju-hFf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="9"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="TfT-wa-hYc" firstAttribute="top" secondItem="PUH-02-me7" secondAttribute="top" constant="11" id="J9H-Hf-HXi"/>
+                    <constraint firstItem="TfT-wa-hYc" firstAttribute="leading" secondItem="PUH-02-me7" secondAttribute="leading" constant="15" id="LK2-wh-TOt"/>
+                    <constraint firstItem="940-IT-5MK" firstAttribute="top" secondItem="PUH-02-me7" secondAttribute="top" constant="15" id="SNR-7f-E3M"/>
+                    <constraint firstItem="940-IT-5MK" firstAttribute="leading" secondItem="TfT-wa-hYc" secondAttribute="trailing" constant="1" id="VsQ-Le-haR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="0.69411764710000001" green="0.33333333329999998" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+            <connections>
+                <outlet property="lblHeadline" destination="TfT-wa-hYc" id="spP-2X-ee7"/>
+                <outlet property="timeAndCategory" destination="940-IT-5MK" id="HgL-HV-OKO"/>
+            </connections>
+            <point key="canvasLocation" x="149" y="169"/>
+        </tableViewCell>
+    </objects>
+</document>

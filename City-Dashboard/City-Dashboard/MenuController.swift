@@ -93,10 +93,23 @@ class MenuController: UIViewController, UITableViewDataSource, UITableViewDelega
             
             return cell!
         case bottomTable:
-            bottomTable.registerNib(UINib.init(nibName: "cityNewsCell", bundle: nil), forCellReuseIdentifier: "news")
+           
+           
             
-            let cell = bottomTable.dequeueReusableCellWithIdentifier("news") as! cityNewsCell
-            return cell
+            if indexPath.row > 0 {
+                bottomTable.registerNib(UINib.init(nibName: "CityNewsAlt", bundle: nil), forCellReuseIdentifier:"news")
+                
+                let cell2 = bottomTable.dequeueReusableCellWithIdentifier("news") as! CityNewsAlt
+                return cell2
+            } else {
+                bottomTable.registerNib(UINib.init(nibName: "CityNewsMain", bundle: nil), forCellReuseIdentifier: "news")
+                
+                
+                let cell = bottomTable.dequeueReusableCellWithIdentifier("news") as! CityNewsMain
+                return cell
+            }
+            
+            
         default:
             let cell = UITableViewCell()
             return cell
@@ -118,6 +131,16 @@ class MenuController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if tableView == bottomTable {
+            if indexPath.row == 0 {
+                return 130
+            } else {
+                return 42
+            }
+        }
+        return 160
+    }
   
     
     
