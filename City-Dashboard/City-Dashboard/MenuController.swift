@@ -20,7 +20,7 @@ class MenuController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var middleTable: UITableView!
     @IBOutlet weak var bottomTable: UITableView!
-    
+   
     
     var isFirstTap = true
     var isMiddleHidden = false
@@ -71,24 +71,24 @@ class MenuController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func botViewTap(sender: AnyObject) {
         
         self.changeViewConstraints(50, secondViewHeight: 50, thirdViewHeight: self.view.frame.height - 100)
-       
+        
         self.middleTable.hidden = !isFirstTap
         self.bottomTable.hidden = false
-  
+        
     }
     
     
     // Tables
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    
+        
         switch tableView {
         case middleTable:
-        
+            
             let cell = middleTable.dequeueReusableCellWithIdentifier("middle")
             
             
-           
+            
             return cell!
         case bottomTable:
             bottomTable.registerNib(UINib.init(nibName: "cityNewsCell", bundle: nil), forCellReuseIdentifier: "news")
@@ -115,7 +115,7 @@ class MenuController: UIViewController, UITableViewDataSource, UITableViewDelega
             return 0
         }
     }
-        
+    
     
     
     

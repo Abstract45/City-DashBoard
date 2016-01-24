@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E84480C51C54938C0035DCE6 /* smallWeather.xib in Resources */ = {isa = PBXBuildFile; fileRef = E84480C41C54938C0035DCE6 /* smallWeather.xib */; };
+		E84480CA1C549C4B0035DCE6 /* SmallWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84480C91C549C4B0035DCE6 /* SmallWeatherView.swift */; };
 		E84FD0EA1C51D0620031FF33 /* cityNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84FD0E91C51D0620031FF33 /* cityNewsCell.swift */; };
 		E84FD0EC1C51D2420031FF33 /* cityNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E84FD0EB1C51D2420031FF33 /* cityNewsCell.xib */; };
 		E87089231C4C2A6C0051D868 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87089221C4C2A6C0051D868 /* AppDelegate.swift */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E84480C41C54938C0035DCE6 /* smallWeather.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = smallWeather.xib; sourceTree = "<group>"; };
+		E84480C91C549C4B0035DCE6 /* SmallWeatherView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallWeatherView.swift; sourceTree = "<group>"; };
 		E84FD0E91C51D0620031FF33 /* cityNewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cityNewsCell.swift; sourceTree = "<group>"; };
 		E84FD0EB1C51D2420031FF33 /* cityNewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = cityNewsCell.xib; path = ../cityNewsCell.xib; sourceTree = "<group>"; };
 		E870891F1C4C2A6C0051D868 /* City-Dashboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "City-Dashboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +51,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E84480C61C5493970035DCE6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E84480C81C5493B90035DCE6 /* Weather */,
+				E84480C71C5493A20035DCE6 /* News */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E84480C71C5493A20035DCE6 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				E84FD0EB1C51D2420031FF33 /* cityNewsCell.xib */,
+				E84FD0E91C51D0620031FF33 /* cityNewsCell.swift */,
+			);
+			name = News;
+			sourceTree = "<group>";
+		};
+		E84480C81C5493B90035DCE6 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				E84480C41C54938C0035DCE6 /* smallWeather.xib */,
+				E84480C91C549C4B0035DCE6 /* SmallWeatherView.swift */,
+			);
+			name = Weather;
+			sourceTree = "<group>";
+		};
 		E87089161C4C2A6C0051D868 = {
 			isa = PBXGroup;
 			children = (
@@ -69,11 +100,10 @@
 				E87089221C4C2A6C0051D868 /* AppDelegate.swift */,
 				FAC3FB281C538D4D00E2642A /* Model */,
 				E87089241C4C2A6C0051D868 /* MenuController.swift */,
-				E84FD0E91C51D0620031FF33 /* cityNewsCell.swift */,
+				E84480C61C5493970035DCE6 /* View */,
 				E87089261C4C2A6C0051D868 /* Main.storyboard */,
 				E87089291C4C2A6C0051D868 /* Assets.xcassets */,
 				E870892B1C4C2A6C0051D868 /* LaunchScreen.storyboard */,
-				E84FD0EB1C51D2420031FF33 /* cityNewsCell.xib */,
 				E870892E1C4C2A6C0051D868 /* Info.plist */,
 			);
 			path = "City-Dashboard";
@@ -157,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E870892D1C4C2A6C0051D868 /* LaunchScreen.storyboard in Resources */,
+				E84480C51C54938C0035DCE6 /* smallWeather.xib in Resources */,
 				E870892A1C4C2A6C0051D868 /* Assets.xcassets in Resources */,
 				E87089281C4C2A6C0051D868 /* Main.storyboard in Resources */,
 				E84FD0EC1C51D2420031FF33 /* cityNewsCell.xib in Resources */,
@@ -175,6 +206,7 @@
 				E84FD0EA1C51D0620031FF33 /* cityNewsCell.swift in Sources */,
 				E87089251C4C2A6C0051D868 /* MenuController.swift in Sources */,
 				E87089231C4C2A6C0051D868 /* AppDelegate.swift in Sources */,
+				E84480CA1C549C4B0035DCE6 /* SmallWeatherView.swift in Sources */,
 				FAC3FB331C538E4200E2642A /* WeatherToday.swift in Sources */,
 				FAC3FB321C538E4200E2642A /* WeatherNext.swift in Sources */,
 			);

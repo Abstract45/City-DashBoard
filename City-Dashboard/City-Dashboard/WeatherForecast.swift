@@ -66,7 +66,7 @@ class WeatherForecast {
         _ = NSURLSession.sharedSession().dataTaskWithURL(url!) { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
             
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            
+                
                 do {
                     let json = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments)
                     
@@ -156,10 +156,10 @@ class WeatherForecast {
                 }
                 
                 completion()
-
+                
             })
             
-        }.resume()
+            }.resume()
     }
     
     func downloadWeeklyForecast(completion: DownloadComplete) {
@@ -291,7 +291,7 @@ class WeatherForecast {
                 }
                 
                 completion()
-
+                
             })
             
         }).resume()

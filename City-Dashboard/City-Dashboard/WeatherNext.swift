@@ -14,7 +14,7 @@ class WeatherNext: Weather {
     var temperatureNight: Double?
     var temperatureEvening: Double?
     var temperatureMorning: Double?
-        
+    
     override init(city: String) {
         super.init(city: city)
     }
