@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15E27e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15E27e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -11,73 +11,105 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nightimg" id="dNA-1Y-424">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nightimg" translatesAutoresizingMaskIntoConstraints="NO" id="dNA-1Y-424">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
-                    <autoresizingMask key="autoresizingMask"/>
                     <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:17" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4b7-3q-fFH">
-                    <rect key="frame" x="33" y="32" width="73" height="40"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12:17" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4b7-3q-fFH">
+                    <rect key="frame" x="24" y="32" width="98" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="AKY-cV-qcb"/>
+                        <constraint firstAttribute="width" constant="98" id="KDh-dx-s9G"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="35"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sun, January 24" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MxZ-aB-sbK">
-                    <rect key="frame" x="17" y="69" width="119" height="21"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sun, January 24" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MxZ-aB-sbK">
+                    <rect key="frame" x="8" y="69" width="119" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="6Vw-bR-OVH"/>
+                        <constraint firstAttribute="width" constant="119" id="Gag-Wk-ZS6"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="13"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Richmond Hill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9bu-8e-mum">
-                    <rect key="frame" x="125" y="110" width="113" height="22"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-9 °C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahn-3H-sEs">
+                    <rect key="frame" x="225" y="95" width="59" height="36.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="59" id="INd-Kz-MW8"/>
+                        <constraint firstAttribute="height" constant="36.5" id="oyL-IK-9jy"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="24.5"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-9 °C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ahn-3H-sEs">
-                    <rect key="frame" x="240" y="109" width="44" height="22.5"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-6 -13" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Q22-vJ-aMa">
-                    <rect key="frame" x="284" y="109" width="28" height="34"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-6 -13" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q22-vJ-aMa">
+                    <rect key="frame" x="284" y="95" width="28" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="34" id="96d-mY-bLJ"/>
+                        <constraint firstAttribute="width" constant="28" id="GxX-t2-BxO"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BJZ-ZU-dNj">
-                    <rect key="frame" x="107" y="44" width="29" height="28"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJZ-ZU-dNj">
+                    <rect key="frame" x="125" y="44" width="29" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="29" id="5J7-98-4xI"/>
+                        <constraint firstAttribute="height" constant="28" id="J8h-Dv-dnn"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="13"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Updated 01/24 12:18 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jQi-FK-Eir">
-                    <rect key="frame" x="131" y="140" width="153" height="19"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Updated 01/24 12:18 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQi-FK-Eir">
+                    <rect key="frame" x="131" y="139" width="153" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="19" id="Dr0-H6-VQg"/>
+                        <constraint firstAttribute="width" constant="153" id="SIV-Fx-VaF"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Richmond Hill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bu-8e-mum">
+                    <rect key="frame" x="104" y="103" width="113" height="27.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="113" id="N7b-9J-qp7"/>
+                        <constraint firstAttribute="height" constant="27.5" id="nES-o8-yTs"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="BJZ-ZU-dNj" firstAttribute="top" secondItem="TtD-Go-4oK" secondAttribute="top" constant="44" id="40p-91-xqz"/>
+                <constraint firstAttribute="bottom" secondItem="Q22-vJ-aMa" secondAttribute="bottom" constant="31" id="6M0-Yy-pCh"/>
+                <constraint firstAttribute="trailing" secondItem="dNA-1Y-424" secondAttribute="trailing" id="AdZ-hb-vtJ"/>
+                <constraint firstItem="4b7-3q-fFH" firstAttribute="top" secondItem="TtD-Go-4oK" secondAttribute="top" constant="32" id="Cl6-Ve-qWm"/>
+                <constraint firstItem="MxZ-aB-sbK" firstAttribute="top" secondItem="TtD-Go-4oK" secondAttribute="top" constant="69" id="HQM-20-geM"/>
+                <constraint firstItem="jQi-FK-Eir" firstAttribute="top" secondItem="9bu-8e-mum" secondAttribute="bottom" constant="8.5" id="Hl4-eQ-1xf"/>
+                <constraint firstItem="jQi-FK-Eir" firstAttribute="top" secondItem="ahn-3H-sEs" secondAttribute="bottom" constant="7.5" id="KRl-GB-6RZ"/>
+                <constraint firstAttribute="bottom" secondItem="dNA-1Y-424" secondAttribute="bottom" id="Lfy-oQ-qJ2"/>
+                <constraint firstItem="dNA-1Y-424" firstAttribute="top" secondItem="TtD-Go-4oK" secondAttribute="top" id="Np1-ED-d2a"/>
+                <constraint firstItem="BJZ-ZU-dNj" firstAttribute="leading" secondItem="4b7-3q-fFH" secondAttribute="trailing" constant="3" id="Y1j-3E-9Cr"/>
+                <constraint firstItem="4b7-3q-fFH" firstAttribute="leading" secondItem="TtD-Go-4oK" secondAttribute="leading" constant="24" id="ddt-At-zLs"/>
+                <constraint firstItem="ahn-3H-sEs" firstAttribute="leading" secondItem="9bu-8e-mum" secondAttribute="trailing" constant="8" id="eQ0-1z-2dw"/>
+                <constraint firstItem="Q22-vJ-aMa" firstAttribute="leading" secondItem="ahn-3H-sEs" secondAttribute="trailing" id="ffs-xe-WGp"/>
+                <constraint firstAttribute="trailing" secondItem="jQi-FK-Eir" secondAttribute="trailing" constant="36" id="nPX-VS-Imt"/>
+                <constraint firstItem="dNA-1Y-424" firstAttribute="leading" secondItem="TtD-Go-4oK" secondAttribute="leading" id="psM-QO-2RG"/>
+                <constraint firstAttribute="trailing" secondItem="Q22-vJ-aMa" secondAttribute="trailing" constant="8" id="qVy-5b-xYZ"/>
+                <constraint firstAttribute="bottom" secondItem="jQi-FK-Eir" secondAttribute="bottom" constant="2" id="yfs-hW-NCf"/>
+                <constraint firstItem="MxZ-aB-sbK" firstAttribute="leading" secondItem="TtD-Go-4oK" secondAttribute="leading" constant="8" id="yxe-GP-Mfx"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="226" y="-1366"/>
-        </view>
-        <view contentMode="scaleToFill" id="i8p-KE-R03" customClass="SmallWeatherView" customModule="City_Dashboard" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-            <nil key="simulatedStatusBarMetrics"/>
-            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="226" y="-1138"/>
         </view>
     </objects>
     <resources>
