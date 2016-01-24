@@ -20,7 +20,7 @@
                             <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="UYt-vS-8f8">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <subviews>
-                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9d-Gz-G8l" customClass="SmallWeatherView" customModule="City_Dashboard" customModuleProvider="target">
+                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9d-Gz-G8l" customClass="SmallWeatherAlt" customModule="City_Dashboard" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <gestureRecognizers/>
