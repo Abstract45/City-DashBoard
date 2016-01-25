@@ -20,13 +20,45 @@
                             <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="UYt-vS-8f8">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <subviews>
-                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9d-Gz-G8l" customClass="SmallWeatherAlt" customModule="City_Dashboard" customModuleProvider="target">
+                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9d-Gz-G8l" customClass="LargeWeatherScreen" customModule="City_Dashboard" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R17-1d-nZj" customClass="SmallWeatherAlt" customModule="City_Dashboard" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <gestureRecognizers/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="A0u-16-MWG"/>
+                                            <constraint firstItem="R17-1d-nZj" firstAttribute="leading" secondItem="T9d-Gz-G8l" secondAttribute="leading" id="4Yh-dE-9Fi"/>
+                                            <constraint firstAttribute="height" constant="160" id="A0u-16-MWG"/>
+                                            <constraint firstAttribute="trailing" secondItem="R17-1d-nZj" secondAttribute="trailing" id="I8T-i4-klp"/>
+                                            <constraint firstAttribute="bottom" secondItem="R17-1d-nZj" secondAttribute="bottom" id="LKS-RT-cfz"/>
+                                            <constraint firstItem="R17-1d-nZj" firstAttribute="top" secondItem="T9d-Gz-G8l" secondAttribute="top" id="YDJ-Xh-ZTV"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="R17-1d-nZj"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <exclude reference="4Yh-dE-9Fi"/>
+                                                <exclude reference="I8T-i4-klp"/>
+                                                <exclude reference="LKS-RT-cfz"/>
+                                                <exclude reference="YDJ-Xh-ZTV"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="subviews">
+                                                <include reference="R17-1d-nZj"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <include reference="4Yh-dE-9Fi"/>
+                                                <include reference="I8T-i4-klp"/>
+                                                <include reference="LKS-RT-cfz"/>
+                                                <include reference="YDJ-Xh-ZTV"/>
+                                            </mask>
+                                        </variation>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="u2z-fO-SuA" appends="YES" id="XUF-sZ-u7d"/>
                                         </connections>
@@ -57,7 +89,7 @@
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="lV5-Ar-6Tk" secondAttribute="trailing" id="BHT-WK-UFm"/>
-                                            <constraint firstAttribute="height" constant="200" id="NcL-pZ-fKH"/>
+                                            <constraint firstAttribute="height" constant="160" id="NcL-pZ-fKH"/>
                                             <constraint firstItem="lV5-Ar-6Tk" firstAttribute="leading" secondItem="EEQ-fb-5xk" secondAttribute="leading" id="Ogo-FM-ZII"/>
                                             <constraint firstAttribute="bottom" secondItem="lV5-Ar-6Tk" secondAttribute="bottom" id="xJG-J3-MDG"/>
                                             <constraint firstItem="lV5-Ar-6Tk" firstAttribute="top" secondItem="EEQ-fb-5xk" secondAttribute="top" id="xh9-9n-yks"/>
@@ -94,7 +126,7 @@
                                             <constraint firstItem="sXy-Eo-nI3" firstAttribute="leading" secondItem="AQx-Lb-znv" secondAttribute="leading" id="8NP-Jz-fpw"/>
                                             <constraint firstAttribute="bottom" secondItem="sXy-Eo-nI3" secondAttribute="bottom" id="MWw-pr-oDx"/>
                                             <constraint firstItem="sXy-Eo-nI3" firstAttribute="top" secondItem="AQx-Lb-znv" secondAttribute="top" id="UxE-N5-f50"/>
-                                            <constraint firstAttribute="height" constant="200" id="dpu-18-RxZ"/>
+                                            <constraint firstAttribute="height" constant="160" id="dpu-18-RxZ"/>
                                         </constraints>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="HZE-h4-2ym" appends="YES" id="3di-n2-tYM"/>
@@ -120,6 +152,7 @@
                         <outlet property="midViewHeight" destination="NcL-pZ-fKH" id="3kQ-9M-nJ1"/>
                         <outlet property="middleTable" destination="lV5-Ar-6Tk" id="bOs-Oe-RKg"/>
                         <outlet property="middleView" destination="EEQ-fb-5xk" id="I7q-kx-d7Y"/>
+                        <outlet property="smallWeatherView" destination="R17-1d-nZj" id="bgi-0n-L89"/>
                         <outlet property="topView" destination="T9d-Gz-G8l" id="egP-uB-Hw4"/>
                         <outlet property="topViewHeight" destination="A0u-16-MWG" id="4P1-MT-cr7"/>
                     </connections>
