@@ -29,6 +29,7 @@
 		E87089281C4C2A6C0051D868 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E87089261C4C2A6C0051D868 /* Main.storyboard */; };
 		E870892A1C4C2A6C0051D868 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E87089291C4C2A6C0051D868 /* Assets.xcassets */; };
 		E870892D1C4C2A6C0051D868 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E870892B1C4C2A6C0051D868 /* LaunchScreen.storyboard */; };
+		FA7C8C0C1C589C6000C99352 /* TestTrafficViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7C8C0B1C589C6000C99352 /* TestTrafficViewController.swift */; };
 		FAAD99881C5625AA00C44322 /* Incident.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD99841C5625AA00C44322 /* Incident.swift */; };
 		FAAD99891C5625AA00C44322 /* Incidents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD99851C5625AA00C44322 /* Incidents.swift */; };
 		FAAD998A1C5625AA00C44322 /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD99861C5625AA00C44322 /* Market.swift */; };
@@ -64,6 +65,7 @@
 		E87089291C4C2A6C0051D868 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E870892C1C4C2A6C0051D868 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E870892E1C4C2A6C0051D868 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA7C8C0B1C589C6000C99352 /* TestTrafficViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTrafficViewController.swift; sourceTree = "<group>"; };
 		FAAD99841C5625AA00C44322 /* Incident.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Incident.swift; sourceTree = "<group>"; };
 		FAAD99851C5625AA00C44322 /* Incidents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Incidents.swift; sourceTree = "<group>"; };
 		FAAD99861C5625AA00C44322 /* Market.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		E84480C61C5493970035DCE6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FA7C8C0A1C589C3000C99352 /* APITestVCs */,
 				E87089261C4C2A6C0051D868 /* Main.storyboard */,
 				E870892B1C4C2A6C0051D868 /* LaunchScreen.storyboard */,
 				E84480C81C5493B90035DCE6 /* Weather */,
@@ -162,6 +165,14 @@
 				E870892E1C4C2A6C0051D868 /* Info.plist */,
 			);
 			path = "City-Dashboard";
+			sourceTree = "<group>";
+		};
+		FA7C8C0A1C589C3000C99352 /* APITestVCs */ = {
+			isa = PBXGroup;
+			children = (
+				FA7C8C0B1C589C6000C99352 /* TestTrafficViewController.swift */,
+			);
+			name = APITestVCs;
 			sourceTree = "<group>";
 		};
 		FAAD99831C56257700C44322 /* Traffic */ = {
@@ -292,6 +303,7 @@
 				E80BD98D1C58859C005D7EAF /* WeatherTableCell.swift in Sources */,
 				E80BD98A1C587E53005D7EAF /* WeatherView.swift in Sources */,
 				FAAD998A1C5625AA00C44322 /* Market.swift in Sources */,
+				FA7C8C0C1C589C6000C99352 /* TestTrafficViewController.swift in Sources */,
 				FAAD998B1C5625AA00C44322 /* Markets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

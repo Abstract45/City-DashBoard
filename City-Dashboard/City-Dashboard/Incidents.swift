@@ -12,13 +12,50 @@ class Incidents {
     
     var incidents = [Incident]()
     
-    var upperLeftLatitude: Double?
-    var upperLeftLongitude: Double?
-    var lowerRightLatitude: Double?
-    var lowerRightLongitude: Double?
+    private var _upperLeftLatitude: Double?
+    private var _upperLeftLongitude: Double?
+    private var _lowerRightLatitude: Double?
+    private var _lowerRightLongitude: Double?
     
-    private var URL_BASE = "http://www.mapquestapi.com/traffic/v2/incidents?key=xJ45BUDAUC9X0QyNQVG5uv9gqHPr9yae&callback=handleIncidentsResponse&boundingBox="
-    private var URL_END = "&inFormat=kvp&outFormat=json"
+    var upperLeftLatitude: Double {
+        if _upperLeftLatitude != nil {
+            return _upperLeftLatitude!
+        } else {
+            print("UpperLeftLatitude: " + errorMessage)
+            return 0
+        }
+    }
+    
+    var upperLeftLongitude: Double {
+        if _upperLeftLongitude != nil {
+            return _upperLeftLongitude!
+        } else {
+            print("UpperLeftLongitude: " + errorMessage)
+            return 0
+        }
+    }
+    
+    var lowerRightLatitude: Double {
+        if _lowerRightLatitude != nil {
+            return _lowerRightLatitude!
+        } else {
+            print("LowerRightLatitude: " + errorMessage)
+            return 0
+        }
+    }
+    
+    var lowerRightLongitude: Double {
+        if _lowerRightLongitude != nil {
+            return _lowerRightLongitude!
+        } else {
+            print("LowerRightLongitude: " + errorMessage)
+            return 0
+        }
+    }
+    
+    private let errorMessage = "value is nill in Incidents object."
+    private let URL_BASE = "http://www.mapquestapi.com/traffic/v2/incidents?key=xJ45BUDAUC9X0QyNQVG5uv9gqHPr9yae&callback=handleIncidentsResponse&boundingBox="
+    private let URL_END = "&inFormat=kvp&outFormat=json"
     private var urlString = ""
     
     internal typealias DownloadComplete = () -> ()
@@ -26,12 +63,12 @@ class Incidents {
     init(ulLat: Double, ulLon: Double, lrLat: Double, lrLon: Double) {
         // These values provide the bounding box of the map for the API link.
         
-        upperLeftLatitude = ulLat
-        upperLeftLongitude = ulLon
-        lowerRightLatitude = lrLat
-        lowerRightLongitude = lrLon
+        _upperLeftLatitude = ulLat
+        _upperLeftLongitude = ulLon
+        _lowerRightLatitude = lrLat
+        _lowerRightLongitude = lrLon
         
-        urlString = "http://www.mapquestapi.com/traffic/v2/incidents?key=xJ45BUDAUC9X0QyNQVG5uv9gqHPr9yae&callback=handleIncidentsResponse&boundingBox=43.937885,-80.00816,43.382116,-78.823744&filters=construction,incidents&inFormat=kvp&outFormat=ksp"
+        urlString = "http://www.mapquestapi.com/traffic/v2/incidents?key=xJ45BUDAUC9X0QyNQVG5uv9gqHPr9yae&callback=handleIncidentsResponse&boundingBox=43.849529,-79.657187,43.452068,-79.107870&filters=construction,incidents&inFormat=kvp&outFormat=ksp"
         
 //            + "\(upperLeftLatitude)," + "\(upperLeftLongitude)," + "\(lowerRightLatitude)," + "\(lowerRightLongitude)," + URL_END
         
@@ -111,11 +148,11 @@ class Incidents {
                                     }
                                     
                                     if let sever = inc["severity"] as? Int {
-                                        tempIncident.severity = sever
+                                        tempIncident.severityIndex = sever
                                     }
                                     
                                     if let type = inc["type"] as? Int {
-                                        tempIncident.type = type
+                                        tempIncident.typeIndex = type
                                     }
                                     
                                     if let start = inc["startTime"] as? String {
@@ -127,7 +164,7 @@ class Incidents {
                                     }
                                     
                                     if let distance = inc["distance"] as? Double {
-                                        tempIncident.distance = distance
+                                        tempIncident.distanceDouble = distance
                                     }
                                     
                                     if let impact = inc["impacting"] as? Bool {
@@ -159,6 +196,5 @@ class Incidents {
             
         }).resume()
     }
-    
     
 }
