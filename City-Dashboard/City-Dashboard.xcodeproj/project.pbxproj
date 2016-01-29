@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		E80BD9801C57E12B005D7EAF /* AnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80BD97F1C57E12B005D7EAF /* AnimationController.swift */; };
+		E80BD9821C586D95005D7EAF /* WeatherView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E80BD9811C586D95005D7EAF /* WeatherView.xib */; };
+		E80BD98A1C587E53005D7EAF /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80BD9891C587E53005D7EAF /* WeatherView.swift */; };
+		E80BD98D1C58859C005D7EAF /* WeatherTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80BD98B1C58859C005D7EAF /* WeatherTableCell.swift */; };
+		E80BD98E1C58859C005D7EAF /* WeatherTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E80BD98C1C58859C005D7EAF /* WeatherTableCell.xib */; };
 		E84480C51C54938C0035DCE6 /* SmallWeather.xib in Resources */ = {isa = PBXBuildFile; fileRef = E84480C41C54938C0035DCE6 /* SmallWeather.xib */; };
 		E84480CA1C549C4B0035DCE6 /* SmallWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84480C91C549C4B0035DCE6 /* SmallWeather.swift */; };
 		E84480CC1C54B2CC0035DCE6 /* SmallWeatherAlt.xib in Resources */ = {isa = PBXBuildFile; fileRef = E84480CB1C54B2CC0035DCE6 /* SmallWeatherAlt.xib */; };
@@ -37,6 +41,10 @@
 
 /* Begin PBXFileReference section */
 		E80BD97F1C57E12B005D7EAF /* AnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationController.swift; sourceTree = "<group>"; };
+		E80BD9811C586D95005D7EAF /* WeatherView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeatherView.xib; sourceTree = "<group>"; };
+		E80BD9891C587E53005D7EAF /* WeatherView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		E80BD98B1C58859C005D7EAF /* WeatherTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherTableCell.swift; sourceTree = "<group>"; };
+		E80BD98C1C58859C005D7EAF /* WeatherTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeatherTableCell.xib; sourceTree = "<group>"; };
 		E84480C41C54938C0035DCE6 /* SmallWeather.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmallWeather.xib; sourceTree = "<group>"; };
 		E84480C91C549C4B0035DCE6 /* SmallWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallWeather.swift; sourceTree = "<group>"; };
 		E84480CB1C54B2CC0035DCE6 /* SmallWeatherAlt.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmallWeatherAlt.xib; sourceTree = "<group>"; };
@@ -106,8 +114,12 @@
 			children = (
 				E84480C41C54938C0035DCE6 /* SmallWeather.xib */,
 				E84480C91C549C4B0035DCE6 /* SmallWeather.swift */,
-				E84480DC1C55C3A00035DCE6 /* LargeWeatherScreen.swift */,
 				E84480DE1C55C3B40035DCE6 /* LargeWeatherScreen.xib */,
+				E84480DC1C55C3A00035DCE6 /* LargeWeatherScreen.swift */,
+				E80BD98B1C58859C005D7EAF /* WeatherTableCell.swift */,
+				E80BD98C1C58859C005D7EAF /* WeatherTableCell.xib */,
+				E80BD9891C587E53005D7EAF /* WeatherView.swift */,
+				E80BD9811C586D95005D7EAF /* WeatherView.xib */,
 				E84480CB1C54B2CC0035DCE6 /* SmallWeatherAlt.xib */,
 				E84480CD1C54BDA20035DCE6 /* SmallWeatherAlt.swift */,
 			);
@@ -245,7 +257,9 @@
 				E84480CC1C54B2CC0035DCE6 /* SmallWeatherAlt.xib in Resources */,
 				E870892D1C4C2A6C0051D868 /* LaunchScreen.storyboard in Resources */,
 				E84480C51C54938C0035DCE6 /* SmallWeather.xib in Resources */,
+				E80BD98E1C58859C005D7EAF /* WeatherTableCell.xib in Resources */,
 				E870892A1C4C2A6C0051D868 /* Assets.xcassets in Resources */,
+				E80BD9821C586D95005D7EAF /* WeatherView.xib in Resources */,
 				E87089281C4C2A6C0051D868 /* Main.storyboard in Resources */,
 				E84FD0EC1C51D2420031FF33 /* cityNewsCell.xib in Resources */,
 				E84480D91C5578550035DCE6 /* CityNewsAlt.xib in Resources */,
@@ -275,6 +289,8 @@
 				FAC3FB331C538E4200E2642A /* WeatherToday.swift in Sources */,
 				FAC3FB321C538E4200E2642A /* WeatherNext.swift in Sources */,
 				E84480D71C5570CE0035DCE6 /* CityNewsMain.swift in Sources */,
+				E80BD98D1C58859C005D7EAF /* WeatherTableCell.swift in Sources */,
+				E80BD98A1C587E53005D7EAF /* WeatherView.swift in Sources */,
 				FAAD998A1C5625AA00C44322 /* Market.swift in Sources */,
 				FAAD998B1C5625AA00C44322 /* Markets.swift in Sources */,
 			);

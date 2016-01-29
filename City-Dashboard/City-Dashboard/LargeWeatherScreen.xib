@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="torontoImg" translatesAutoresizingMaskIntoConstraints="NO" id="Dr8-rF-zAW">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgToronto" translatesAutoresizingMaskIntoConstraints="NO" id="Dr8-rF-zAW">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toronto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9l-Zd-nyM">
@@ -986,7 +986,7 @@
                             </variation>
                         </stackView>
                     </subviews>
-                    <color key="backgroundColor" red="0.98244160353535359" green="0.98244160353535359" blue="0.98244160353535359" alpha="0.34477407094594581" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.98431372549019602" green="0.98431372549019602" blue="0.98431372549019602" alpha="0.34477407094594581" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="KUI-CX-AJd" firstAttribute="top" secondItem="IlB-DR-GcA" secondAttribute="top" constant="3" id="4YP-vo-RrF">
                             <variation key="heightClass=regular-widthClass=compact" constant="1"/>
@@ -1145,6 +1145,6 @@
         </view>
     </objects>
     <resources>
-        <image name="torontoImg" width="2048" height="1152"/>
+        <image name="imgToronto" width="627" height="1082"/>
     </resources>
 </document>
