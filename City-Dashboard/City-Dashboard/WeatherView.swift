@@ -9,6 +9,7 @@
 import UIKit
 
 class WeatherView: UIView, UITableViewDataSource, UITableViewDelegate{
+    @IBOutlet weak var topViewHeight: NSLayoutConstraint!
     @IBOutlet weak var lblHumidityPercent: UILabel!
     @IBOutlet weak var lblWindSpeed: UILabel!
     @IBOutlet weak var lblCurrentTemp: UILabel!
@@ -86,7 +87,7 @@ class WeatherView: UIView, UITableViewDataSource, UITableViewDelegate{
     private  func cofigLayerView() {
         weatherTable.layer.cornerRadius = 10
         weatherTable.clipsToBounds = true
-        
+     
         forecastView.layer.cornerRadius = 10
         forecastView.clipsToBounds = true
     }

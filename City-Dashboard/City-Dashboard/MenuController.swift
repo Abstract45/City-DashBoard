@@ -11,7 +11,7 @@ import UIKit
 class MenuController: UIViewController, UITableViewDataSource, UITableViewDelegate {
    
     
-    @IBOutlet weak var smallWeatherView: SmallWeatherAlt!
+    
     @IBOutlet weak var menuStack: UIStackView!
     @IBOutlet weak var middleView: UIView!
     @IBOutlet weak var bottomView: UIView!
@@ -62,7 +62,7 @@ class MenuController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.changeViewConstraints(50, secondViewHeight: self.view.frame.height - 100, thirdViewHeight: 50)
         self.bottomTable.hidden = !isFirstTap
         self.middleTable.hidden = false
-        self.smallWeatherView.hidden = false
+        
     }
     @IBAction func topViewTap(sender: AnyObject) {
         
@@ -71,7 +71,7 @@ class MenuController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.bottomTable.hidden = !isFirstTap
         self.middleTable.hidden = !isFirstTap
         
-        smallWeatherView.hidden = !isFirstTap
+        
         
         
         
@@ -83,7 +83,7 @@ class MenuController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         self.middleTable.hidden = !isFirstTap
         self.bottomTable.hidden = false
-        self.smallWeatherView.hidden = false
+    
         
     }
     
@@ -100,22 +100,17 @@ class MenuController: UIViewController, UITableViewDataSource, UITableViewDelega
             
             
             return cell!
-        case bottomTable:
-           
+//        case bottomTable:
+//           
            
             
-            if indexPath.row > 0 {
-                bottomTable.registerNib(UINib.init(nibName: "CityNewsAlt", bundle: nil), forCellReuseIdentifier:"news")
-                
-                let cell2 = bottomTable.dequeueReusableCellWithIdentifier("news") as! CityNewsAlt
-                return cell2
-            } else {
-                bottomTable.registerNib(UINib.init(nibName: "CityNewsMain", bundle: nil), forCellReuseIdentifier: "news")
-                
-                
-                let cell = bottomTable.dequeueReusableCellWithIdentifier("news") as! CityNewsMain
-                return cell
-            }
+            
+//                bottomTable.registerNib(UINib.init(nibName: "CityNewsMain", bundle: nil), forCellReuseIdentifier: "news")
+//                
+//                
+//                let cell = bottomTable.dequeueReusableCellWithIdentifier("news") as! CityNewsMain
+//                return cell
+            
             
             
         default:

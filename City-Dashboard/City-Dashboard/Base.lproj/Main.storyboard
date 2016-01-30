@@ -414,40 +414,10 @@
                         <viewControllerLayoutGuide type="top" id="W9B-8R-VFA"/>
                         <viewControllerLayoutGuide type="bottom" id="jkx-xM-UNI"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="NNj-UW-mtC">
+                    <view key="view" contentMode="scaleToFill" id="NNj-UW-mtC" customClass="TrafficMainView" customModule="City_Dashboard" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="138"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Traffic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48w-qC-Ywc">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="48w-qC-Ywc" firstAttribute="centerX" secondItem="NNj-UW-mtC" secondAttribute="centerX" id="6zQ-JH-akv"/>
-                            <constraint firstItem="48w-qC-Ywc" firstAttribute="centerY" secondItem="NNj-UW-mtC" secondAttribute="centerY" id="ByP-sV-w7Q"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="48w-qC-Ywc"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="6zQ-JH-akv"/>
-                                <exclude reference="ByP-sV-w7Q"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="48w-qC-Ywc"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="6zQ-JH-akv"/>
-                                <include reference="ByP-sV-w7Q"/>
-                            </mask>
-                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v6G-8N-p3N" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -462,46 +432,9 @@
                         <viewControllerLayoutGuide type="top" id="Jeb-wP-6RO"/>
                         <viewControllerLayoutGuide type="bottom" id="6Ro-ha-M9A"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="6E9-Dw-U7I">
+                    <view key="view" contentMode="scaleToFill" id="6E9-Dw-U7I" customClass="CityNewsMain" customModule="City_Dashboard" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="174"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vW-Tn-BxU">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="News">
-                                        <attributes>
-                                            <color key="NSColor" red="0.99201298849125052" green="0.99295646013403338" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.1229149070945946" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="1vW-Tn-BxU" firstAttribute="centerY" secondItem="6E9-Dw-U7I" secondAttribute="centerY" id="M7g-f6-XBh"/>
-                            <constraint firstItem="1vW-Tn-BxU" firstAttribute="centerX" secondItem="6E9-Dw-U7I" secondAttribute="centerX" id="foA-Dy-qpq"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="1vW-Tn-BxU"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="M7g-f6-XBh"/>
-                                <exclude reference="foA-Dy-qpq"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="1vW-Tn-BxU"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="M7g-f6-XBh"/>
-                                <include reference="foA-Dy-qpq"/>
-                            </mask>
-                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bkF-Au-6cr" userLabel="First Responder" sceneMemberID="firstResponder"/>

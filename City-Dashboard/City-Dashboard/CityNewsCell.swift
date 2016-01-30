@@ -1,32 +1,23 @@
 //
-//  cityNewsCell.swift
+//  CityNewsCell.swift
 //  City-Dashboard
 //
-//  Created by Miwand Najafe on 2016-01-21.
+//  Created by Miwand Najafe on 2016-01-24.
 //  Copyright © 2016 Miwand Najafe. All rights reserved.
 //
 
 import UIKit
 
-class cityNewsCell: UITableViewCell {
+class CityNewsCell: UITableViewCell {
 
-    @IBOutlet weak var customNewsView: UIView!
+    @IBOutlet weak var timeCategory: UILabel!
+    @IBOutlet weak var headlines: UILabel!
     @IBOutlet weak var imgCityNews: UIImageView!
-    @IBOutlet weak var lblCityNews: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        customizeView()
-        
+        // Initialization code
     }
 
-    
-    func customizeView() {
-        customNewsView.layer.cornerRadius = 5
-        customNewsView.clipsToBounds = true
-        
-              
-    }
-    
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

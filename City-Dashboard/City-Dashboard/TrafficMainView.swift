@@ -1,5 +1,5 @@
 //
-//  CityNewsMain.swift
+//  TrafficMainView.swift
 //  City-Dashboard
 //
 //  Created by Miwand Najafe on 2016-01-29.
@@ -8,23 +8,22 @@
 
 import UIKit
 
-class CityNewsMain: UIView, UITableViewDataSource, UITableViewDelegate {
- private var view: UIView!
+class TrafficMainView: UIView, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var trafficTableView: UITableView!
     
+    private var view: UIView!
     
-    @IBOutlet weak var newsTableView: UITableView!
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         xibSetup()
-        
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        xibSetup()
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        xibSetup()
+    }
     private func xibSetup() {
         view = loadViewFromNib()
         
@@ -36,28 +35,36 @@ class CityNewsMain: UIView, UITableViewDataSource, UITableViewDelegate {
     
     private func loadViewFromNib() -> UIView {
         let bundle = NSBundle(forClass: self.dynamicType)
-        let nib = UINib(nibName: "CityNewsMain", bundle: bundle)
-        let view = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
+        let nib = UINib.init(nibName: "TrafficMainView", bundle: bundle)
+         view = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
+        
         return view
+        
+        
     }
+    
+   
+    
+    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+           trafficTableView.registerNib(UINib.init(nibName: "TrafficTableCell", bundle: nil), forCellReuseIdentifier: "traffic")
         
-        newsTableView.registerNib(UINib.init(nibName: "CityNewsCell", bundle: nil), forCellReuseIdentifier:"news")
-        let cell = newsTableView.dequeueReusableCellWithIdentifier("news") as! CityNewsCell
-       
+        let cell = trafficTableView.dequeueReusableCellWithIdentifier("traffic") as! TrafficTableCell
+        
         return cell
+        
     }
     
+    
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 91
+        return 64
     }
+    
+    
 
 }
