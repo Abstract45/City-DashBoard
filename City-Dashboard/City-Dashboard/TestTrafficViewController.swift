@@ -20,15 +20,15 @@ class TestTrafficViewController: UIViewController {
             let lrLt = mTest.markets[0].boxLowerRightLatitude
             let lrLn = mTest.markets[0].boxLowerRightLongitude
             
-            print(mTest.marketIndex["Denver"])
+//            print(mTest.marketIndex["Denver"])
             
             let iTest = Incidents(ulLat: ulLt, ulLon: ulLn, lrLat: lrLt, lrLon: lrLn)
             iTest.downloadTrafficEvents({ () -> () in
-                print(iTest.incidents[0].delayFromFreeFlow)
-                print(iTest.incidents[0].delayFromTypical)
-                print(iTest.incidents[0].severityIndex)
-                print(iTest.incidents[0].typeIndex)
-                print(iTest.incidents[0].impactingTraffic)
+//                print(iTest.incidents[0].delayFromFreeFlow)
+//                print(iTest.incidents[0].delayFromTypical)
+//                print(iTest.incidents[0].severityIndex)
+//                print(iTest.incidents[0].typeIndex)
+//                print(iTest.incidents[0].impactingTraffic)
                 
             })
         }
