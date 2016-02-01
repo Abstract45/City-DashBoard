@@ -14,6 +14,7 @@ import UIKit
     
     @IBOutlet weak var logoRightConstraint: NSLayoutConstraint!
 
+    @IBOutlet weak var lblDailyHeadlines: UILabel!
     
     @IBOutlet weak var newsTableView: UITableView!
     override init(frame: CGRect) {

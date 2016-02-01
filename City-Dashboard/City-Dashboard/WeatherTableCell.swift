@@ -19,7 +19,7 @@ class WeatherTableCell: UITableViewCell {
         super.awakeFromNib()
       self.layer.cornerRadius = 10
         self.clipsToBounds = true
-        self.imgDayIcon.image = UIImage(named: "")
+        
         
     }
     

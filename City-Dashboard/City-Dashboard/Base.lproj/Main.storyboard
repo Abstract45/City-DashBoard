@@ -32,7 +32,7 @@
                                         <subviews>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZCJ-9r-cpY" userLabel="topView">
                                                 <rect key="frame" x="20" y="20" width="320" height="152"/>
-                                                <color key="backgroundColor" red="0.12156862745098039" green="0.23921568627450981" blue="0.32156862745098042" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="160" id="fo9-Ip-34W"/>
                                                 </constraints>
@@ -53,7 +53,7 @@
                                             </containerView>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MZ9-Fv-WFP" userLabel="middleView">
                                                 <rect key="frame" x="20" y="171" width="320" height="138"/>
-                                                <color key="backgroundColor" red="0.1960784314" green="0.33725490200000002" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="160" id="rfj-3Y-RKV"/>
                                                 </constraints>
@@ -74,7 +74,7 @@
                                             </containerView>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ttS-9C-Qdu" userLabel="bottomView">
                                                 <rect key="frame" x="20" y="306" width="320" height="174"/>
-                                                <color key="backgroundColor" red="0.27450980392156865" green="0.40392156862745099" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="160" id="KHt-4b-yaC"/>
                                                 </constraints>
@@ -216,7 +216,6 @@
         <!--WeatherVC-->
         <scene sceneID="TuP-rT-Wus">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZZZ-H6-H9j" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="ajm-r8-bm9" customClass="WeatherVC" customModule="City_Dashboard" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pSK-Xc-yVu"/>
@@ -225,7 +224,7 @@
                     <view key="view" contentMode="scaleToFill" id="VvY-ZW-hth" customClass="WeatherView" customModule="City_Dashboard" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="152"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.1215686275" green="0.23921568630000001" blue="0.32156862749999998" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -233,14 +232,14 @@
                         <outlet property="weatherMainView" destination="VvY-ZW-hth" id="vSO-GQ-DsY"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZZZ-H6-H9j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1281" y="-283"/>
         </scene>
-        <!--View Controller-->
+        <!--TrafficVC-->
         <scene sceneID="F0y-LK-5fh">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v6G-8N-p3N" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="ofS-PY-GSb" sceneMemberID="viewController">
+                <viewController id="ofS-PY-GSb" customClass="TrafficVC" customModule="City_Dashboard" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="W9B-8R-VFA"/>
                         <viewControllerLayoutGuide type="bottom" id="jkx-xM-UNI"/>
@@ -248,18 +247,21 @@
                     <view key="view" contentMode="scaleToFill" id="NNj-UW-mtC" customClass="TrafficMainView" customModule="City_Dashboard" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="138"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.1960784314" green="0.33725490200000002" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="trafficMainView" destination="NNj-UW-mtC" id="Dbn-mj-zZz"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v6G-8N-p3N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1281" y="-78"/>
         </scene>
-        <!--View Controller-->
+        <!--NewsVC-->
         <scene sceneID="DNL-no-liN">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bkF-Au-6cr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="J8L-Tl-WM9" sceneMemberID="viewController">
+                <viewController id="J8L-Tl-WM9" customClass="NewsVC" customModule="City_Dashboard" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jeb-wP-6RO"/>
                         <viewControllerLayoutGuide type="bottom" id="6Ro-ha-M9A"/>
@@ -267,9 +269,13 @@
                     <view key="view" contentMode="scaleToFill" id="6E9-Dw-U7I" customClass="CityNewsMain" customModule="City_Dashboard" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="174"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.27450980390000002" green="0.4039215686" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="newsMainView" destination="6E9-Dw-U7I" id="b08-BR-oKd"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bkF-Au-6cr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1281" y="169"/>
         </scene>
