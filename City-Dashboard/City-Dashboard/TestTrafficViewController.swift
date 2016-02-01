@@ -7,12 +7,23 @@
 //
 
 import UIKit
+import CoreLocation
 
-class TestTrafficViewController: UIViewController {
+class TestTrafficViewController: UIViewController, CLLocationManagerDelegate {
 
+    var locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        locationManager.requestLocation()
+//        print(locationManager.location)
+        
         let mTest = Markets()
         mTest.downloadMarkets { () -> () in
             let ulLt = mTest.markets[0].boxUpperLeftLatitude
@@ -20,20 +31,35 @@ class TestTrafficViewController: UIViewController {
             let lrLt = mTest.markets[0].boxLowerRightLatitude
             let lrLn = mTest.markets[0].boxLowerRightLongitude
             
-//            print(mTest.marketIndex["Denver"])
-            
             let iTest = Incidents(ulLat: ulLt, ulLon: ulLn, lrLat: lrLt, lrLon: lrLn)
             iTest.downloadTrafficEvents({ () -> () in
-//                print(iTest.incidents[0].delayFromFreeFlow)
-//                print(iTest.incidents[0].delayFromTypical)
-//                print(iTest.incidents[0].severityIndex)
-//                print(iTest.incidents[0].typeIndex)
-//                print(iTest.incidents[0].impactingTraffic)
                 
             })
         }
     }
-
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        locationManager.stopUpdatingLocation()
+        
+        let upLat = locations[0].coordinate.latitude + 1
+        let upLon = locations[0].coordinate.longitude - 1
+        let lowLat = locations[0].coordinate.latitude - 1
+        let lowLon = locations[0].coordinate.longitude + 1
+        
+        let iTest = Incidents(ulLat: upLat, ulLon: upLon, lrLat: lowLat, lrLon: lowLon)
+        
+        iTest.downloadTrafficEvents { () -> () in
+            print(iTest.incidents[0].roadName)
+            print(iTest.incidents.count)
+        }
+        
+    }
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

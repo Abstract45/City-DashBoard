@@ -41,5 +41,9 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Will recieve the most accurate weather and traffic.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Will recieve the most accurate weather and traffic.</string>
 </dict>
 </plist>
