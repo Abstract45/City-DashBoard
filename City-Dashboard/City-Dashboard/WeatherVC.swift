@@ -26,7 +26,7 @@ class WeatherVC: UIViewController, UIGestureRecognizerDelegate {
     
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "changeWeatherXib:", name: "changeTopView", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "resetWeatherXib:", name: "resetViews", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "hideShowInfo:", name: "topViewOpen", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "hideShowWeather:", name: "topViewOpen", object: nil)
     }
     
     func changeWeatherXib(notification:NSNotification) {
@@ -38,7 +38,7 @@ class WeatherVC: UIViewController, UIGestureRecognizerDelegate {
     }
     
     
-    func hideShowInfo(notification:NSNotification) {
+    func hideShowWeather(notification:NSNotification) {
         UIView.animateWithDuration(1) { () -> Void in
             self.weatherMainView.forecastView.alpha = 1
             self.weatherMainView.weatherTable.alpha = 1

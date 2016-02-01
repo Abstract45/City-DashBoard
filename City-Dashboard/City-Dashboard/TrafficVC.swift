@@ -23,17 +23,23 @@ class TrafficVC: UIViewController {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "changeTrafficXib:", name: "changeMiddleView", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "resetTrafficXib:", name: "resetViews", object: nil)
+           
     }
     
     func changeTrafficXib(notification:NSNotification) {
         UIView.animateWithDuration(1) { () -> Void in
             self.trafficMainView.logoRightConstraint.constant = self.midSize
+             self.trafficMainView.lblCurrentIncidents.hidden = true
                 self.view.layoutIfNeeded()
         }
     }
+    
+   
+    
     func resetTrafficXib(notification:NSNotification) {
         UIView.animateWithDuration(1) { () -> Void in
             self.trafficMainView.logoRightConstraint.constant = 22
+            self.trafficMainView.lblCurrentIncidents.hidden = false
             self.view.layoutIfNeeded()
         }
         

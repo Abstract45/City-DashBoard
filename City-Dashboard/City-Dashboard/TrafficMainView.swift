@@ -12,6 +12,7 @@ import UIKit
     @IBOutlet weak var trafficTableView: UITableView!
     @IBOutlet weak var logoRightConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var lblCurrentIncidents: UILabel!
     private var view: UIView!
     
     override init(frame: CGRect) {
