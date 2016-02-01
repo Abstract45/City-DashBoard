@@ -29,7 +29,7 @@ class TrafficVC: UIViewController {
     func changeTrafficXib(notification:NSNotification) {
         UIView.animateWithDuration(1) { () -> Void in
             self.trafficMainView.logoRightConstraint.constant = self.midSize
-             self.trafficMainView.lblCurrentIncidents.hidden = true
+             self.trafficMainView.lblCurrentIncidents.alpha = 0
                 self.view.layoutIfNeeded()
         }
     }
@@ -39,7 +39,7 @@ class TrafficVC: UIViewController {
     func resetTrafficXib(notification:NSNotification) {
         UIView.animateWithDuration(1) { () -> Void in
             self.trafficMainView.logoRightConstraint.constant = 22
-            self.trafficMainView.lblCurrentIncidents.hidden = false
+            self.trafficMainView.lblCurrentIncidents.alpha = 1
             self.view.layoutIfNeeded()
         }
         

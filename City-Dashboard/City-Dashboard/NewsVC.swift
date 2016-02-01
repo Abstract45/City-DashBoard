@@ -30,7 +30,7 @@ class NewsVC: UIViewController {
     func changeNewsXib(notification:NSNotification) {
         UIView.animateWithDuration(1) { () -> Void in
             self.newsMainView.logoRightConstraint.constant = self.midSize
-            self.newsMainView.lblDailyHeadlines.hidden = true
+            self.newsMainView.lblDailyHeadlines.alpha = 0
             self.view.layoutIfNeeded()
         }
         
@@ -39,7 +39,7 @@ class NewsVC: UIViewController {
     func resetNewsXib(notification:NSNotification) {
         UIView.animateWithDuration(1) { () -> Void in
              self.newsMainView.logoRightConstraint.constant = 22
-            self.newsMainView.lblDailyHeadlines.hidden = false
+            self.newsMainView.lblDailyHeadlines.alpha = 1
             self.view.layoutIfNeeded()
         }
        
