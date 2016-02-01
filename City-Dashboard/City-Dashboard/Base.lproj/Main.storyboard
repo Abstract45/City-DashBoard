@@ -32,7 +32,7 @@
                                         <subviews>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZCJ-9r-cpY" userLabel="topView">
                                                 <rect key="frame" x="20" y="20" width="320" height="152"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" red="0.12156862745098039" green="0.23921568627450981" blue="0.32156862745098042" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="160" id="fo9-Ip-34W"/>
                                                 </constraints>
@@ -53,7 +53,7 @@
                                             </containerView>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MZ9-Fv-WFP" userLabel="middleView">
                                                 <rect key="frame" x="20" y="171" width="320" height="138"/>
-                                                <color key="backgroundColor" white="1" alpha="0.326171875" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" red="0.1960784314" green="0.33725490200000002" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="160" id="rfj-3Y-RKV"/>
                                                 </constraints>
@@ -74,7 +74,7 @@
                                             </containerView>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ttS-9C-Qdu" userLabel="bottomView">
                                                 <rect key="frame" x="20" y="306" width="320" height="174"/>
-                                                <color key="backgroundColor" white="1" alpha="0.32577597128378377" colorSpace="calibratedWhite"/>
+                                                <color key="backgroundColor" red="0.27450980392156865" green="0.40392156862745099" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="160" id="KHt-4b-yaC"/>
                                                 </constraints>
@@ -195,11 +195,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hOH-XT-Jp7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="Oi4-9M-8eC">
-                    <connections>
-                        <action selector="topTap:" destination="Uwp-Zf-Rbm" id="dfq-bi-4N7"/>
-                    </connections>
-                </tapGestureRecognizer>
                 <tapGestureRecognizer id="v6w-ms-rJV">
                     <connections>
                         <action selector="middleTap:" destination="Uwp-Zf-Rbm" id="xzN-mM-KPn"/>
@@ -210,186 +205,19 @@
                         <action selector="bottomTap:" destination="Uwp-Zf-Rbm" id="AyN-FJ-yix"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="Oi4-9M-8eC">
+                    <connections>
+                        <action selector="topTap:" destination="Uwp-Zf-Rbm" id="dfq-bi-4N7"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="432" y="-106.5"/>
         </scene>
-        <!--Menu Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="MenuController" customModule="City_Dashboard" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="UYt-vS-8f8">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                                <subviews>
-                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9d-Gz-G8l" customClass="LargeWeatherScreen" customModule="City_Dashboard" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R17-1d-nZj" customClass="SmallWeatherAlt" customModule="City_Dashboard" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            </view>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstItem="R17-1d-nZj" firstAttribute="leading" secondItem="T9d-Gz-G8l" secondAttribute="leading" id="4Yh-dE-9Fi"/>
-                                            <constraint firstAttribute="height" constant="160" id="A0u-16-MWG"/>
-                                            <constraint firstAttribute="trailing" secondItem="R17-1d-nZj" secondAttribute="trailing" id="I8T-i4-klp"/>
-                                            <constraint firstAttribute="bottom" secondItem="R17-1d-nZj" secondAttribute="bottom" id="LKS-RT-cfz"/>
-                                            <constraint firstItem="R17-1d-nZj" firstAttribute="top" secondItem="T9d-Gz-G8l" secondAttribute="top" id="YDJ-Xh-ZTV"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="subviews">
-                                                <exclude reference="R17-1d-nZj"/>
-                                            </mask>
-                                            <mask key="constraints">
-                                                <exclude reference="4Yh-dE-9Fi"/>
-                                                <exclude reference="I8T-i4-klp"/>
-                                                <exclude reference="LKS-RT-cfz"/>
-                                                <exclude reference="YDJ-Xh-ZTV"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=compact">
-                                            <mask key="subviews">
-                                                <include reference="R17-1d-nZj"/>
-                                            </mask>
-                                            <mask key="constraints">
-                                                <include reference="4Yh-dE-9Fi"/>
-                                                <include reference="I8T-i4-klp"/>
-                                                <include reference="LKS-RT-cfz"/>
-                                                <include reference="YDJ-Xh-ZTV"/>
-                                            </mask>
-                                        </variation>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="u2z-fO-SuA" appends="YES" id="XUF-sZ-u7d"/>
-                                        </connections>
-                                    </view>
-                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="EEQ-fb-5xk">
-                                        <rect key="frame" x="0.0" y="160" width="320" height="160"/>
-                                        <subviews>
-                                            <tableView clipsSubviews="YES" contentMode="top" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="71" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lV5-Ar-6Tk">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="middle" rowHeight="71" id="f9d-Te-pCU">
-                                                        <rect key="frame" x="0.0" y="28" width="320" height="71"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f9d-Te-pCU" id="Nxk-VR-NaP">
-                                                            <rect key="frame" x="0.0" y="0.0" width="320" height="70.5"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                        </tableViewCellContentView>
-                                                    </tableViewCell>
-                                                </prototypes>
-                                                <connections>
-                                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="dOs-nI-fjz"/>
-                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="gc5-xf-KyL"/>
-                                                </connections>
-                                            </tableView>
-                                        </subviews>
-                                        <color key="backgroundColor" red="1" green="0.3803921569" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="lV5-Ar-6Tk" secondAttribute="trailing" id="BHT-WK-UFm"/>
-                                            <constraint firstAttribute="height" constant="160" id="NcL-pZ-fKH"/>
-                                            <constraint firstItem="lV5-Ar-6Tk" firstAttribute="leading" secondItem="EEQ-fb-5xk" secondAttribute="leading" id="Ogo-FM-ZII"/>
-                                            <constraint firstAttribute="bottom" secondItem="lV5-Ar-6Tk" secondAttribute="bottom" id="xJG-J3-MDG"/>
-                                            <constraint firstItem="lV5-Ar-6Tk" firstAttribute="top" secondItem="EEQ-fb-5xk" secondAttribute="top" id="xh9-9n-yks"/>
-                                        </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="cwr-fL-8s7" appends="YES" id="nYB-Op-ccC"/>
-                                        </connections>
-                                    </view>
-                                    <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="AQx-Lb-znv">
-                                        <rect key="frame" x="0.0" y="320" width="320" height="160"/>
-                                        <subviews>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="130" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sXy-Eo-nI3">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <color key="separatorColor" red="0.70980392156862748" green="0.54509803921568623" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
-                                                <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="news" id="dOg-Si-Ocz">
-                                                        <rect key="frame" x="0.0" y="28" width="320" height="130"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dOg-Si-Ocz" id="sMX-32-HOj">
-                                                            <rect key="frame" x="0.0" y="0.0" width="320" height="129.5"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                        </tableViewCellContentView>
-                                                    </tableViewCell>
-                                                </prototypes>
-                                                <connections>
-                                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="7rT-9a-vsI"/>
-                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="zFu-3g-bAF"/>
-                                                </connections>
-                                            </tableView>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.14901960780000001" green="0.1450980392" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
-                                        <gestureRecognizers/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="sXy-Eo-nI3" secondAttribute="trailing" id="0w8-3X-Eal"/>
-                                            <constraint firstItem="sXy-Eo-nI3" firstAttribute="leading" secondItem="AQx-Lb-znv" secondAttribute="leading" id="8NP-Jz-fpw"/>
-                                            <constraint firstAttribute="bottom" secondItem="sXy-Eo-nI3" secondAttribute="bottom" id="MWw-pr-oDx"/>
-                                            <constraint firstItem="sXy-Eo-nI3" firstAttribute="top" secondItem="AQx-Lb-znv" secondAttribute="top" id="UxE-N5-f50"/>
-                                            <constraint firstAttribute="height" constant="160" id="dpu-18-RxZ"/>
-                                        </constraints>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="HZE-h4-2ym" appends="YES" id="3di-n2-tYM"/>
-                                        </connections>
-                                    </view>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="UYt-vS-8f8" secondAttribute="bottom" id="0Py-de-NGK"/>
-                            <constraint firstItem="UYt-vS-8f8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Bep-DZ-0l5"/>
-                            <constraint firstAttribute="trailing" secondItem="UYt-vS-8f8" secondAttribute="trailing" id="ZAe-Kg-ea8"/>
-                            <constraint firstItem="UYt-vS-8f8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="f1v-KA-cA6"/>
-                        </constraints>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                    <connections>
-                        <outlet property="botViewHeight" destination="dpu-18-RxZ" id="jG2-1q-Wzm"/>
-                        <outlet property="bottomTable" destination="sXy-Eo-nI3" id="KDc-hK-oAY"/>
-                        <outlet property="bottomView" destination="AQx-Lb-znv" id="Kf7-dV-3TB"/>
-                        <outlet property="menuStack" destination="UYt-vS-8f8" id="9Cw-LH-MV8"/>
-                        <outlet property="midViewHeight" destination="NcL-pZ-fKH" id="3kQ-9M-nJ1"/>
-                        <outlet property="middleTable" destination="lV5-Ar-6Tk" id="bOs-Oe-RKg"/>
-                        <outlet property="middleView" destination="EEQ-fb-5xk" id="I7q-kx-d7Y"/>
-                        <outlet property="smallWeatherView" destination="R17-1d-nZj" id="bgi-0n-L89"/>
-                        <outlet property="topView" destination="T9d-Gz-G8l" id="egP-uB-Hw4"/>
-                        <outlet property="topViewHeight" destination="A0u-16-MWG" id="4P1-MT-cr7"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="u2z-fO-SuA">
-                    <connections>
-                        <action selector="topViewTap:" destination="BYZ-38-t0r" id="ply-C3-sAe"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="cwr-fL-8s7">
-                    <connections>
-                        <action selector="midViewTap:" destination="BYZ-38-t0r" id="Gtu-j9-CDh"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="HZE-h4-2ym">
-                    <connections>
-                        <action selector="botViewTap:" destination="BYZ-38-t0r" id="yxp-Ba-vKX"/>
-                    </connections>
-                </tapGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="250.5" y="495"/>
-        </scene>
-        <!--View Controller-->
+        <!--WeatherVC-->
         <scene sceneID="TuP-rT-Wus">
             <objects>
-                <viewController id="ajm-r8-bm9" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZZZ-H6-H9j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="ajm-r8-bm9" customClass="WeatherVC" customModule="City_Dashboard" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pSK-Xc-yVu"/>
                         <viewControllerLayoutGuide type="bottom" id="dBH-yF-jZQ"/>
@@ -398,17 +226,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="152"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="weatherMainView" destination="VvY-ZW-hth" id="vSO-GQ-DsY"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZZZ-H6-H9j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1156.5" y="-233.25"/>
+            <point key="canvasLocation" x="1281" y="-283"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="F0y-LK-5fh">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v6G-8N-p3N" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="ofS-PY-GSb" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="W9B-8R-VFA"/>
@@ -419,14 +250,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v6G-8N-p3N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1281" y="-84.75"/>
+            <point key="canvasLocation" x="1281" y="-78"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="DNL-no-liN">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bkF-Au-6cr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="J8L-Tl-WM9" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jeb-wP-6RO"/>
@@ -435,11 +267,11 @@
                     <view key="view" contentMode="scaleToFill" id="6E9-Dw-U7I" customClass="CityNewsMain" customModule="City_Dashboard" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="174"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bkF-Au-6cr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1281" y="66.75"/>
+            <point key="canvasLocation" x="1281" y="169"/>
         </scene>
     </scenes>
     <resources>

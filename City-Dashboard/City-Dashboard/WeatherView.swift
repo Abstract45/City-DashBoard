@@ -8,8 +8,9 @@
 
 import UIKit
 
-class WeatherView: UIView, UITableViewDataSource, UITableViewDelegate{
-    @IBOutlet weak var topViewHeight: NSLayoutConstraint!
+ class WeatherView: UIView, UITableViewDataSource, UITableViewDelegate{
+
+    @IBOutlet weak var logoRightConstraint: NSLayoutConstraint!
     @IBOutlet weak var lblHumidityPercent: UILabel!
     @IBOutlet weak var lblWindSpeed: UILabel!
     @IBOutlet weak var lblCurrentTemp: UILabel!
@@ -35,12 +36,9 @@ class WeatherView: UIView, UITableViewDataSource, UITableViewDelegate{
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         xibSetup()
-        
     }
-    
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         xibSetup()
@@ -91,6 +89,8 @@ class WeatherView: UIView, UITableViewDataSource, UITableViewDelegate{
         forecastView.layer.cornerRadius = 10
         forecastView.clipsToBounds = true
     }
+    
+    
     
     
     

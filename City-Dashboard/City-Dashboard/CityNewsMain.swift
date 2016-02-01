@@ -8,9 +8,12 @@
 
 import UIKit
 
-class CityNewsMain: UIView, UITableViewDataSource, UITableViewDelegate {
+ class CityNewsMain: UIView, UITableViewDataSource, UITableViewDelegate {
  private var view: UIView!
+ 
     
+    @IBOutlet weak var logoRightConstraint: NSLayoutConstraint!
+
     
     @IBOutlet weak var newsTableView: UITableView!
     override init(frame: CGRect) {
@@ -34,6 +37,7 @@ class CityNewsMain: UIView, UITableViewDataSource, UITableViewDelegate {
         addSubview(view)
     }
     
+ 
     private func loadViewFromNib() -> UIView {
         let bundle = NSBundle(forClass: self.dynamicType)
         let nib = UINib(nibName: "CityNewsMain", bundle: bundle)
@@ -59,5 +63,8 @@ class CityNewsMain: UIView, UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 91
     }
+    
+    
+    
 
 }

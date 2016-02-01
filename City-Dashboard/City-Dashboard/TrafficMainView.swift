@@ -8,8 +8,9 @@
 
 import UIKit
 
-class TrafficMainView: UIView, UITableViewDelegate, UITableViewDataSource {
+ class TrafficMainView: UIView, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var trafficTableView: UITableView!
+    @IBOutlet weak var logoRightConstraint: NSLayoutConstraint!
     
     private var view: UIView!
     
@@ -37,15 +38,11 @@ class TrafficMainView: UIView, UITableViewDelegate, UITableViewDataSource {
         let bundle = NSBundle(forClass: self.dynamicType)
         let nib = UINib.init(nibName: "TrafficMainView", bundle: bundle)
          view = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
-        
+       
         return view
         
         
     }
-    
-   
-    
-    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
@@ -64,6 +61,9 @@ class TrafficMainView: UIView, UITableViewDelegate, UITableViewDataSource {
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 64
     }
+    
+   
+    
     
     
 

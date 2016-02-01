@@ -18,10 +18,10 @@
 		E8234FAB1C5C2F76000C91A9 /* TrafficTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8234FA91C5C2F76000C91A9 /* TrafficTableCell.xib */; };
 		E8234FAD1C5C2F93000C91A9 /* TrafficMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8234FAC1C5C2F93000C91A9 /* TrafficMainView.swift */; };
 		E8234FAF1C5C2FA0000C91A9 /* TrafficMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8234FAE1C5C2FA0000C91A9 /* TrafficMainView.xib */; };
+		E8234FDB1C5F4974000C91A9 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8234FDA1C5F4974000C91A9 /* WeatherVC.swift */; };
 		E84480D41C556C7D0035DCE6 /* CityNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E84480D31C556C7D0035DCE6 /* CityNewsCell.xib */; };
 		E84480D71C5570CE0035DCE6 /* CityNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84480D61C5570CE0035DCE6 /* CityNewsCell.swift */; };
 		E87089231C4C2A6C0051D868 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87089221C4C2A6C0051D868 /* AppDelegate.swift */; };
-		E87089251C4C2A6C0051D868 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87089241C4C2A6C0051D868 /* MenuController.swift */; };
 		E87089281C4C2A6C0051D868 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E87089261C4C2A6C0051D868 /* Main.storyboard */; };
 		E870892A1C4C2A6C0051D868 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E87089291C4C2A6C0051D868 /* Assets.xcassets */; };
 		E870892D1C4C2A6C0051D868 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E870892B1C4C2A6C0051D868 /* LaunchScreen.storyboard */; };
@@ -48,11 +48,11 @@
 		E8234FA91C5C2F76000C91A9 /* TrafficTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrafficTableCell.xib; sourceTree = "<group>"; };
 		E8234FAC1C5C2F93000C91A9 /* TrafficMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrafficMainView.swift; sourceTree = "<group>"; };
 		E8234FAE1C5C2FA0000C91A9 /* TrafficMainView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrafficMainView.xib; sourceTree = "<group>"; };
+		E8234FDA1C5F4974000C91A9 /* WeatherVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
 		E84480D31C556C7D0035DCE6 /* CityNewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CityNewsCell.xib; path = ../CityNewsCell.xib; sourceTree = "<group>"; };
 		E84480D61C5570CE0035DCE6 /* CityNewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityNewsCell.swift; sourceTree = "<group>"; };
 		E870891F1C4C2A6C0051D868 /* City-Dashboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "City-Dashboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E87089221C4C2A6C0051D868 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E87089241C4C2A6C0051D868 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		E87089271C4C2A6C0051D868 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E87089291C4C2A6C0051D868 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E870892C1C4C2A6C0051D868 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -128,8 +128,8 @@
 		E84480D51C5570720035DCE6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E8234FDA1C5F4974000C91A9 /* WeatherVC.swift */,
 				E80BD97F1C57E12B005D7EAF /* AnimationController.swift */,
-				E87089241C4C2A6C0051D868 /* MenuController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -284,7 +284,6 @@
 				E80BD9801C57E12B005D7EAF /* AnimationController.swift in Sources */,
 				E8234FAD1C5C2F93000C91A9 /* TrafficMainView.swift in Sources */,
 				E8234FAA1C5C2F76000C91A9 /* TrafficTableCell.swift in Sources */,
-				E87089251C4C2A6C0051D868 /* MenuController.swift in Sources */,
 				FAAD99881C5625AA00C44322 /* Incident.swift in Sources */,
 				FAAD99891C5625AA00C44322 /* Incidents.swift in Sources */,
 				E87089231C4C2A6C0051D868 /* AppDelegate.swift in Sources */,
@@ -293,6 +292,7 @@
 				FAC3FB321C538E4200E2642A /* WeatherNext.swift in Sources */,
 				E84480D71C5570CE0035DCE6 /* CityNewsCell.swift in Sources */,
 				E80BD98D1C58859C005D7EAF /* WeatherTableCell.swift in Sources */,
+				E8234FDB1C5F4974000C91A9 /* WeatherVC.swift in Sources */,
 				E80BD98A1C587E53005D7EAF /* WeatherView.swift in Sources */,
 				FAAD998A1C5625AA00C44322 /* Market.swift in Sources */,
 				FA7C8C0C1C589C6000C99352 /* TestTrafficViewController.swift in Sources */,
