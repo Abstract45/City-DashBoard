@@ -70,9 +70,7 @@ import UIKit
         return currentWeekDays.count
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
+   
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         weatherTable.registerNib(UINib.init(nibName: "WeatherTableCell", bundle: nil), forCellReuseIdentifier:"weather")

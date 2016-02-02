@@ -53,7 +53,7 @@
                     <constraint firstItem="HN3-Ce-ugP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="kNc-5R-4r7"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="1" alpha="0.34013407939189189" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="imgDayIcon" destination="grg-38-GZJ" id="BYP-e0-HPh"/>
                 <outlet property="tempMinMax" destination="HN3-Ce-ugP" id="g7E-bB-8Ca"/>

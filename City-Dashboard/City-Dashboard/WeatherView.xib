@@ -773,8 +773,8 @@
                 </view>
                 <tableView clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G2W-cQ-vu5">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                    <color key="backgroundColor" red="0.98431372549019602" green="0.98431372549019602" blue="0.98431372549019602" alpha="0.3444626266891892" colorSpace="calibratedRGB"/>
-                    <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="Li0-Jf-tjp"/>
@@ -883,7 +883,7 @@
                     <include reference="ocB-sC-Ppe"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="338" y="867.5"/>
+            <point key="canvasLocation" x="382.5" y="991"/>
         </view>
     </objects>
     <resources>

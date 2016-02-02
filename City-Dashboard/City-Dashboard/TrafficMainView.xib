@@ -229,12 +229,12 @@
                         </mask>
                         <mask key="constraints">
                             <exclude reference="vWt-Q4-m2C"/>
-                            <exclude reference="YvX-CG-ECL"/>
-                            <exclude reference="cr3-hl-eeT"/>
                             <exclude reference="1lK-nW-j0i"/>
                             <exclude reference="VNz-rF-wPd"/>
                             <exclude reference="Vbs-Oe-wGG"/>
                             <exclude reference="dJz-Yw-hxB"/>
+                            <exclude reference="YvX-CG-ECL"/>
+                            <exclude reference="cr3-hl-eeT"/>
                         </mask>
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact">
@@ -245,18 +245,19 @@
                         </mask>
                         <mask key="constraints">
                             <include reference="vWt-Q4-m2C"/>
-                            <include reference="YvX-CG-ECL"/>
-                            <include reference="cr3-hl-eeT"/>
                             <include reference="1lK-nW-j0i"/>
                             <include reference="VNz-rF-wPd"/>
                             <include reference="Vbs-Oe-wGG"/>
                             <include reference="dJz-Yw-hxB"/>
+                            <include reference="YvX-CG-ECL"/>
+                            <include reference="cr3-hl-eeT"/>
                         </mask>
                     </variation>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="67p-JA-dRW">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="67p-JA-dRW">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="xTh-bs-1Kb"/>
@@ -294,16 +295,16 @@
                     <exclude reference="67p-JA-dRW"/>
                 </mask>
                 <mask key="constraints">
+                    <exclude reference="A24-GD-6XD"/>
+                    <exclude reference="EZH-Ib-ui4"/>
+                    <exclude reference="KZZ-Xo-dh1"/>
+                    <exclude reference="TTL-ca-1Pi"/>
                     <exclude reference="7B4-X0-oaj"/>
                     <exclude reference="S6O-ZK-0Fd"/>
                     <exclude reference="kHq-Lc-gUq"/>
                     <exclude reference="KQc-vP-z67"/>
                     <exclude reference="cMv-BC-ZF6"/>
                     <exclude reference="fDR-8f-YyG"/>
-                    <exclude reference="A24-GD-6XD"/>
-                    <exclude reference="EZH-Ib-ui4"/>
-                    <exclude reference="KZZ-Xo-dh1"/>
-                    <exclude reference="TTL-ca-1Pi"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
@@ -313,19 +314,19 @@
                     <include reference="67p-JA-dRW"/>
                 </mask>
                 <mask key="constraints">
+                    <include reference="A24-GD-6XD"/>
+                    <include reference="EZH-Ib-ui4"/>
+                    <include reference="KZZ-Xo-dh1"/>
+                    <include reference="TTL-ca-1Pi"/>
                     <include reference="7B4-X0-oaj"/>
                     <include reference="S6O-ZK-0Fd"/>
                     <include reference="kHq-Lc-gUq"/>
                     <include reference="KQc-vP-z67"/>
                     <include reference="cMv-BC-ZF6"/>
                     <include reference="fDR-8f-YyG"/>
-                    <include reference="A24-GD-6XD"/>
-                    <include reference="EZH-Ib-ui4"/>
-                    <include reference="KZZ-Xo-dh1"/>
-                    <include reference="TTL-ca-1Pi"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="663" y="232.5"/>
+            <point key="canvasLocation" x="695.5" y="283.5"/>
         </view>
     </objects>
     <resources>

@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="0.0" reuseIdentifier="news" rowHeight="91" id="Ckk-ie-Fa3" customClass="CityNewsCell" customModule="City_Dashboard" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="news" rowHeight="91" id="Ckk-ie-Fa3" customClass="CityNewsCell" customModule="City_Dashboard" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ckk-ie-Fa3" id="gmu-3x-DYZ">
@@ -41,7 +41,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
-                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <color key="backgroundColor" red="0.27450980390000002" green="0.4039215686" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="xek-se-k91" firstAttribute="leading" secondItem="1JW-Mf-2EX" secondAttribute="trailing" constant="8" id="9Sz-ld-rpo"/>
                     <constraint firstItem="1JW-Mf-2EX" firstAttribute="top" secondItem="gmu-3x-DYZ" secondAttribute="top" constant="8" id="Dfk-ei-jb0"/>
@@ -53,7 +53,6 @@
                     <constraint firstItem="D9b-Na-iHo" firstAttribute="leading" secondItem="1JW-Mf-2EX" secondAttribute="trailing" constant="8" id="k2Q-Ic-f7k"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="headlines" destination="xek-se-k91" id="cg5-eJ-KCJ"/>
                 <outlet property="imgCityNews" destination="1JW-Mf-2EX" id="t91-kw-sII"/>

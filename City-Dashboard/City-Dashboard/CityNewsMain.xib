@@ -141,11 +141,11 @@
                         </mask>
                     </variation>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vnp-nY-6ge">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vnp-nY-6ge">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <color key="separatorColor" red="0.90972346067428589" green="0.492714524269104" blue="0.41513669490814209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                    <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="W4P-tO-Wh0"/>
                         <outlet property="delegate" destination="-1" id="LY7-JD-dhW"/>
@@ -155,9 +155,9 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Vnp-nY-6ge" firstAttribute="leading" secondItem="1d1-hj-K3k" secondAttribute="leading" id="NVn-Ag-7eh"/>
-                <constraint firstAttribute="bottom" secondItem="Vnp-nY-6ge" secondAttribute="bottom" id="NjL-fv-zvh"/>
+                <constraint firstAttribute="bottom" secondItem="Vnp-nY-6ge" secondAttribute="bottom" constant="-36" id="NjL-fv-zvh"/>
                 <constraint firstItem="L6F-0s-jST" firstAttribute="top" secondItem="1d1-hj-K3k" secondAttribute="top" id="TMl-uY-m2h"/>
-                <constraint firstItem="Vnp-nY-6ge" firstAttribute="top" secondItem="L6F-0s-jST" secondAttribute="bottom" constant="-3" id="ZSF-21-tiC"/>
+                <constraint firstItem="Vnp-nY-6ge" firstAttribute="top" secondItem="L6F-0s-jST" secondAttribute="bottom" id="ZSF-21-tiC"/>
                 <constraint firstAttribute="trailing" secondItem="Vnp-nY-6ge" secondAttribute="trailing" id="jw1-M7-dDA"/>
                 <constraint firstAttribute="trailing" secondItem="L6F-0s-jST" secondAttribute="trailing" id="rj7-6b-Pb6"/>
                 <constraint firstItem="L6F-0s-jST" firstAttribute="leading" secondItem="1d1-hj-K3k" secondAttribute="leading" id="ryS-2C-xAr"/>
