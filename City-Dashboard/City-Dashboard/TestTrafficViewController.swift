@@ -22,7 +22,6 @@ class TestTrafficViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         locationManager.requestLocation()
-//        print(locationManager.location)
         
         let mTest = Markets()
         mTest.downloadMarkets { () -> () in
@@ -57,7 +56,7 @@ class TestTrafficViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
-        
+        print("Error: " + error.localizedDescription)
     }
     
     override func didReceiveMemoryWarning() {
