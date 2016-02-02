@@ -50,8 +50,8 @@
                     <constraint firstAttribute="topMargin" secondItem="QCX-ki-pAf" secondAttribute="top" id="6Ut-c8-chr"/>
                     <constraint firstItem="QCX-ki-pAf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="MQ1-7f-Fha"/>
                     <constraint firstItem="StL-4p-kFp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="5" id="kEQ-lA-I1X"/>
+                    <constraint firstItem="z1p-rG-uLv" firstAttribute="leading" secondItem="QCX-ki-pAf" secondAttribute="trailing" constant="43" id="ndQ-df-mAT"/>
                     <constraint firstItem="StL-4p-kFp" firstAttribute="leading" secondItem="z1p-rG-uLv" secondAttribute="trailing" constant="11" id="o9o-Bx-DmU"/>
-                    <constraint firstItem="z1p-rG-uLv" firstAttribute="leading" secondItem="QCX-ki-pAf" secondAttribute="trailing" constant="43" id="vnA-2o-F2w"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

@@ -12,6 +12,7 @@ import UIKit
     @IBOutlet weak var trafficTableView: UITableView!
     @IBOutlet weak var logoRightConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var mapBtnView: UIButton!
     @IBOutlet weak var lblCurrentIncidents: UILabel!
     private var view: UIView!
     
@@ -64,6 +65,9 @@ import UIKit
     }
     
    
+    @IBAction func btnMapFlip(sender: AnyObject) {
+   
+    }
     
     
     

@@ -23,6 +23,8 @@ class TrafficVC: UIViewController {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "changeTrafficXib:", name: "changeMiddleView", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "resetTrafficXib:", name: "resetViews", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "showMapBtn:", name: "midViewOpen", object: nil)
+       
            
     }
     
@@ -34,12 +36,17 @@ class TrafficVC: UIViewController {
         }
     }
     
-   
+    func showMapBtn(notification:NSNotification) {
+        UIView.animateWithDuration(1) { () -> Void in
+            self.trafficMainView.mapBtnView.alpha = 1
+        }
+    }
     
     func resetTrafficXib(notification:NSNotification) {
         UIView.animateWithDuration(1) { () -> Void in
             self.trafficMainView.logoRightConstraint.constant = 22
             self.trafficMainView.lblCurrentIncidents.alpha = 1
+            self.trafficMainView.mapBtnView.alpha = 0
             self.view.layoutIfNeeded()
         }
         

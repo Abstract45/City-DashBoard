@@ -83,6 +83,7 @@ class AnimationController: UIViewController {
             } else if secondView == tallHeight {
                 NSNotificationCenter.defaultCenter().postNotificationName("changeTopView", object: nil)
                 NSNotificationCenter.defaultCenter().postNotificationName("changeBottomView", object: nil)
+                NSNotificationCenter.defaultCenter().postNotificationName("midViewOpen", object: nil)
                 
             } else {
                 NSNotificationCenter.defaultCenter().postNotificationName("changeMiddleView", object: nil)
