@@ -27,6 +27,11 @@
 		E87089281C4C2A6C0051D868 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E87089261C4C2A6C0051D868 /* Main.storyboard */; };
 		E870892A1C4C2A6C0051D868 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E87089291C4C2A6C0051D868 /* Assets.xcassets */; };
 		E870892D1C4C2A6C0051D868 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E870892B1C4C2A6C0051D868 /* LaunchScreen.storyboard */; };
+		FA40DF351C5C0B1A008DF6D4 /* TestWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA40DF341C5C0B1A008DF6D4 /* TestWeatherViewController.swift */; };
+		FA5B699B1C5F548F007FCB10 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5B699A1C5F548F007FCB10 /* CoreLocation.framework */; };
+		FA7BB8711C60C5940004B699 /* Multimedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7BB86E1C60C5940004B699 /* Multimedia.swift */; };
+		FA7BB8721C60C5940004B699 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7BB86F1C60C5940004B699 /* News.swift */; };
+		FA7BB8731C60C5940004B699 /* NewsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7BB8701C60C5940004B699 /* NewsItem.swift */; };
 		FA7C8C0C1C589C6000C99352 /* TestTrafficViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7C8C0B1C589C6000C99352 /* TestTrafficViewController.swift */; };
 		FAAD99881C5625AA00C44322 /* Incident.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD99841C5625AA00C44322 /* Incident.swift */; };
 		FAAD99891C5625AA00C44322 /* Incidents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD99851C5625AA00C44322 /* Incidents.swift */; };
@@ -61,6 +66,11 @@
 		E87089291C4C2A6C0051D868 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E870892C1C4C2A6C0051D868 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E870892E1C4C2A6C0051D868 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA40DF341C5C0B1A008DF6D4 /* TestWeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestWeatherViewController.swift; sourceTree = "<group>"; };
+		FA5B699A1C5F548F007FCB10 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FA7BB86E1C60C5940004B699 /* Multimedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Multimedia.swift; path = "../../../../Practice Projects/More Practice/News API/News API/Multimedia.swift"; sourceTree = "<group>"; };
+		FA7BB86F1C60C5940004B699 /* News.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = News.swift; path = "../../../../Practice Projects/More Practice/News API/News API/News.swift"; sourceTree = "<group>"; };
+		FA7BB8701C60C5940004B699 /* NewsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsItem.swift; path = "../../../../Practice Projects/More Practice/News API/News API/NewsItem.swift"; sourceTree = "<group>"; };
 		FA7C8C0B1C589C6000C99352 /* TestTrafficViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTrafficViewController.swift; sourceTree = "<group>"; };
 		FAAD99841C5625AA00C44322 /* Incident.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Incident.swift; sourceTree = "<group>"; };
 		FAAD99851C5625AA00C44322 /* Incidents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Incidents.swift; sourceTree = "<group>"; };
@@ -77,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5B699B1C5F548F007FCB10 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +154,7 @@
 		E87089161C4C2A6C0051D868 = {
 			isa = PBXGroup;
 			children = (
+				FA5B699A1C5F548F007FCB10 /* CoreLocation.framework */,
 				E87089211C4C2A6C0051D868 /* City-Dashboard */,
 				E87089201C4C2A6C0051D868 /* Products */,
 			);
@@ -169,10 +181,21 @@
 			path = "City-Dashboard";
 			sourceTree = "<group>";
 		};
+		FA7BB86D1C60C5660004B699 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				FA7BB8701C60C5940004B699 /* NewsItem.swift */,
+				FA7BB86E1C60C5940004B699 /* Multimedia.swift */,
+				FA7BB86F1C60C5940004B699 /* News.swift */,
+			);
+			name = News;
+			sourceTree = "<group>";
+		};
 		FA7C8C0A1C589C3000C99352 /* APITestVCs */ = {
 			isa = PBXGroup;
 			children = (
 				FA7C8C0B1C589C6000C99352 /* TestTrafficViewController.swift */,
+				FA40DF341C5C0B1A008DF6D4 /* TestWeatherViewController.swift */,
 			);
 			name = APITestVCs;
 			sourceTree = "<group>";
@@ -191,8 +214,9 @@
 		FAC3FB281C538D4D00E2642A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FAAD99831C56257700C44322 /* Traffic */,
 				FAC3FB291C538D5400E2642A /* Weather */,
+				FAAD99831C56257700C44322 /* Traffic */,
+				FA7BB86D1C60C5660004B699 /* News */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -286,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAC3FB301C538E4200E2642A /* Weather.swift in Sources */,
+				FA7BB8731C60C5940004B699 /* NewsItem.swift in Sources */,
 				FAC3FB311C538E4200E2642A /* WeatherForecast.swift in Sources */,
 				E80BD9801C57E12B005D7EAF /* AnimationController.swift in Sources */,
 				E8234FAD1C5C2F93000C91A9 /* TrafficMainView.swift in Sources */,
@@ -303,6 +328,7 @@
 				E80BD98A1C587E53005D7EAF /* WeatherView.swift in Sources */,
 				FAAD998A1C5625AA00C44322 /* Market.swift in Sources */,
 				FA7C8C0C1C589C6000C99352 /* TestTrafficViewController.swift in Sources */,
+				FA7BB8721C60C5940004B699 /* News.swift in Sources */,
 				FAAD998B1C5625AA00C44322 /* Markets.swift in Sources */,
 				E8234FDD1C5FCA93000C91A9 /* TrafficVC.swift in Sources */,
 			);

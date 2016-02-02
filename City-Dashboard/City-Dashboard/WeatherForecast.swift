@@ -48,6 +48,7 @@ class WeatherForecast {
     
     init(city: String) {
         _city = city
+        _weatherNext.append(WeatherNext())
         urlStringT = URL_BASE + URL_WEATHER + URL_CITY + _city! + URL_API + KEY_API
         urlStringN = URL_BASE + URL_DAILY + URL_CITY + _city! + URL_API + KEY_API
     }
@@ -90,34 +91,34 @@ class WeatherForecast {
                         if let main = todaysDict["main"] as? Dictionary<String, AnyObject> {
                             
                             if let temp = main["temp"] as? Double {
-                                self._weatherToday?.temperature = temp
+                                self._weatherToday?.temperatureRaw = temp
                             }
                             
                             if let tempMin = main["temp_min"] as? Double {
-                                self._weatherToday?.temperatureMin = tempMin
+                                self._weatherToday?.temperatureMinRaw = tempMin
                             }
                             
                             if let tempMax = main["temp_max"] as? Double {
-                                self._weatherToday?.temperatureMax = tempMax
+                                self._weatherToday?.temperatureMaxRaw = tempMax
                             }
                             
                             if let press = main["pressure"] as? Double {
-                                self._weatherToday?.pressure = press
+                                self._weatherToday?.pressureRaw = press
                             }
                             
                             if let humid = main["humidity"] as? Double {
-                                self._weatherToday?.humidity = humid
+                                self._weatherToday?.humidityRaw = humid
                             }
                         }
                         
                         if let wind = todaysDict["wind"] as? Dictionary<String, AnyObject> {
                             
                             if let speed = wind["speed"] as? Double {
-                                self._weatherToday?.windSpeed = speed
+                                self._weatherToday?.windSpeedRaw = speed
                             }
                             
                             if let direction = wind["deg"] as? Double {
-                                self._weatherToday?.windDirection = direction
+                                self._weatherToday?.windDirectionRaw = direction
                             }
                         }
                         
@@ -142,11 +143,11 @@ class WeatherForecast {
                             }
                             
                             if let sunR = sys["sunrise"] as? Double {
-                                self._weatherToday?.sunrise = sunR
+                                self._weatherToday?.sunriseDouble = sunR
                             }
                             
                             if let sunS = sys["sunset"] as? Double {
-                                self._weatherToday?.sunset = sunS
+                                self._weatherToday?.sunsetDouble = sunS
                             }
                         }
                     }
@@ -164,8 +165,8 @@ class WeatherForecast {
     
     func downloadWeeklyForecast(completion: DownloadComplete) {
         
-        var wNext = WeatherNext()
-        
+        _weatherNext.removeAll()
+                
         var wCity = ""
         var wCountry = ""
         var wLatitude: Double = 0
@@ -219,48 +220,48 @@ class WeatherForecast {
                                     if let temp = item["temp"] as? Dictionary<String, AnyObject> {
                                         
                                         if let tempDay = temp["day"] as? Double {
-                                            wNext.temperature = tempDay
+                                            wNext.temperatureRaw = tempDay
                                         }
                                         
                                         if let tempMin = temp["min"] as? Double {
-                                            wNext.temperatureMin = tempMin
+                                            wNext.temperatureMinRaw = tempMin
                                         }
                                         
                                         if let tempMax = temp["max"] as? Double {
-                                            wNext.temperatureMax = tempMax
+                                            wNext.temperatureMaxRaw = tempMax
                                         }
                                         
                                         if let tempEve = temp["eve"] as? Double {
-                                            wNext.temperatureEvening = tempEve
+                                            wNext.temperatureEveningRaw = tempEve
                                         }
                                         
                                         if let tempNight = temp["night"] as? Double {
-                                            wNext.temperatureNight = tempNight
+                                            wNext.temperatureNightRaw = tempNight
                                         }
                                         
                                         if let tempMorn = temp["morn"] as? Double {
-                                            wNext.temperatureMorning = tempMorn
+                                            wNext.temperatureMorningRaw = tempMorn
                                         }
                                     }
                                     
                                     if let press = item["pressure"] as? Double {
-                                        wNext.pressure = press
+                                        wNext.pressureRaw = press
                                     }
                                     
                                     if let humid = item["humidity"] as? Double {
-                                        wNext.humidity = humid
+                                        wNext.humidityRaw = humid
                                     }
                                     
                                     if let windS = item["speed"] as? Double {
-                                        wNext.windSpeed = windS
+                                        wNext.windSpeedRaw = windS
                                     }
                                     
                                     if let windD = item["deg"] as? Double {
-                                        wNext.windDirection = windD
+                                        wNext.windDirectionRaw = windD
                                     }
                                     
                                     if let cloud = item["clouds"] as? Double {
-                                        wNext.cloudCoverage = cloud
+                                        wNext.cloudCoverageRaw = cloud
                                     }
                                     
                                     if let weather = item["weather"] as? Array<AnyObject> {
@@ -278,7 +279,6 @@ class WeatherForecast {
                                     }
                                     
                                     self._weatherNext.append(wNext)
-                                    
                                 }
                                 
                             }
@@ -286,7 +286,9 @@ class WeatherForecast {
                         }
                         
                     }
+                    
                 } catch {
+                    
                     print("Could not serialize JSON for weekly forecast link.")
                 }
                 
@@ -295,11 +297,7 @@ class WeatherForecast {
             })
             
         }).resume()
+        
     }
-    
-    
-    
-    
-    
     
 }
