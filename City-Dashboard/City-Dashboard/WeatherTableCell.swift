@@ -1,33 +1,38 @@
 //
-//  CityNewsAlt.swift
+//  WeatherTableCell.swift
 //  City-Dashboard
 //
-//  Created by Miwand Najafe on 2016-01-24.
+//  Created by Miwand Najafe on 2016-01-26.
 //  Copyright © 2016 Miwand Najafe. All rights reserved.
 //
 
 import UIKit
 
-class CityNewsAlt: UITableViewCell {
+class WeatherTableCell: UITableViewCell {
 
-    @IBOutlet weak var lblHeadline: UILabel!
-    @IBOutlet weak var timeAndCategory: UILabel!
+    @IBOutlet weak var weekday: UILabel!
     
-    var time: String!
-    var category: String!
-    var headline: String!
+    @IBOutlet weak var tempMinMax: UILabel!
+    @IBOutlet weak var imgDayIcon: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+      self.layer.cornerRadius = 10
+        self.clipsToBounds = true
+        
+        
     }
+    
+    
 
+   
     
     
+
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
-
+    
 }
