@@ -95,10 +95,12 @@ class WeatherForecast {
                             }
                             
                             if let tempMin = main["temp_min"] as? Double {
+                                
                                 self._weatherToday?.temperatureMinRaw = tempMin
                             }
                             
                             if let tempMax = main["temp_max"] as? Double {
+                               
                                 self._weatherToday?.temperatureMaxRaw = tempMax
                             }
                             
@@ -108,6 +110,12 @@ class WeatherForecast {
                             
                             if let humid = main["humidity"] as? Double {
                                 self._weatherToday?.humidityRaw = humid
+                            }
+                        }
+                        
+                        if let clouds = todaysDict["clouds"] as? Dictionary<String,AnyObject> {
+                            if let cloudPercent = clouds["all"] as? Double {
+                                self.weatherToday.cloudCoverageRaw = cloudPercent
                             }
                         }
                         

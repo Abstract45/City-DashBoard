@@ -294,8 +294,11 @@ class Weather {
     func kelvinToCelciusToString(temp: Double) -> String {
         let answer = temp - 273.15
         let roundedAnswer = Int(answer)
-        
-        return "\(roundedAnswer)° C"
+        if roundedAnswer < 0 {
+        return "\(roundedAnswer)°"
+        } else {
+            return " \(roundedAnswer)°"
+        }
     }
     
     func kelvinToFaranheitToString(temp: Double ) -> String {
@@ -306,7 +309,7 @@ class Weather {
     }
     
     func hectopascalsToKilopascalsToString(press: Double) -> String {
-        let answer = press / 10
+        let answer = Int(press / 10)
         
         return "\(answer) kPa"
     }

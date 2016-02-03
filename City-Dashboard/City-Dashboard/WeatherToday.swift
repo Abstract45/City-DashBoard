@@ -30,7 +30,7 @@ class WeatherToday: Weather {
     
     var sunrise: String {
         if _sunrise != nil {
-            return "\(_sunrise!)"
+            return timeReadable(_sunrise!)
         } else {
             print("Sunrise value is nil in Weather Today object.")
             return ""
@@ -53,7 +53,7 @@ class WeatherToday: Weather {
     
     var sunset: String {
         if _sunset != nil {
-            return "\(_sunset!)"
+            return timeReadable(_sunset!)
         } else {
             print("Sunset value nil in Weather Today object.")
             return ""
@@ -67,4 +67,13 @@ class WeatherToday: Weather {
     override init(lat: Double, lon: Double) {
         super.init(lat: lat, lon: lon)
     }
+    
+    func timeReadable(time:Double) -> String{
+        let date = NSDate(timeIntervalSince1970: time)
+        let dateString = String(date)
+        let timeString = String(dateString.characters.dropLast(9).dropFirst(11))
+        
+        return timeString
+    }
+    
 }
