@@ -26,6 +26,7 @@ class NewsVC: UIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "resetNewsXib:", name: "resetViews", object: nil)
         
     }
+   
     
     func changeNewsXib(notification:NSNotification) {
         UIView.animateWithDuration(1) { () -> Void in

@@ -123,8 +123,8 @@
 		E84480C71C5493A20035DCE6 /* News */ = {
 			isa = PBXGroup;
 			children = (
-				E84480D31C556C7D0035DCE6 /* CityNewsCell.xib */,
 				E84480D61C5570CE0035DCE6 /* CityNewsCell.swift */,
+				E84480D31C556C7D0035DCE6 /* CityNewsCell.xib */,
 				E8234FA11C5C2719000C91A9 /* CityNewsMain.swift */,
 				E8234FA31C5C272C000C91A9 /* CityNewsMain.xib */,
 			);
