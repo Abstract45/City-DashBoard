@@ -53,6 +53,4 @@ class TrafficVC: UIViewController {
     }
     
     
-    
-    
 }

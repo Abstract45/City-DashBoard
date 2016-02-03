@@ -314,15 +314,15 @@ class Incident {
     
     var descriptionLong: String {
         get {
-            if _descriptionShort != nil {
-                return _descriptionShort!
+            if _descriptionLong != nil {
+                return _descriptionLong!
             } else {
                 print("DescriptionShort: " + errorMessage)
                 return ""
             }
         }
         set(newValue) {
-            _descriptionShort = newValue
+            _descriptionLong = newValue
         }
     }
     

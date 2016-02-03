@@ -17,6 +17,9 @@ import UIKit
     @IBOutlet weak var lblDailyHeadlines: UILabel!
     
     @IBOutlet weak var newsTableView: UITableView!
+    
+    var newsArray = [NewsItem]()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -46,8 +49,13 @@ import UIKit
         return view
     }
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        populateNews()
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return  newsArray.count
     }
     
    
@@ -55,7 +63,15 @@ import UIKit
         
         newsTableView.registerNib(UINib.init(nibName: "CityNewsCell", bundle: nil), forCellReuseIdentifier:"news")
         let cell = newsTableView.dequeueReusableCellWithIdentifier("news") as! CityNewsCell
-       
+        cell.headlines.text = newsArray[indexPath.row].title
+        cell.timeCategory.text = newsArray[indexPath.row].datePublished ?? ""
+        
+        dispatch_async(dispatch_get_main_queue()) { () -> Void in    
+        cell.imgCityNews.imageFromUrl(self.newsArray[indexPath.row].multimedia[0].url ?? "")
+        }
+        
+        
+        
         return cell
     }
     
@@ -63,6 +79,18 @@ import UIKit
         return 91
     }
     
+    func populateNews() -> [NewsItem] {
+        let news = News()
+        
+        news.downloadNews { () -> () in
+            
+            self.newsArray = news.news
+            
+            
+            self.newsTableView.reloadData()
+        }
+        return newsArray
+    }
     
     
     

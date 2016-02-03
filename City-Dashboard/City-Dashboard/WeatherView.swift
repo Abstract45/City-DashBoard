@@ -27,12 +27,13 @@ import UIKit
     @IBOutlet weak var lblSunriseTime: UILabel!
     private var view: UIView!
     
+    var wToday = WeatherToday(city: "Toronto")
+    var wNext = [WeatherNext]()
+    
     private var currentWeekDays = [String]()
     private var weeklyMinMaxTemps = [String]()
     
-    func configWeatherView() {
-        
-    }
+   
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -45,9 +46,11 @@ import UIKit
     }
     
     override func awakeFromNib() {
-        self.cofigLayerView()
+        super.awakeFromNib()
         currentWeekDays = ["Monday","Tuesday","Wednesday","Thursday","Friday"]
         weeklyMinMaxTemps = ["-1*  2*"," 1*  4*", "-9* -1*", "-7* -5*", " 0*  3*"]
+        populateWeeklyForecastLabels()
+        populateWeatherLabels()
     }
     
     private func xibSetup() {
@@ -67,7 +70,7 @@ import UIKit
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return currentWeekDays.count
+        return self.wNext.count
     }
     
    
@@ -75,8 +78,8 @@ import UIKit
         
         weatherTable.registerNib(UINib.init(nibName: "WeatherTableCell", bundle: nil), forCellReuseIdentifier:"weather")
         let cell = weatherTable.dequeueReusableCellWithIdentifier("weather") as! WeatherTableCell
-        cell.weekday.text = currentWeekDays[indexPath.row]
-        cell.tempMinMax.text = weeklyMinMaxTemps[indexPath.row]
+        cell.weekday.text = ""
+        cell.tempMinMax.text = "\(wNext[indexPath.row].temperatureMin)\(wNext[indexPath.row].temperatureMax))"
         return cell
     }
     
@@ -88,8 +91,38 @@ import UIKit
         forecastView.clipsToBounds = true
     }
     
+    func populateWeatherLabels() -> WeatherToday {
+        
+        
+        
+        let weatherToday = WeatherForecast(city: "Toronto")
+        
+        weatherToday.downloadTodaysWeather { () -> () in
+            
+            self.wToday = weatherToday.weatherToday
+            
+        }
+        
+        return self.wToday
+    }
     
+    func populateWeeklyForecastLabels() -> [WeatherNext] {
+
+        let weatherNext = WeatherForecast(city: "Toronto")
+        
+        weatherNext.downloadWeeklyForecast { () -> () in
+            
+            self.wNext = weatherNext.weatherNext
+            
+            print(self.wNext)
+            self.weatherTable.reloadData()
+        }
+        
+        return self.wNext
+    }
     
-    
+    func configWeatherView() {
+        
+    }
     
 }

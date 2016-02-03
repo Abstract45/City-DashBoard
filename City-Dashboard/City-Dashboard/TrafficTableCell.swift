@@ -11,6 +11,9 @@ import UIKit
 class TrafficTableCell: UITableViewCell {
 
     @IBOutlet weak var severityView: UIView!
+    @IBOutlet weak var lblTrafficDescription: UILabel!
+    @IBOutlet weak var lblDelayTime: UILabel!
+    @IBOutlet weak var vwSeverity: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

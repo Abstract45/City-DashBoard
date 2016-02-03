@@ -15,6 +15,12 @@ import UIKit
     @IBOutlet weak var mapBtnView: UIButton!
     @IBOutlet weak var lblCurrentIncidents: UILabel!
     private var view: UIView!
+    var incidentsArray = [Incident()]
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        populateTrafficCells()
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -47,13 +53,17 @@ import UIKit
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return incidentsArray.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
            trafficTableView.registerNib(UINib.init(nibName: "TrafficTableCell", bundle: nil), forCellReuseIdentifier: "traffic")
         
         let cell = trafficTableView.dequeueReusableCellWithIdentifier("traffic") as! TrafficTableCell
+        
+
+        cell.lblTrafficDescription.text = incidentsArray[indexPath.row].descriptionLong ?? ""
+        cell.lblDelayTime.text = String(incidentsArray[indexPath.row].delayFromFreeFlow) ?? ""
         
         return cell
         
@@ -70,6 +80,32 @@ import UIKit
     }
     
     
-    
+    func populateTrafficCells() -> [Incident] {
+        
+       
+        
+        let market = Markets()
+        
+        market.downloadMarkets { () -> () in
+            
+            let upperLat = market.markets[market.marketIndex["Toronto"]!].boxUpperLeftLatitude
+            let upperLon = market.markets[market.marketIndex["Toronto"]!].boxUpperLeftLongitude
+            let lowerLat = market.markets[market.marketIndex["Toronto"]!].boxLowerRightLatitude
+            let lowerLon = market.markets[market.marketIndex["Toronto"]!].boxLowerRightLongitude
+            
+            let incidents = Incidents(ulLat: upperLat, ulLon: upperLon, lrLat: lowerLat, lrLon: lowerLon)
+            
+            incidents.downloadTrafficEvents({ () -> () in
+                
+                self.incidentsArray = incidents.incidents
+                self.trafficTableView.reloadData()
+            })
+            
+        }
+        
+        
+        return incidentsArray
+        
+    }
 
 }
