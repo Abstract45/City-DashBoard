@@ -188,6 +188,7 @@ class Incidents {
                     
                 } catch {
                     print("Could not serialize JSON for traffic incidents link.")
+                    print("Thos Branch")
                 }
                 
                 completion()
