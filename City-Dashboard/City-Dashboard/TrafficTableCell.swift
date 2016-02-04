@@ -10,6 +10,7 @@ import UIKit
 
 class TrafficTableCell: UITableViewCell {
 
+    @IBOutlet weak var vwTrafficCard: UIView!
     @IBOutlet weak var imgIncidentType: UIImageView!
     @IBOutlet weak var lblTrafficDescription: UILabel!
     @IBOutlet weak var lblDelayTime: UILabel!
@@ -18,6 +19,9 @@ class TrafficTableCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         circleView()
+        configTrafficCard()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "changeTrafficCard:", name: "midViewOpen", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "hideCardShadow:", name: "resetViews", object: nil)
     }
 
    private func circleView() {
@@ -29,7 +33,26 @@ class TrafficTableCell: UITableViewCell {
         
     }
     
+    func configTrafficCard() {
+        
+        vwTrafficCard.layer.cornerRadius = 5
+        vwTrafficCard.clipsToBounds = true
+        let shadowPath = UIBezierPath(rect: self.vwTrafficCard.bounds)
+        vwTrafficCard.layer.masksToBounds = false
+        vwTrafficCard.layer.shadowColor = UIColor.blackColor().CGColor
+        vwTrafficCard.layer.shadowOffset = CGSize(width: 0.0, height: 5)
+        vwTrafficCard.layer.shadowOpacity = 0
+        vwTrafficCard.layer.shadowPath = shadowPath.CGPath  
+    }
     
+    
+    func changeTrafficCard(notification:NSNotification) {
+        vwTrafficCard.layer.shadowOpacity = 0.5
+    }
+    func hideCardShadow(notification:NSNotification) {
+        vwTrafficCard.layer.shadowOpacity = 0
+        
+    }
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
