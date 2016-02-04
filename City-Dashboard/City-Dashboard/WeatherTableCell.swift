@@ -18,8 +18,7 @@ class WeatherTableCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-      self.layer.cornerRadius = 10
-        self.clipsToBounds = true
+  
         
         
     }

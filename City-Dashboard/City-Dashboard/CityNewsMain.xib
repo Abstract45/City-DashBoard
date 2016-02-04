@@ -99,7 +99,7 @@
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="xwt-MT-SMJ" secondAttribute="trailing" constant="22" id="0ne-SH-h5B"/>
                         <constraint firstItem="Io6-zX-NbL" firstAttribute="top" secondItem="L6F-0s-jST" secondAttribute="top" constant="13" id="8vy-bk-Ehg">
-                            <variation key="heightClass=regular-widthClass=compact" constant="12"/>
+                            <variation key="heightClass=regular-widthClass=compact" constant="13"/>
                         </constraint>
                         <constraint firstItem="xwt-MT-SMJ" firstAttribute="top" secondItem="L6F-0s-jST" secondAttribute="top" constant="8" id="CvS-iq-nBj"/>
                         <constraint firstAttribute="height" constant="38" id="DRE-Sf-Zkg"/>
@@ -160,7 +160,7 @@
                 <constraint firstItem="Vnp-nY-6ge" firstAttribute="leading" secondItem="1d1-hj-K3k" secondAttribute="leading" id="NVn-Ag-7eh"/>
                 <constraint firstItem="L6F-0s-jST" firstAttribute="top" secondItem="1d1-hj-K3k" secondAttribute="top" id="TMl-uY-m2h"/>
                 <constraint firstItem="Vnp-nY-6ge" firstAttribute="top" secondItem="L6F-0s-jST" secondAttribute="bottom" id="ZSF-21-tiC">
-                    <variation key="heightClass=regular-widthClass=compact" constant="10"/>
+                    <variation key="heightClass=regular-widthClass=compact" constant="2"/>
                 </constraint>
                 <constraint firstAttribute="bottom" secondItem="Vnp-nY-6ge" secondAttribute="bottom" id="bCw-f6-m8d"/>
                 <constraint firstAttribute="trailing" secondItem="Vnp-nY-6ge" secondAttribute="trailing" id="jw1-M7-dDA"/>
