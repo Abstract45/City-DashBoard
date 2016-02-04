@@ -73,6 +73,7 @@
                 <outlet property="tempMin" destination="HN3-Ce-ugP" id="vfx-5J-TTs"/>
                 <outlet property="weekday" destination="ujl-5E-jFQ" id="LBX-I6-tRC"/>
             </connections>
+            <point key="canvasLocation" x="195" y="230"/>
         </tableViewCell>
     </objects>
 </document>

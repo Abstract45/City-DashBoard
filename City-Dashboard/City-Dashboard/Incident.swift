@@ -328,7 +328,7 @@ class Incident {
     
     // delay relative to normal and optimal traffic levels
     private var _delayFromTypical: Double?
-    private var _delayFromFreeFlow: Double?
+    private var _delayFromFreeFlow: Int?
     
     var delayFromTypical: Double {
         get {
@@ -343,7 +343,7 @@ class Incident {
             _delayFromTypical = newValue
         }
     }
-    var delayFromFreeFlow: Double {
+    var delayFromFreeFlow: Int {
         get {
             if _delayFromFreeFlow != nil {
                 return _delayFromFreeFlow!

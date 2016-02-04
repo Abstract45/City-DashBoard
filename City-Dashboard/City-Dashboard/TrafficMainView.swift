@@ -65,8 +65,8 @@ import UIKit
         let cell = trafficTableView.dequeueReusableCellWithIdentifier("traffic") as! TrafficTableCell
         
 
-        cell.lblTrafficDescription.text = incidentsArray[indexPath.row].descriptionShort ?? ""
-        cell.lblDelayTime.text = String(incidentsArray[indexPath.row].delayFromFreeFlow) ?? ""
+        cell.lblTrafficDescription.text = incidentsArray[indexPath.row].descriptionShort
+        cell.lblDelayTime.text = "\(incidentsArray[indexPath.row].delayFromFreeFlow) mins"
         
         return cell
         

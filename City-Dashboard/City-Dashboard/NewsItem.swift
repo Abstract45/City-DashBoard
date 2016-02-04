@@ -119,6 +119,7 @@ class NewsItem {
     var dateCreated: String {
         get {
             if _dateCreated != nil {
+                
                 return _dateCreated!
             } else {
                 return ""

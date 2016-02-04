@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -15,51 +14,59 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="86.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1JW-Mf-2EX">
-                        <rect key="frame" x="8" y="8" width="75" height="75"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gnB-EG-Hry">
+                        <rect key="frame" x="8" y="0.0" width="304" height="78.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k5p-14-IUw">
+                                <rect key="frame" x="5" y="5" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="C1W-Rm-Esg"/>
+                                    <constraint firstAttribute="width" constant="70" id="Lxu-I9-NyK"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Human Right campaign Endorse Hilary Clinton for President" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cZp-vI-LIp">
+                                <rect key="frame" x="83" y="5" width="213" height="33"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
+                                <color key="textColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30mins | Politic" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cWJ-9B-1hL">
+                                <rect key="frame" x="83" y="61" width="115" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="gR3-yQ-PEh"/>
+                                    <constraint firstAttribute="width" constant="115" id="yd3-6X-2YI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="10"/>
+                                <color key="textColor" red="0.3411764705882353" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="75" id="bIu-fK-l6d"/>
-                            <constraint firstAttribute="width" constant="75" id="cvV-eC-RUy"/>
+                            <constraint firstItem="k5p-14-IUw" firstAttribute="top" secondItem="gnB-EG-Hry" secondAttribute="top" constant="5" id="4B6-dY-oiL"/>
+                            <constraint firstAttribute="trailing" secondItem="cZp-vI-LIp" secondAttribute="trailing" constant="8" id="H05-zE-6YD"/>
+                            <constraint firstItem="cZp-vI-LIp" firstAttribute="leading" secondItem="k5p-14-IUw" secondAttribute="trailing" constant="8" id="LiH-XE-gyH"/>
+                            <constraint firstItem="cZp-vI-LIp" firstAttribute="top" secondItem="gnB-EG-Hry" secondAttribute="top" constant="5" id="P7E-ar-TN3"/>
+                            <constraint firstItem="cWJ-9B-1hL" firstAttribute="top" secondItem="cZp-vI-LIp" secondAttribute="bottom" constant="23" id="Zve-7u-aui"/>
+                            <constraint firstItem="k5p-14-IUw" firstAttribute="leading" secondItem="gnB-EG-Hry" secondAttribute="leading" constant="5" id="sFo-c9-YDQ"/>
+                            <constraint firstItem="cWJ-9B-1hL" firstAttribute="leading" secondItem="k5p-14-IUw" secondAttribute="trailing" constant="8" id="xiO-he-YLF"/>
                         </constraints>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30mins | Politic" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9b-Na-iHo">
-                        <rect key="frame" x="91" y="69" width="143" height="14"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="14" id="9zW-zf-G6m"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="10"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Human Right campaign Endorse Hilary Clinton for President" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xek-se-k91">
-                        <rect key="frame" x="91" y="6" width="221" height="33"/>
-                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    </view>
                 </subviews>
-                <color key="backgroundColor" red="0.27450980390000002" green="0.4039215686" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstItem="D9b-Na-iHo" firstAttribute="top" secondItem="xek-se-k91" secondAttribute="bottom" constant="30" id="8x0-pl-ZwD"/>
-                    <constraint firstItem="xek-se-k91" firstAttribute="leading" secondItem="1JW-Mf-2EX" secondAttribute="trailing" constant="8" id="9Sz-ld-rpo"/>
-                    <constraint firstItem="1JW-Mf-2EX" firstAttribute="top" secondItem="gmu-3x-DYZ" secondAttribute="top" constant="8" id="Dfk-ei-jb0"/>
-                    <constraint firstItem="xek-se-k91" firstAttribute="top" secondItem="gmu-3x-DYZ" secondAttribute="top" constant="6" id="HF8-hZ-alk"/>
-                    <constraint firstItem="1JW-Mf-2EX" firstAttribute="leading" secondItem="gmu-3x-DYZ" secondAttribute="leading" constant="8" id="MNI-cn-DxM"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="D9b-Na-iHo" secondAttribute="trailing" constant="78" id="XJi-07-7Rh"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="xek-se-k91" secondAttribute="trailing" id="jh4-D2-MXS"/>
-                    <constraint firstItem="D9b-Na-iHo" firstAttribute="leading" secondItem="1JW-Mf-2EX" secondAttribute="trailing" constant="8" id="k2Q-Ic-f7k"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="D9b-Na-iHo" secondAttribute="bottom" constant="6.5" id="yoI-hb-4Lq"/>
+                    <constraint firstItem="gnB-EG-Hry" firstAttribute="leading" secondItem="gmu-3x-DYZ" secondAttribute="leading" constant="8" id="Clp-iq-WZZ"/>
+                    <constraint firstItem="gnB-EG-Hry" firstAttribute="top" secondItem="gmu-3x-DYZ" secondAttribute="top" id="Euy-8h-qAW"/>
+                    <constraint firstAttribute="trailing" secondItem="gnB-EG-Hry" secondAttribute="trailing" constant="8" id="bro-b7-BYE"/>
+                    <constraint firstAttribute="bottom" secondItem="gnB-EG-Hry" secondAttribute="bottom" constant="8" id="fIg-xH-bfL"/>
                 </constraints>
-                <variation key="default">
-                    <mask key="constraints">
-                        <exclude reference="yoI-hb-4Lq"/>
-                    </mask>
-                </variation>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
-                <outlet property="headlines" destination="xek-se-k91" id="cg5-eJ-KCJ"/>
-                <outlet property="imgCityNews" destination="1JW-Mf-2EX" id="t91-kw-sII"/>
-                <outlet property="timeCategory" destination="D9b-Na-iHo" id="ufU-MJ-qLV"/>
+                <outlet property="headlines" destination="cZp-vI-LIp" id="wpO-ud-C8v"/>
+                <outlet property="imgCityNews" destination="k5p-14-IUw" id="ghA-jh-rte"/>
+                <outlet property="timeCategory" destination="cWJ-9B-1hL" id="Rrb-eC-luD"/>
+                <outlet property="vwNewsCard" destination="gnB-EG-Hry" id="71c-Xw-9Ld"/>
             </connections>
             <point key="canvasLocation" x="73" y="142.5"/>
         </tableViewCell>

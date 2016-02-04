@@ -55,7 +55,7 @@ class WeatherVC: UIViewController, UIGestureRecognizerDelegate {
         self.weatherMainView.weatherTable.alpha = 0
         self.weatherMainView.lblWeatherCategory.alpha = 1
         self.weatherMainView.imgWeatherLogo.alpha = 1
-        self.view.backgroundColor = UIColor(red: 31/255, green: 61/255, blue: 82/255, alpha: 1)
+        self.view.backgroundColor = UIColor(red: 58/255, green: 55/255, blue: 51/255, alpha: 1)
         self.view.layoutIfNeeded()
         }
     }

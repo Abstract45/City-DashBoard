@@ -131,7 +131,7 @@ class Incidents {
                                         }
                                     }
                                     
-                                    if let delFromFF = inc["delayFromFreeFlow"] as? Double {
+                                    if let delFromFF = inc["delayFromFreeFlow"] as? Int {
                                         tempIncident.delayFromFreeFlow = delFromFF
                                     }
                                     
