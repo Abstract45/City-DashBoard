@@ -10,7 +10,7 @@ import UIKit
 
 class TrafficTableCell: UITableViewCell {
 
-    @IBOutlet weak var severityView: UIView!
+    @IBOutlet weak var imgIncidentType: UIImageView!
     @IBOutlet weak var lblTrafficDescription: UILabel!
     @IBOutlet weak var lblDelayTime: UILabel!
     @IBOutlet weak var vwSeverity: UIView!
@@ -21,8 +21,8 @@ class TrafficTableCell: UITableViewCell {
     }
 
    private func circleView() {
-        severityView.layer.cornerRadius = severityView.bounds.height/2
-        severityView.clipsToBounds = true
+        vwSeverity.layer.cornerRadius = vwSeverity.bounds.height/2
+        vwSeverity.clipsToBounds = true
     }
     
   private func colorBySeverity() {

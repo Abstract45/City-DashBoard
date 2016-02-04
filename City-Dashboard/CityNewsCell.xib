@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15E33e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -15,7 +15,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="86.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgToronto" translatesAutoresizingMaskIntoConstraints="NO" id="1JW-Mf-2EX">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1JW-Mf-2EX">
                         <rect key="frame" x="8" y="8" width="75" height="75"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="75" id="bIu-fK-l6d"/>
@@ -32,7 +32,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Human Right campaign Endorse Hilary Clinton for President" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xek-se-k91">
-                        <rect key="frame" x="91" y="8" width="221" height="33"/>
+                        <rect key="frame" x="91" y="6" width="221" height="33"/>
                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -40,10 +40,10 @@
                 </subviews>
                 <color key="backgroundColor" red="0.27450980390000002" green="0.4039215686" blue="0.48627450979999998" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
-                    <constraint firstItem="D9b-Na-iHo" firstAttribute="top" secondItem="xek-se-k91" secondAttribute="bottom" constant="28" id="8x0-pl-ZwD"/>
+                    <constraint firstItem="D9b-Na-iHo" firstAttribute="top" secondItem="xek-se-k91" secondAttribute="bottom" constant="30" id="8x0-pl-ZwD"/>
                     <constraint firstItem="xek-se-k91" firstAttribute="leading" secondItem="1JW-Mf-2EX" secondAttribute="trailing" constant="8" id="9Sz-ld-rpo"/>
                     <constraint firstItem="1JW-Mf-2EX" firstAttribute="top" secondItem="gmu-3x-DYZ" secondAttribute="top" constant="8" id="Dfk-ei-jb0"/>
-                    <constraint firstItem="xek-se-k91" firstAttribute="top" secondItem="gmu-3x-DYZ" secondAttribute="top" constant="8" id="HF8-hZ-alk"/>
+                    <constraint firstItem="xek-se-k91" firstAttribute="top" secondItem="gmu-3x-DYZ" secondAttribute="top" constant="6" id="HF8-hZ-alk"/>
                     <constraint firstItem="1JW-Mf-2EX" firstAttribute="leading" secondItem="gmu-3x-DYZ" secondAttribute="leading" constant="8" id="MNI-cn-DxM"/>
                     <constraint firstAttribute="trailingMargin" secondItem="D9b-Na-iHo" secondAttribute="trailing" constant="78" id="XJi-07-7Rh"/>
                     <constraint firstAttribute="trailingMargin" secondItem="xek-se-k91" secondAttribute="trailing" id="jh4-D2-MXS"/>
@@ -64,7 +64,4 @@
             <point key="canvasLocation" x="73" y="142.5"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="imgToronto" width="627" height="1082"/>
-    </resources>
 </document>

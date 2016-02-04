@@ -12,6 +12,9 @@ import UIKit
     @IBOutlet weak var trafficTableView: UITableView!
     @IBOutlet weak var logoRightConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var lblTitleDelay: UILabel!
+    @IBOutlet weak var lblTraffic: UILabel!
+    @IBOutlet weak var imgLogo: UIImageView!
     @IBOutlet weak var mapBtnView: UIButton!
     @IBOutlet weak var lblCurrentIncidents: UILabel!
     private var view: UIView!
@@ -62,7 +65,7 @@ import UIKit
         let cell = trafficTableView.dequeueReusableCellWithIdentifier("traffic") as! TrafficTableCell
         
 
-        cell.lblTrafficDescription.text = incidentsArray[indexPath.row].descriptionLong ?? ""
+        cell.lblTrafficDescription.text = incidentsArray[indexPath.row].descriptionShort ?? ""
         cell.lblDelayTime.text = String(incidentsArray[indexPath.row].delayFromFreeFlow) ?? ""
         
         return cell

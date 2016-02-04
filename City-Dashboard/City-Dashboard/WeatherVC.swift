@@ -26,7 +26,7 @@ class WeatherVC: UIViewController, UIGestureRecognizerDelegate {
     
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "changeWeatherXib:", name: "changeTopView", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "resetWeatherXib:", name: "resetViews", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "hideShowWeather:", name: "topViewOpen", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "topOpen:", name: "topViewOpen", object: nil)
     }
     
     func changeWeatherXib(notification:NSNotification) {
@@ -38,10 +38,12 @@ class WeatherVC: UIViewController, UIGestureRecognizerDelegate {
     }
     
     
-    func hideShowWeather(notification:NSNotification) {
+    func topOpen(notification:NSNotification) {
         UIView.animateWithDuration(1) { () -> Void in
             self.weatherMainView.forecastView.alpha = 1
             self.weatherMainView.weatherTable.alpha = 1
+            self.weatherMainView.lblWeatherCategory.alpha = 0
+            self.weatherMainView.imgWeatherLogo.alpha = 0
             self.view.backgroundColor = UIColor.clearColor()
         }
     }
@@ -51,6 +53,8 @@ class WeatherVC: UIViewController, UIGestureRecognizerDelegate {
         self.weatherMainView.logoRightConstraint.constant = 22
         self.weatherMainView.forecastView.alpha = 0
         self.weatherMainView.weatherTable.alpha = 0
+        self.weatherMainView.lblWeatherCategory.alpha = 1
+        self.weatherMainView.imgWeatherLogo.alpha = 1
         self.view.backgroundColor = UIColor(red: 31/255, green: 61/255, blue: 82/255, alpha: 1)
         self.view.layoutIfNeeded()
         }

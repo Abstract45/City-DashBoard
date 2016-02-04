@@ -18,6 +18,8 @@ import UIKit
     
     @IBOutlet weak var newsTableView: UITableView!
     
+    @IBOutlet weak var lblNewsCategory: UILabel!
+    @IBOutlet weak var imgNewsLogo: UIImageView!
     var newsArray = [NewsItem]()
     
     override init(frame: CGRect) {
@@ -64,7 +66,10 @@ import UIKit
         newsTableView.registerNib(UINib.init(nibName: "CityNewsCell", bundle: nil), forCellReuseIdentifier:"news")
         let cell = newsTableView.dequeueReusableCellWithIdentifier("news") as! CityNewsCell
         cell.headlines.text = newsArray[indexPath.row].title
-        cell.timeCategory.text = newsArray[indexPath.row].datePublished ?? ""
+        cell.timeCategory.text = newsArray[indexPath.row].datePublished
+        
+        print(newsArray[0].dateCreated)
+        
         
         dispatch_async(dispatch_get_main_queue()) { () -> Void in    
         cell.imgCityNews.imageFromUrl(self.newsArray[indexPath.row].multimedia[0].url ?? "")

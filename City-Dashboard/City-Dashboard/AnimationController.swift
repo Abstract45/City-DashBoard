@@ -88,6 +88,7 @@ class AnimationController: UIViewController {
             } else {
                 NSNotificationCenter.defaultCenter().postNotificationName("changeMiddleView", object: nil)
                 NSNotificationCenter.defaultCenter().postNotificationName("changeTopView", object: nil)
+                NSNotificationCenter.defaultCenter().postNotificationName("botViewOpen", object: nil)
             }
         } else {
             NSNotificationCenter.defaultCenter().postNotificationName("resetViews", object: nil)

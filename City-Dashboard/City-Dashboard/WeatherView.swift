@@ -10,6 +10,8 @@ import UIKit
 
 class WeatherView: UIView, UITableViewDataSource, UITableViewDelegate{
     
+    @IBOutlet weak var imgWeatherLogo: UIImageView!
+    @IBOutlet weak var lblWeatherCategory: UILabel!
     @IBOutlet weak var logoRightConstraint: NSLayoutConstraint!
     @IBOutlet weak var lblHumidityPercent: UILabel!
     @IBOutlet weak var lblWindSpeed: UILabel!

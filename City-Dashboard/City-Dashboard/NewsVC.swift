@@ -24,6 +24,7 @@ class NewsVC: UIViewController {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "changeNewsXib:", name: "changeBottomView", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "resetNewsXib:", name: "resetViews", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "botOpen:", name: "botViewOpen", object: nil)
         
     }
     
@@ -36,9 +37,18 @@ class NewsVC: UIViewController {
         
     }
     
+    func botOpen(notification:NSNotification) {
+        UIView.animateWithDuration(1) { () -> Void in
+            self.newsMainView.lblNewsCategory.alpha = 0
+            self.newsMainView.imgNewsLogo.alpha = 0
+        }
+    }
+    
     func resetNewsXib(notification:NSNotification) {
         UIView.animateWithDuration(1) { () -> Void in
              self.newsMainView.logoRightConstraint.constant = 22
+            self.newsMainView.lblNewsCategory.alpha = 1
+            self.newsMainView.imgNewsLogo.alpha = 1
             self.newsMainView.lblDailyHeadlines.alpha = 1
             self.view.layoutIfNeeded()
         }
