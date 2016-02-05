@@ -22,7 +22,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="W80-w8-uPz"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="12"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SJ0-Xt-eBo">
@@ -46,7 +46,7 @@
                                     <constraint firstAttribute="height" constant="21" id="l6s-HJ-ogc"/>
                                     <constraint firstAttribute="width" constant="42" id="txb-H2-Whv"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="10"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="10"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>

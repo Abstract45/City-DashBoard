@@ -23,7 +23,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L6F-0s-jST">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avI-CM-0B2">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="avI-CM-0B2">
                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="9ni-Yi-WBW"/>
@@ -31,8 +31,8 @@
                                     <variation key="heightClass=regular-widthClass=compact" constant="52"/>
                                 </constraint>
                             </constraints>
-                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="18"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="default">
                                 <mask key="constraints">
@@ -70,16 +70,16 @@
                                 </mask>
                             </variation>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Headlines" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Io6-zX-NbL">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DAILY HEADLINES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Io6-zX-NbL">
                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="2Mt-jd-pbA"/>
                                 <constraint firstAttribute="width" constant="153" id="fCY-7c-9Az">
-                                    <variation key="heightClass=regular-widthClass=compact" constant="117"/>
+                                    <variation key="heightClass=regular-widthClass=compact" constant="140"/>
                                 </constraint>
                             </constraints>
-                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="default">
                                 <mask key="constraints">
@@ -102,7 +102,7 @@
                             <variation key="heightClass=regular-widthClass=compact" constant="13"/>
                         </constraint>
                         <constraint firstItem="xwt-MT-SMJ" firstAttribute="top" secondItem="L6F-0s-jST" secondAttribute="top" constant="8" id="CvS-iq-nBj"/>
-                        <constraint firstAttribute="height" constant="38" id="DRE-Sf-Zkg"/>
+                        <constraint firstAttribute="height" constant="43" id="DRE-Sf-Zkg"/>
                         <constraint firstItem="Io6-zX-NbL" firstAttribute="leading" secondItem="L6F-0s-jST" secondAttribute="leading" constant="20" id="HHa-Fl-jIF">
                             <variation key="heightClass=regular-widthClass=compact" constant="8"/>
                         </constraint>

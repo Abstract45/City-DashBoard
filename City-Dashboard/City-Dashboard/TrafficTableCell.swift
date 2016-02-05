@@ -19,6 +19,7 @@ class TrafficTableCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         circleView()
+        colorBySeverity()
         configTrafficCard()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "changeTrafficCard:", name: "midViewOpen", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "hideCardShadow:", name: "resetViews", object: nil)
@@ -30,7 +31,7 @@ class TrafficTableCell: UITableViewCell {
     }
     
   private func colorBySeverity() {
-        
+       vwSeverity.backgroundColor = UIColor.redColor()
     }
     
     func configTrafficCard() {

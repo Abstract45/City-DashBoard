@@ -268,7 +268,7 @@ class Weather {
     var descriptionLong: String {
         get {
             if _descriptionLong != nil {
-                return _descriptionLong!.capitalizedString
+                return _descriptionLong!.uppercaseString
             } else {
                 return ""
             }

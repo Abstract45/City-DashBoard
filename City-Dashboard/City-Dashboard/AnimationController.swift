@@ -99,7 +99,7 @@ class AnimationController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        smallHeight = 38
+        smallHeight = 43
         tallHeight = self.view.bounds.height - smallHeight
         
         //Turn off constraint errors

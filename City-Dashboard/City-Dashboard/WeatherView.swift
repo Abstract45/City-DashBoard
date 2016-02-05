@@ -129,7 +129,7 @@ class WeatherView: UIView, UITableViewDataSource, UITableViewDelegate{
     func configWeatherView() {
         lblCity.text = wToday.city
         lblCloudPercent.text = wToday.cloudCoverage
-        lblCurrentTemp.text = wToday.temperature + "C"
+        lblCurrentTemp.text = wToday.temperature + "c"
         
         lblCurrentTempMin.text = wToday.temperatureMin
         lblCurrentTempMax.text = wToday.temperatureMax
@@ -138,6 +138,7 @@ class WeatherView: UIView, UITableViewDataSource, UITableViewDelegate{
         lblSunriseTime.text = wToday.sunrise
         lblSunsetTime.text = wToday.sunset
         lblWeatherDescription.text = wToday.descriptionLong
+        
         lblCloudPercent.text = wToday.cloudCoverage
         lblPressure.text = wToday.pressure
  

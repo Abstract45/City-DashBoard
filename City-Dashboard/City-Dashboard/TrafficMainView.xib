@@ -24,30 +24,6 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vaj-nR-h8s">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Traffic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnH-e6-XJe">
-                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="124" id="SBl-5h-ZLo">
-                                    <variation key="heightClass=regular-widthClass=compact" constant="52"/>
-                                </constraint>
-                                <constraint firstAttribute="height" constant="30" id="b3d-dS-KaF"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <nil key="highlightedColor"/>
-                            <variation key="default">
-                                <mask key="constraints">
-                                    <exclude reference="SBl-5h-ZLo"/>
-                                    <exclude reference="b3d-dS-KaF"/>
-                                </mask>
-                            </variation>
-                            <variation key="heightClass=regular-widthClass=compact">
-                                <mask key="constraints">
-                                    <include reference="SBl-5h-ZLo"/>
-                                    <include reference="b3d-dS-KaF"/>
-                                </mask>
-                            </variation>
-                        </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgToronto" translatesAutoresizingMaskIntoConstraints="NO" id="tBu-Oq-D0x">
                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             <constraints>
@@ -95,16 +71,16 @@
                                 <action selector="btnMapFlip:" destination="-1" eventType="touchUpInside" id="O9x-Uc-Jau"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Incidents" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKM-3J-RkV">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CURRENT INCIDENTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKM-3J-RkV">
                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="153" id="MG8-us-B65">
-                                    <variation key="heightClass=regular-widthClass=compact" constant="116"/>
+                                    <variation key="heightClass=regular-widthClass=compact" constant="157"/>
                                 </constraint>
                                 <constraint firstAttribute="height" constant="21" id="wkG-Ab-yjg"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="15"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="default">
                                 <mask key="constraints">
@@ -145,6 +121,31 @@
                                 </mask>
                             </variation>
                         </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Traffic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnH-e6-XJe">
+                            <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="124" id="SBl-5h-ZLo">
+                                    <variation key="heightClass=regular-widthClass=compact" constant="52"/>
+                                </constraint>
+                                <constraint firstAttribute="height" constant="30" id="b3d-dS-KaF"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="18"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="SBl-5h-ZLo"/>
+                                    <exclude reference="b3d-dS-KaF"/>
+                                </mask>
+                            </variation>
+                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                <rect key="frame" x="191" y="8" width="52" height="30"/>
+                                <mask key="constraints">
+                                    <include reference="SBl-5h-ZLo"/>
+                                    <include reference="b3d-dS-KaF"/>
+                                </mask>
+                            </variation>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
@@ -166,7 +167,7 @@
                         <constraint firstItem="tBu-Oq-D0x" firstAttribute="top" secondItem="Vaj-nR-h8s" secondAttribute="top" constant="8" id="DSB-f1-pHi"/>
                         <constraint firstAttribute="trailing" secondItem="tBu-Oq-D0x" secondAttribute="trailing" constant="22" id="FRP-mf-mww"/>
                         <constraint firstItem="gnH-e6-XJe" firstAttribute="top" secondItem="Vaj-nR-h8s" secondAttribute="top" constant="8" id="fpg-rX-Icg"/>
-                        <constraint firstAttribute="height" constant="38" id="ovK-ot-RhW"/>
+                        <constraint firstAttribute="height" constant="43" id="ovK-ot-RhW"/>
                         <constraint firstItem="ygw-Qc-lrW" firstAttribute="top" secondItem="Vaj-nR-h8s" secondAttribute="top" constant="7" id="rja-2Y-qff">
                             <variation key="heightClass=regular-widthClass=compact" constant="13"/>
                         </constraint>
@@ -174,11 +175,11 @@
                     </constraints>
                     <variation key="default">
                         <mask key="subviews">
-                            <exclude reference="gnH-e6-XJe"/>
                             <exclude reference="tBu-Oq-D0x"/>
                             <exclude reference="Vwr-nC-Jzx"/>
                             <exclude reference="CKM-3J-RkV"/>
                             <exclude reference="ygw-Qc-lrW"/>
+                            <exclude reference="gnH-e6-XJe"/>
                         </mask>
                         <mask key="constraints">
                             <exclude reference="ovK-ot-RhW"/>
@@ -196,11 +197,11 @@
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact">
                         <mask key="subviews">
-                            <include reference="gnH-e6-XJe"/>
                             <include reference="tBu-Oq-D0x"/>
                             <include reference="Vwr-nC-Jzx"/>
                             <include reference="CKM-3J-RkV"/>
                             <include reference="ygw-Qc-lrW"/>
+                            <include reference="gnH-e6-XJe"/>
                         </mask>
                         <mask key="constraints">
                             <include reference="ovK-ot-RhW"/>
@@ -278,7 +279,7 @@
                     <include reference="kHq-Lc-gUq"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="742" y="336"/>
+            <point key="canvasLocation" x="771.5" y="412"/>
         </view>
     </objects>
     <resources>
