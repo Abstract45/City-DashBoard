@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WeatherVC: UIViewController, UIGestureRecognizerDelegate {
+class WeatherVC: UIViewController {
     
     
     @IBOutlet var weatherMainView: WeatherView!

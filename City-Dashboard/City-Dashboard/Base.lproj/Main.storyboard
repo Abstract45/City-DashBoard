@@ -236,6 +236,128 @@
             </objects>
             <point key="canvasLocation" x="1281" y="-283"/>
         </scene>
+        <!--News WebVC-->
+        <scene sceneID="Y48-ii-kYV">
+            <objects>
+                <viewController storyboardIdentifier="NewsWebVC" id="MPI-N6-ST0" customClass="NewsWebVC" customModule="City_Dashboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="goA-DZ-uqo"/>
+                        <viewControllerLayoutGuide type="bottom" id="zt5-Gf-Gz3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ddI-tO-BAa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zw0-3g-sly">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pRR-Pc-aE5">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgG-5i-nWP">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="51" id="bBw-nK-ZqX"/>
+                                            <constraint firstAttribute="height" constant="44" id="ygA-yg-3jc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="40"/>
+                                        <state key="normal" title="x"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="bBw-nK-ZqX"/>
+                                                <exclude reference="ygA-yg-3jc"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="bBw-nK-ZqX"/>
+                                                <include reference="ygA-yg-3jc"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="closeWebView:" destination="MPI-N6-ST0" eventType="touchUpInside" id="Irt-Kq-Ghe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99928977272727271" green="0.99928977272727271" blue="0.99928977272727271" alpha="0.85248627533783783" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="CJX-pP-bIv"/>
+                                    <constraint firstItem="mgG-5i-nWP" firstAttribute="top" secondItem="pRR-Pc-aE5" secondAttribute="top" constant="8" id="hmd-xo-NaU"/>
+                                    <constraint firstItem="mgG-5i-nWP" firstAttribute="leading" secondItem="pRR-Pc-aE5" secondAttribute="leading" constant="8" id="x35-uB-2Ap"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="mgG-5i-nWP"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="CJX-pP-bIv"/>
+                                        <exclude reference="hmd-xo-NaU"/>
+                                        <exclude reference="x35-uB-2Ap"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="mgG-5i-nWP"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="CJX-pP-bIv"/>
+                                        <include reference="hmd-xo-NaU"/>
+                                        <include reference="x35-uB-2Ap"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pRR-Pc-aE5" firstAttribute="leading" secondItem="ddI-tO-BAa" secondAttribute="leading" id="5Dy-hS-QIc"/>
+                            <constraint firstItem="zw0-3g-sly" firstAttribute="top" secondItem="goA-DZ-uqo" secondAttribute="bottom" id="NhY-l6-H28"/>
+                            <constraint firstAttribute="trailing" secondItem="pRR-Pc-aE5" secondAttribute="trailing" id="S1I-Hz-D4r"/>
+                            <constraint firstItem="zt5-Gf-Gz3" firstAttribute="top" secondItem="zw0-3g-sly" secondAttribute="bottom" id="aio-jx-g9B"/>
+                            <constraint firstItem="pRR-Pc-aE5" firstAttribute="top" secondItem="goA-DZ-uqo" secondAttribute="bottom" id="hPh-z1-bQE"/>
+                            <constraint firstItem="zw0-3g-sly" firstAttribute="leading" secondItem="ddI-tO-BAa" secondAttribute="leading" id="rqT-Er-iE1"/>
+                            <constraint firstAttribute="trailing" secondItem="zw0-3g-sly" secondAttribute="trailing" id="sRw-N8-PtP"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="zw0-3g-sly"/>
+                                <exclude reference="pRR-Pc-aE5"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="5Dy-hS-QIc"/>
+                                <exclude reference="S1I-Hz-D4r"/>
+                                <exclude reference="hPh-z1-bQE"/>
+                                <exclude reference="NhY-l6-H28"/>
+                                <exclude reference="rqT-Er-iE1"/>
+                                <exclude reference="sRw-N8-PtP"/>
+                                <exclude reference="aio-jx-g9B"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="zw0-3g-sly"/>
+                                <include reference="pRR-Pc-aE5"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="5Dy-hS-QIc"/>
+                                <include reference="S1I-Hz-D4r"/>
+                                <include reference="hPh-z1-bQE"/>
+                                <include reference="NhY-l6-H28"/>
+                                <include reference="rqT-Er-iE1"/>
+                                <include reference="sRw-N8-PtP"/>
+                                <include reference="aio-jx-g9B"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <connections>
+                        <outlet property="newsWebView" destination="zw0-3g-sly" id="7IA-yk-W5S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zri-q7-H2L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1914" y="-249.75"/>
+        </scene>
         <!--TrafficVC-->
         <scene sceneID="F0y-LK-5fh">
             <objects>

@@ -138,8 +138,7 @@
                                     <exclude reference="b3d-dS-KaF"/>
                                 </mask>
                             </variation>
-                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                <rect key="frame" x="191" y="8" width="52" height="30"/>
+                            <variation key="heightClass=regular-widthClass=compact">
                                 <mask key="constraints">
                                     <include reference="SBl-5h-ZLo"/>
                                     <include reference="b3d-dS-KaF"/>

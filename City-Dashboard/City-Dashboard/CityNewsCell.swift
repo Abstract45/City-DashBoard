@@ -8,16 +8,28 @@
 
 import UIKit
 
+
+
+
 class CityNewsCell: UITableViewCell {
 
     
-    @IBOutlet weak var vwNewsCard: UIView!
+    @IBOutlet weak var vwNewsCard: UIButton!
     
     @IBOutlet weak var timeCategory: UILabel!
     @IBOutlet weak var headlines: UILabel!
     @IBOutlet weak var imgCityNews: UIImageView!
     
-    
+    private var _url: String = ""
+   
+    var url: String {
+        get {
+            return ""
+        }
+        set(newValue) {
+           _url = newValue
+        }
+    }
     
     
     override func awakeFromNib() {
@@ -25,6 +37,7 @@ class CityNewsCell: UITableViewCell {
         configNewsCard()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "changeNewsCard:", name: "botViewOpen", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "hideCardShadow:", name: "resetViews", object: nil)
+        vwNewsCard.enabled = false
     }
     
     
@@ -43,18 +56,26 @@ class CityNewsCell: UITableViewCell {
     }
     func changeNewsCard(notification:NSNotification) {
         vwNewsCard.layer.shadowOpacity = 0.5
+        vwNewsCard.enabled = true
     }
     func hideCardShadow(notification:NSNotification) {
         vwNewsCard.layer.shadowOpacity = 0
+        vwNewsCard.enabled = false
        
     }
     
-    
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
+   
+    @IBAction func newsSegue(sender: AnyObject) {
         
-       
+        
+        NSUserDefaults.standardUserDefaults().setValue(_url, forKey: "currentURL")
+        NSUserDefaults.standardUserDefaults().synchronize()
+        
+        NSNotificationCenter.defaultCenter().postNotificationName("segueToWebView", object: nil)
+        
     }
+    
+    
+   
 
 }

@@ -8,17 +8,21 @@
 
 import UIKit
 
-class NewsVC: UIViewController, UIScrollViewDelegate {
+class NewsVC: UIViewController {
 
     @IBOutlet var newsMainView: CityNewsMain!
     private var midSize:CGFloat = 0
-    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
          midSize = self.newsMainView.frame.midX - 51.5
+      
        
+        
+        
     }
 
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
        
@@ -26,12 +30,13 @@ class NewsVC: UIViewController, UIScrollViewDelegate {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "changeNewsXib:", name: "changeBottomView", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "resetNewsXib:", name: "resetViews", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "botOpen:", name: "botViewOpen", object: nil)
-        
-      
-        
-        
-        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "segueToWeb:", name: "segueToWebView", object: nil)
+   
     }
+    
+    
+    
+    
     
     func changeNewsXib(notification:NSNotification) {
         UIView.animateWithDuration(1) { () -> Void in
@@ -63,7 +68,14 @@ class NewsVC: UIViewController, UIScrollViewDelegate {
        
     }
     
-   
+    func segueToWeb(notification:NSNotification) {
+        let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = mainStoryBoard.instantiateViewControllerWithIdentifier("NewsWebVC") 
+        self.presentViewController(vc, animated: true, completion: nil)
+       
+    }
+    
+    
     
 
 }

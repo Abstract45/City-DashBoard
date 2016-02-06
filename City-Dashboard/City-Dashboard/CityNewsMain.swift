@@ -8,13 +8,14 @@
 
 import UIKit
 
- class CityNewsMain: UIView, UITableViewDataSource, UITableViewDelegate {
- private var view: UIView!
- 
-    @IBOutlet weak var vwBottom: UIView!
+class CityNewsMain: UIView, UITableViewDataSource, UITableViewDelegate {
+    
+    private var view: UIView!
+    
+    
     
     @IBOutlet weak var logoRightConstraint: NSLayoutConstraint!
-
+    
     @IBOutlet weak var lblDailyHeadlines: UILabel!
     
     @IBOutlet weak var newsTableView: UITableView!
@@ -22,7 +23,8 @@ import UIKit
     @IBOutlet weak var lblNewsCategory: UILabel!
     @IBOutlet weak var imgNewsLogo: UIImageView!
     @IBOutlet weak var vwTop: UIView!
-    
+    var indexValue: NSIndexPath?
+    var currentURL:String? = ""
     var newsArray = [NewsItem]()
     
     override init(frame: CGRect) {
@@ -30,7 +32,7 @@ import UIKit
         
         xibSetup()
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         xibSetup()
@@ -45,7 +47,7 @@ import UIKit
         addSubview(view)
     }
     
- 
+    
     private func loadViewFromNib() -> UIView {
         let bundle = NSBundle(forClass: self.dynamicType)
         let nib = UINib(nibName: "CityNewsMain", bundle: bundle)
@@ -62,7 +64,7 @@ import UIKit
         return  newsArray.count
     }
     
-   
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         newsTableView.registerNib(UINib.init(nibName: "CityNewsCell", bundle: nil), forCellReuseIdentifier:"news")
@@ -70,11 +72,11 @@ import UIKit
         cell.headlines.text = newsArray[indexPath.row].title
         cell.timeCategory.text = newsArray[indexPath.row].dateCreated
         
-        dispatch_async(dispatch_get_main_queue()) { () -> Void in    
-        cell.imgCityNews.imageFromUrl(self.newsArray[indexPath.row].multimedia[0].url)
+        cell.url = newsArray[indexPath.row].url
+        
+        dispatch_async(dispatch_get_main_queue()) { () -> Void in
+            cell.imgCityNews.imageFromUrl(self.newsArray[indexPath.row].multimedia[0].url)
         }
-        
-        
         
         return cell
     }
@@ -82,6 +84,11 @@ import UIKit
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 91
     }
+    
+
+    
+    
+    
     
     func populateNews() -> [NewsItem] {
         let news = News()
@@ -97,54 +104,54 @@ import UIKit
     }
     
     
-   
     
-//    func scrollViewDidScroll(scrollView: UIScrollView) {
-//       var currentOffset = scrollView.contentOffset
-//        var lastContentOffset: CGPoint = CGPoint(x: 0, y: 0)
-//        if (currentOffset.y > lastContentOffset.y)
-//        {
-//            // Downward
-//            
-//            
-//            botShadow(true)
-//            topShadow(false)
-//        }
-//        else {
-//            // Upward
-//           
-//            topShadow(true)
-//            botShadow(false)
-//        }
-//      lastContentOffset = currentOffset
-//    }
-//    
-//    func topShadow(isScrolledBot:Bool) {
-//        if isScrolledBot {
-//            print("Hit")
-//            let shadowPath = UIBezierPath(rect: self.vwTop.bounds)
-//            vwTop.layer.masksToBounds = false
-//            vwTop.layer.shadowColor = UIColor.blackColor().CGColor
-//            vwTop.layer.shadowOffset = CGSize(width: 0, height: 1)
-//            vwTop.layer.shadowOpacity = 0.5
-//            vwTop.layer.shadowPath = shadowPath.CGPath
-//        } else {
-//            vwTop.layer.shadowOpacity = 0
-//        }
-//    }
-//    func botShadow(isScrolledTop:Bool) {
-//        if isScrolledTop {
-//            print("Hit2")
-//            let shadowPath = UIBezierPath(rect: self.vwBottom.bounds)
-//            vwBottom.layer.masksToBounds = false
-//            vwBottom.layer.shadowColor = UIColor.blackColor().CGColor
-//            vwBottom.layer.shadowOffset = CGSize(width: 5, height: 0)
-//            vwBottom.layer.shadowOpacity = 0.5
-//            vwBottom.layer.shadowPath = shadowPath.CGPath
-//        } else {
-//            vwBottom.layer.shadowOpacity = 0
-//        }
-//        
-//    }
-
+    
+    //    func scrollViewDidScroll(scrollView: UIScrollView) {
+    //       var currentOffset = scrollView.contentOffset
+    //        var lastContentOffset: CGPoint = CGPoint(x: 0, y: 0)
+    //        if (currentOffset.y > lastContentOffset.y)
+    //        {
+    //            // Downward
+    //
+    //
+    //            botShadow(true)
+    //            topShadow(false)
+    //        }
+    //        else {
+    //            // Upward
+    //
+    //            topShadow(true)
+    //            botShadow(false)
+    //        }
+    //      lastContentOffset = currentOffset
+    //    }
+    //
+    //    func topShadow(isScrolledBot:Bool) {
+    //        if isScrolledBot {
+    //            print("Hit")
+    //            let shadowPath = UIBezierPath(rect: self.vwTop.bounds)
+    //            vwTop.layer.masksToBounds = false
+    //            vwTop.layer.shadowColor = UIColor.blackColor().CGColor
+    //            vwTop.layer.shadowOffset = CGSize(width: 0, height: 1)
+    //            vwTop.layer.shadowOpacity = 0.5
+    //            vwTop.layer.shadowPath = shadowPath.CGPath
+    //        } else {
+    //            vwTop.layer.shadowOpacity = 0
+    //        }
+    //    }
+    //    func botShadow(isScrolledTop:Bool) {
+    //        if isScrolledTop {
+    //            print("Hit2")
+    //            let shadowPath = UIBezierPath(rect: self.vwBottom.bounds)
+    //            vwBottom.layer.masksToBounds = false
+    //            vwBottom.layer.shadowColor = UIColor.blackColor().CGColor
+    //            vwBottom.layer.shadowOffset = CGSize(width: 5, height: 0)
+    //            vwBottom.layer.shadowOpacity = 0.5
+    //            vwBottom.layer.shadowPath = shadowPath.CGPath
+    //        } else {
+    //            vwBottom.layer.shadowOpacity = 0
+    //        }
+    //        
+    //    }
+    
 }
