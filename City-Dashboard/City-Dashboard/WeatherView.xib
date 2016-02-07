@@ -307,18 +307,15 @@
                             <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="enT-qg-gXO"/>
-                                <constraint firstAttribute="width" constant="288" id="r1U-aV-GjM"/>
                             </constraints>
                             <variation key="default">
                                 <mask key="constraints">
                                     <exclude reference="enT-qg-gXO"/>
-                                    <exclude reference="r1U-aV-GjM"/>
                                 </mask>
                             </variation>
                             <variation key="heightClass=regular-widthClass=compact">
                                 <mask key="constraints">
                                     <include reference="enT-qg-gXO"/>
-                                    <include reference="r1U-aV-GjM"/>
                                 </mask>
                             </variation>
                         </view>
@@ -857,14 +854,8 @@
                 <constraint firstItem="G2W-cQ-vu5" firstAttribute="leading" secondItem="WXK-ZS-ali" secondAttribute="leading" constant="8" id="NA6-cF-0yW">
                     <variation key="heightClass=regular-widthClass=compact" constant="6"/>
                 </constraint>
-                <constraint firstItem="Nzm-I9-kAy" firstAttribute="centerX" secondItem="WXK-ZS-ali" secondAttribute="centerX" id="Nud-dL-e1W">
-                    <variation key="heightClass=regular-widthClass=compact" constant="-2.5"/>
-                </constraint>
                 <constraint firstItem="Nzm-I9-kAy" firstAttribute="leading" secondItem="WXK-ZS-ali" secondAttribute="leading" constant="21" id="SGE-vp-0gW">
                     <variation key="heightClass=regular-widthClass=compact" constant="6"/>
-                </constraint>
-                <constraint firstItem="G2W-cQ-vu5" firstAttribute="centerX" secondItem="WXK-ZS-ali" secondAttribute="centerX" id="UOL-TH-Q7d">
-                    <variation key="heightClass=regular-widthClass=compact" constant="-2.5"/>
                 </constraint>
                 <constraint firstItem="G2W-cQ-vu5" firstAttribute="top" secondItem="Nzm-I9-kAy" secondAttribute="bottom" constant="8" id="bxP-h4-0L3">
                     <variation key="heightClass=regular-widthClass=compact" constant="4"/>
@@ -896,7 +887,6 @@
                 <mask key="constraints">
                     <exclude reference="C0O-BN-XbT"/>
                     <exclude reference="NA6-cF-0yW"/>
-                    <exclude reference="UOL-TH-Q7d"/>
                     <exclude reference="bxP-h4-0L3"/>
                     <exclude reference="cUx-aD-4Vn"/>
                     <exclude reference="vbY-ND-KUU"/>
@@ -907,7 +897,6 @@
                     <exclude reference="KY5-s4-qwn"/>
                     <exclude reference="Mln-YS-guy"/>
                     <exclude reference="egW-uu-S8R"/>
-                    <exclude reference="Nud-dL-e1W"/>
                     <exclude reference="SGE-vp-0gW"/>
                     <exclude reference="kbK-fl-pov"/>
                     <exclude reference="ocB-sC-Ppe"/>
@@ -923,7 +912,6 @@
                 <mask key="constraints">
                     <include reference="C0O-BN-XbT"/>
                     <include reference="NA6-cF-0yW"/>
-                    <include reference="UOL-TH-Q7d"/>
                     <include reference="bxP-h4-0L3"/>
                     <include reference="cUx-aD-4Vn"/>
                     <include reference="vbY-ND-KUU"/>
@@ -934,13 +922,12 @@
                     <include reference="KY5-s4-qwn"/>
                     <include reference="Mln-YS-guy"/>
                     <exclude reference="egW-uu-S8R"/>
-                    <include reference="Nud-dL-e1W"/>
                     <include reference="SGE-vp-0gW"/>
                     <include reference="kbK-fl-pov"/>
                     <include reference="ocB-sC-Ppe"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="687" y="1932.5"/>
+            <point key="canvasLocation" x="756" y="2090.5"/>
         </view>
     </objects>
     <resources>

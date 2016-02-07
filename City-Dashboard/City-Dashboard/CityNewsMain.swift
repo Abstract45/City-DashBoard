@@ -75,9 +75,15 @@ class CityNewsMain: UIView, UITableViewDataSource, UITableViewDelegate {
         cell.url = newsArray[indexPath.row].url
         
         dispatch_async(dispatch_get_main_queue()) { () -> Void in
-            cell.imgCityNews.imageFromUrl(self.newsArray[indexPath.row].multimedia[0].url)
+            if let url  = NSURL(string: self.newsArray[indexPath.row].multimedia[0].url),
+                data = NSData(contentsOfURL: url)
+            {
+                print(url)
+                cell.imgCityNews.image = UIImage(data: data)
+            }
         }
         
+     
         return cell
     }
     

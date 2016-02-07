@@ -134,7 +134,9 @@
                             <constraint firstItem="o6m-Mn-d4W" firstAttribute="top" secondItem="1wN-kU-goh" secondAttribute="bottom" id="cZD-Q7-a7x"/>
                             <constraint firstItem="ggv-SI-HdV" firstAttribute="top" secondItem="1wN-kU-goh" secondAttribute="bottom" id="gJE-5R-Zh0"/>
                             <constraint firstItem="8cb-1c-TOL" firstAttribute="top" secondItem="o6m-Mn-d4W" secondAttribute="bottom" id="l9p-Sq-YQL"/>
-                            <constraint firstItem="pcw-2r-yEA" firstAttribute="top" secondItem="1wN-kU-goh" secondAttribute="bottom" id="mks-PF-97v"/>
+                            <constraint firstItem="pcw-2r-yEA" firstAttribute="top" secondItem="1wN-kU-goh" secondAttribute="bottom" id="mks-PF-97v">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
                             <constraint firstItem="pcw-2r-yEA" firstAttribute="leading" secondItem="Pya-we-oHj" secondAttribute="leading" id="vMv-M4-GZx"/>
                             <constraint firstItem="8cb-1c-TOL" firstAttribute="top" secondItem="pcw-2r-yEA" secondAttribute="bottom" id="zVe-h2-x7m"/>
                             <constraint firstAttribute="trailing" secondItem="o6m-Mn-d4W" secondAttribute="trailing" id="znO-KB-okP"/>
@@ -200,14 +202,14 @@
                         <action selector="middleTap:" destination="Uwp-Zf-Rbm" id="xzN-mM-KPn"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="SjG-X5-INK">
-                    <connections>
-                        <action selector="bottomTap:" destination="Uwp-Zf-Rbm" id="AyN-FJ-yix"/>
-                    </connections>
-                </tapGestureRecognizer>
                 <tapGestureRecognizer id="Oi4-9M-8eC">
                     <connections>
                         <action selector="topTap:" destination="Uwp-Zf-Rbm" id="dfq-bi-4N7"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="SjG-X5-INK">
+                    <connections>
+                        <action selector="bottomTap:" destination="Uwp-Zf-Rbm" id="AyN-FJ-yix"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -228,6 +230,7 @@
                         <gestureRecognizers/>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="weatherMainView" destination="VvY-ZW-hth" id="vSO-GQ-DsY"/>
                     </connections>
