@@ -35,6 +35,9 @@ class CityNewsCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         configNewsCard()
+        
+       
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "changeNewsCard:", name: "botViewOpen", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "hideCardShadow:", name: "resetViews", object: nil)
         vwNewsCard.enabled = false

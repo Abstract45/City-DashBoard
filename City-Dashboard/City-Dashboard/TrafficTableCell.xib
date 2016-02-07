@@ -18,15 +18,16 @@
                         <rect key="frame" x="8" y="0.0" width="304" height="55.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bovaird Dr.interminent lane closures between Lake Louise  Dr and Regional Rd-1 " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4wn-UC-o84">
-                                <rect key="frame" x="26" y="3" width="199" height="49"/>
+                                <rect key="frame" x="33" y="3" width="199" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="W80-w8-uPz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SJ0-Xt-eBo">
-                                <rect key="frame" x="0.0" y="16" width="22" height="22"/>
+                                <rect key="frame" x="7" y="16" width="22" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="5oW-D1-Kkz"/>
                                     <constraint firstAttribute="width" constant="22" id="6pr-gh-mPO"/>
@@ -47,16 +48,18 @@
                                     <constraint firstAttribute="width" constant="42" id="txb-H2-Whv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.12941176470588237" green="0.57647058823529407" blue="0.58039215686274515" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.32156862745098042" green="0.69019607843137254" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="M1L-NZ-eIB" secondAttribute="trailing" constant="8" id="2dk-qI-1de"/>
                             <constraint firstItem="4wn-UC-o84" firstAttribute="leading" secondItem="SJ0-Xt-eBo" secondAttribute="trailing" constant="4" id="45G-Qu-prh"/>
-                            <constraint firstItem="Byf-nE-zs2" firstAttribute="leading" secondItem="4wn-UC-o84" secondAttribute="trailing" constant="14" id="DC4-hi-Ayk"/>
+                            <constraint firstItem="Byf-nE-zs2" firstAttribute="leading" secondItem="4wn-UC-o84" secondAttribute="trailing" constant="7" id="DC4-hi-Ayk"/>
                             <constraint firstItem="SJ0-Xt-eBo" firstAttribute="top" secondItem="TpF-im-R4b" secondAttribute="top" constant="16" id="Xp0-pG-5yP"/>
-                            <constraint firstItem="SJ0-Xt-eBo" firstAttribute="leading" secondItem="TpF-im-R4b" secondAttribute="leading" id="iT8-Vr-Ghp"/>
+                            <constraint firstItem="SJ0-Xt-eBo" firstAttribute="leading" secondItem="TpF-im-R4b" secondAttribute="leading" constant="7" id="iT8-Vr-Ghp"/>
                             <constraint firstItem="4wn-UC-o84" firstAttribute="top" secondItem="TpF-im-R4b" secondAttribute="top" constant="3" id="kGW-aY-bi0"/>
                             <constraint firstItem="M1L-NZ-eIB" firstAttribute="leading" secondItem="Byf-nE-zs2" secondAttribute="trailing" constant="6" id="mVt-uv-pjq"/>
                             <constraint firstItem="Byf-nE-zs2" firstAttribute="top" secondItem="TpF-im-R4b" secondAttribute="top" constant="14" id="qY0-3z-uCm"/>
@@ -64,7 +67,7 @@
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" red="0.6470588235294118" green="0.49411764705882355" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
+                <color key="backgroundColor" red="0.078431372549019607" green="0.47058823529411764" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="TpF-im-R4b" secondAttribute="trailing" constant="8" id="0tI-9z-Kkx"/>
                     <constraint firstItem="TpF-im-R4b" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="7La-fW-PBe"/>

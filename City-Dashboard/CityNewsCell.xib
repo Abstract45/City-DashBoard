@@ -16,7 +16,7 @@
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMn-mM-Cpl">
                         <rect key="frame" x="8" y="0.0" width="304" height="78.5"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.18431372549019609" green="0.20000000000000001" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                         <connections>
                             <action selector="newsSegue:" destination="Ckk-ie-Fa3" eventType="touchUpInside" id="XZ9-o8-YmE"/>
                         </connections>
@@ -28,15 +28,6 @@
                             <constraint firstAttribute="width" constant="70" id="Qnf-wI-07f"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Human Right campaign Endorse Hilary Clinton for President" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IUi-1e-EZG">
-                        <rect key="frame" x="96" y="10" width="209" height="33"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="209" id="hrj-Um-zfz"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="12"/>
-                        <color key="textColor" red="0.1176470588" green="0.1176470588" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30mins | Politic" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSy-An-x5a">
                         <rect key="frame" x="96" y="61" width="115" height="14"/>
                         <constraints>
@@ -44,20 +35,30 @@
                             <constraint firstAttribute="width" constant="115" id="R5C-p2-yyG"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="10"/>
-                        <color key="textColor" red="0.3411764706" green="0.3411764706" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Human Right campaign " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IUi-1e-EZG">
+                        <rect key="frame" x="96" y="7" width="209" height="16.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="44.5" id="8SK-5e-duV"/>
+                            <constraint firstAttribute="width" constant="209" id="hrj-Um-zfz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="nMn-mM-Cpl" firstAttribute="top" secondItem="gmu-3x-DYZ" secondAttribute="top" id="9N0-QR-gz4"/>
-                    <constraint firstItem="cSy-An-x5a" firstAttribute="top" secondItem="IUi-1e-EZG" secondAttribute="bottom" constant="18" id="BKL-ht-iS7"/>
                     <constraint firstAttribute="trailing" secondItem="nMn-mM-Cpl" secondAttribute="trailing" constant="8" id="Dsm-gf-Pax"/>
                     <constraint firstItem="IUi-1e-EZG" firstAttribute="leading" secondItem="tkr-1h-a9S" secondAttribute="trailing" constant="8" id="HS5-xl-1x0"/>
                     <constraint firstItem="nMn-mM-Cpl" firstAttribute="leading" secondItem="gmu-3x-DYZ" secondAttribute="leading" constant="8" id="J5c-XA-AnG"/>
                     <constraint firstItem="nMn-mM-Cpl" firstAttribute="leading" secondItem="tkr-1h-a9S" secondAttribute="trailing" constant="-80" id="JFH-ss-HLT"/>
                     <constraint firstItem="tkr-1h-a9S" firstAttribute="top" secondItem="nMn-mM-Cpl" secondAttribute="bottom" constant="-73.5" id="KEZ-f9-6ta"/>
                     <constraint firstAttribute="bottom" secondItem="nMn-mM-Cpl" secondAttribute="bottom" constant="8" id="UxP-HO-swA"/>
+                    <constraint firstItem="IUi-1e-EZG" firstAttribute="top" secondItem="nMn-mM-Cpl" secondAttribute="top" constant="7" id="YP5-TX-ji4"/>
                     <constraint firstItem="cSy-An-x5a" firstAttribute="leading" secondItem="tkr-1h-a9S" secondAttribute="trailing" constant="8" id="tWk-yw-jof"/>
                     <constraint firstItem="cSy-An-x5a" firstAttribute="bottom" secondItem="nMn-mM-Cpl" secondAttribute="bottom" constant="-3.5" id="wpC-pj-jyD"/>
                 </constraints>

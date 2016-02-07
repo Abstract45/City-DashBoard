@@ -845,11 +845,11 @@
                 </constraint>
                 <constraint firstItem="vWd-2l-j4V" firstAttribute="top" secondItem="WXK-ZS-ali" secondAttribute="top" id="8sv-Lr-oS0"/>
                 <constraint firstAttribute="trailing" secondItem="G2W-cQ-vu5" secondAttribute="trailing" constant="8" id="C0O-BN-XbT">
-                    <variation key="heightClass=regular-widthClass=compact" constant="11"/>
+                    <variation key="heightClass=regular-widthClass=compact" constant="6"/>
                 </constraint>
                 <constraint firstItem="vWd-2l-j4V" firstAttribute="leading" secondItem="WXK-ZS-ali" secondAttribute="leading" id="K63-Y1-SFG"/>
                 <constraint firstAttribute="trailing" secondItem="aLW-Pv-mKl" secondAttribute="trailing" id="KY5-s4-qwn">
-                    <variation key="heightClass=regular-widthClass=compact" constant="8"/>
+                    <variation key="heightClass=regular-widthClass=compact" constant="6"/>
                 </constraint>
                 <constraint firstItem="aLW-Pv-mKl" firstAttribute="top" secondItem="vWd-2l-j4V" secondAttribute="bottom" id="Mln-YS-guy">
                     <variation key="heightClass=regular-widthClass=compact" constant="2"/>
@@ -877,7 +877,7 @@
                     <variation key="heightClass=regular-widthClass=compact" constant="3"/>
                 </constraint>
                 <constraint firstAttribute="trailing" secondItem="Nzm-I9-kAy" secondAttribute="trailing" constant="21" id="ocB-sC-Ppe">
-                    <variation key="heightClass=regular-widthClass=compact" constant="11"/>
+                    <variation key="heightClass=regular-widthClass=compact" constant="6"/>
                 </constraint>
                 <constraint firstItem="G2W-cQ-vu5" firstAttribute="top" secondItem="WXK-ZS-ali" secondAttribute="top" constant="267" id="vbY-ND-KUU">
                     <variation key="heightClass=regular-widthClass=compact" constant="297"/>
@@ -940,7 +940,7 @@
                     <include reference="ocB-sC-Ppe"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="643" y="1808"/>
+            <point key="canvasLocation" x="687" y="1932.5"/>
         </view>
     </objects>
     <resources>
