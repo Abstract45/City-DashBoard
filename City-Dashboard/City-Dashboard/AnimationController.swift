@@ -10,6 +10,7 @@ import UIKit
 
 class AnimationController: UIViewController {
     
+    @IBOutlet weak var backgroundImg: UIImageView!
     @IBOutlet weak var bottomViewHeight: NSLayoutConstraint!
     @IBOutlet weak var middleViewHeight: NSLayoutConstraint!
     
@@ -78,12 +79,13 @@ class AnimationController: UIViewController {
                 NSNotificationCenter.defaultCenter().postNotificationName("topViewOpen", object: nil)
                 NSNotificationCenter.defaultCenter().postNotificationName("changeMiddleView", object: nil)
                 NSNotificationCenter.defaultCenter().postNotificationName("changeBottomView", object: nil)
-                
+               
                 
             } else if secondView == tallHeight {
                 NSNotificationCenter.defaultCenter().postNotificationName("changeTopView", object: nil)
                 NSNotificationCenter.defaultCenter().postNotificationName("changeBottomView", object: nil)
                 NSNotificationCenter.defaultCenter().postNotificationName("midViewOpen", object: nil)
+                
                 
             } else {
                 NSNotificationCenter.defaultCenter().postNotificationName("changeMiddleView", object: nil)
@@ -92,6 +94,7 @@ class AnimationController: UIViewController {
             }
         } else {
             NSNotificationCenter.defaultCenter().postNotificationName("resetViews", object: nil)
+           
         }
         
     }
@@ -101,6 +104,8 @@ class AnimationController: UIViewController {
         super.viewDidLoad()
         smallHeight = 43
         tallHeight = self.view.bounds.height - smallHeight
+        
+        
         
         //Turn off constraint errors
         NSUserDefaults.standardUserDefaults().setValue(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")

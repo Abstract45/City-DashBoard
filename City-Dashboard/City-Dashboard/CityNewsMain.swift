@@ -78,7 +78,7 @@ class CityNewsMain: UIView, UITableViewDataSource, UITableViewDelegate {
             if let url  = NSURL(string: self.newsArray[indexPath.row].multimedia[0].url),
                 data = NSData(contentsOfURL: url)
             {
-                print(url)
+             
                 cell.imgCityNews.image = UIImage(data: data)
             }
         }
