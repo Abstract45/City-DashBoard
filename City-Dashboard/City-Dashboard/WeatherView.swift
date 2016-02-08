@@ -149,12 +149,12 @@ class WeatherView: UIView, UITableViewDataSource, UITableViewDelegate{
         
         let calendar = NSCalendar.currentCalendar()
         let date = NSDate()
-        let week = calendar.components([.Day], fromDate: date)
-        var todayIs = week.day
+        let week = calendar.components([.Weekday], fromDate: date)
+        var todayIs = week.weekday
         var index = 0
         print(todayIs)
         
-        let weekdays = ["","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
+        let weekdays = ["","Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
         var forecastDays = [String]()
         
         var findTomorrow = ""
@@ -162,9 +162,9 @@ class WeatherView: UIView, UITableViewDataSource, UITableViewDelegate{
             
             if todayIs < 7 {
              index = todayIs.advancedBy(1)
+                
             } else {
                 index = 1
-                
             }
             
             
