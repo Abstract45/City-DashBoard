@@ -43,7 +43,8 @@ class TrafficTableCell: UITableViewCell {
         vwTrafficCard.layer.shadowColor = UIColor.blackColor().CGColor
         vwTrafficCard.layer.shadowOffset = CGSize(width: 0.0, height: 5)
         vwTrafficCard.layer.shadowOpacity = 0
-        vwTrafficCard.layer.shadowPath = shadowPath.CGPath  
+        vwTrafficCard.layer.shadowPath = shadowPath.CGPath
+        vwTrafficCard.layoutSubviews()
     }
     
     

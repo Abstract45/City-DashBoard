@@ -54,7 +54,7 @@ class CityNewsCell: UITableViewCell {
             vwNewsCard.layer.shadowOffset = CGSize(width: 0.0, height: 5)
             vwNewsCard.layer.shadowOpacity = 0
             vwNewsCard.layer.shadowPath = shadowPath.CGPath
-        
+            vwNewsCard.layoutSubviews()
     
     }
     func changeNewsCard(notification:NSNotification) {

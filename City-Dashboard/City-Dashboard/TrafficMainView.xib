@@ -241,7 +241,9 @@
                 <constraint firstItem="67p-JA-dRW" firstAttribute="leading" secondItem="OL4-Ty-xm6" secondAttribute="leading" id="TTL-ca-1Pi">
                     <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                 </constraint>
-                <constraint firstItem="67p-JA-dRW" firstAttribute="top" secondItem="Vaj-nR-h8s" secondAttribute="bottom" id="hHx-Nm-Mk9"/>
+                <constraint firstItem="67p-JA-dRW" firstAttribute="top" secondItem="Vaj-nR-h8s" secondAttribute="bottom" id="hHx-Nm-Mk9">
+                    <variation key="heightClass=regular-widthClass=compact" constant="2"/>
+                </constraint>
                 <constraint firstItem="Vaj-nR-h8s" firstAttribute="top" secondItem="OL4-Ty-xm6" secondAttribute="top" id="kHq-Lc-gUq"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
@@ -278,7 +280,7 @@
                     <include reference="kHq-Lc-gUq"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="836" y="506.5"/>
+            <point key="canvasLocation" x="895" y="559"/>
         </view>
     </objects>
     <resources>
