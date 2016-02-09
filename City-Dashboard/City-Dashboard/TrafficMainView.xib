@@ -24,7 +24,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vaj-nR-h8s">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgToronto" translatesAutoresizingMaskIntoConstraints="NO" id="tBu-Oq-D0x">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Traffic" translatesAutoresizingMaskIntoConstraints="NO" id="tBu-Oq-D0x">
                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="DjH-oS-O0T">
@@ -47,14 +47,14 @@
                                 </mask>
                             </variation>
                         </imageView>
-                        <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vwr-nC-Jzx">
+                        <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vwr-nC-Jzx">
                             <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="26.5" id="QBD-G5-oPM"/>
                                 <constraint firstAttribute="width" constant="26" id="l1v-1e-UHB"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                            <state key="normal" title="Map"/>
+                            <state key="normal" image="Map"/>
                             <variation key="default">
                                 <mask key="constraints">
                                     <exclude reference="QBD-G5-oPM"/>
@@ -244,7 +244,7 @@
                     <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                 </constraint>
                 <constraint firstItem="67p-JA-dRW" firstAttribute="top" secondItem="Vaj-nR-h8s" secondAttribute="bottom" id="hHx-Nm-Mk9">
-                    <variation key="heightClass=regular-widthClass=compact" constant="8"/>
+                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                 </constraint>
                 <constraint firstItem="Vaj-nR-h8s" firstAttribute="top" secondItem="OL4-Ty-xm6" secondAttribute="top" id="kHq-Lc-gUq"/>
             </constraints>
@@ -286,6 +286,7 @@
         </view>
     </objects>
     <resources>
-        <image name="imgToronto" width="627" height="1082"/>
+        <image name="Map" width="54" height="54"/>
+        <image name="Traffic" width="54" height="54"/>
     </resources>
 </document>
