@@ -23,6 +23,7 @@ import UIKit
     override func awakeFromNib() {
         super.awakeFromNib()
         populateTrafficCells()
+      
     }
     
     override init(frame: CGRect) {
@@ -39,11 +40,14 @@ import UIKit
     private func xibSetup() {
         view = loadViewFromNib()
         
-        view.frame = bounds
-        view.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
-        
+        view.frame = UIScreen.mainScreen().bounds 
+//        view.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
+    
         addSubview(view)
+        
     }
+    
+    
     
     private func loadViewFromNib() -> UIView {
         let bundle = NSBundle(forClass: self.dynamicType)

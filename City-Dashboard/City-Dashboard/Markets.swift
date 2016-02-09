@@ -31,8 +31,10 @@ class Markets {
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 
                 do {
-                    
-                    let json = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments)
+                    guard let data = data else {
+                        return
+                    }
+                    let json = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments)
                     
                     if let marketsDict = json as? Dictionary<String, AnyObject> {
                         

@@ -36,14 +36,15 @@ class CityNewsMain: UIView, UITableViewDataSource, UITableViewDelegate {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         xibSetup()
+        
     }
     
     private func xibSetup() {
         view = loadViewFromNib()
         
-        view.frame = bounds
-        view.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
-        
+       view.frame = UIScreen.mainScreen().bounds
+//        view.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
+
         addSubview(view)
     }
     
@@ -58,6 +59,7 @@ class CityNewsMain: UIView, UITableViewDataSource, UITableViewDelegate {
     override func awakeFromNib() {
         super.awakeFromNib()
         populateNews()
+      
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

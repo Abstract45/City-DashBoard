@@ -67,9 +67,11 @@ class WeatherForecast {
         _ = NSURLSession.sharedSession().dataTaskWithURL(url!) { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
             
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                
+                guard let data = data else {
+                    return
+                }
                 do {
-                    let json = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments)
+                    let json = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments)
                     
                     if let todaysDict = json as? Dictionary<String, AnyObject> {
                         
@@ -158,6 +160,7 @@ class WeatherForecast {
                                 self._weatherToday?.sunsetDouble = sunS
                             }
                         }
+                    
                     }
                     
                 } catch {
@@ -186,8 +189,12 @@ class WeatherForecast {
             
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 
+                guard let data = data else {
+                    return
+                }
+                
                 do {
-                    let json = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments)
+                    let json = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments)
                     
                     if let forecastDict = json as? Dictionary<String, AnyObject> {
                         

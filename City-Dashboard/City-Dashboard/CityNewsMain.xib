@@ -162,7 +162,9 @@
                 <constraint firstItem="Vnp-nY-6ge" firstAttribute="top" secondItem="L6F-0s-jST" secondAttribute="bottom" id="ZSF-21-tiC">
                     <variation key="heightClass=regular-widthClass=compact" constant="2"/>
                 </constraint>
-                <constraint firstAttribute="bottom" secondItem="Vnp-nY-6ge" secondAttribute="bottom" id="bCw-f6-m8d"/>
+                <constraint firstAttribute="bottom" secondItem="Vnp-nY-6ge" secondAttribute="bottom" id="bCw-f6-m8d">
+                    <variation key="heightClass=regular-widthClass=compact" constant="104"/>
+                </constraint>
                 <constraint firstAttribute="trailing" secondItem="Vnp-nY-6ge" secondAttribute="trailing" id="jw1-M7-dDA"/>
                 <constraint firstAttribute="trailing" secondItem="L6F-0s-jST" secondAttribute="trailing" id="rj7-6b-Pb6"/>
                 <constraint firstItem="L6F-0s-jST" firstAttribute="leading" secondItem="1d1-hj-K3k" secondAttribute="leading" id="ryS-2C-xAr"/>
