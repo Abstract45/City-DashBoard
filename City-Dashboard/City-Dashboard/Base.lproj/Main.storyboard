@@ -127,6 +127,67 @@
             </objects>
             <point key="canvasLocation" x="432" y="-107"/>
         </scene>
+        <!--Traffic MapVC-->
+        <scene sceneID="dWc-l2-GHz">
+            <objects>
+                <viewController id="iNy-Kl-EeC" customClass="TrafficMapVC" customModule="City_Dashboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OKY-Db-Yq5"/>
+                        <viewControllerLayoutGuide type="bottom" id="BTr-Oz-dUl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="auN-k0-jeD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="t7W-K0-g3t">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dkg-SX-v2s">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lXt-Mf-mfQ">
+                                        <rect key="frame" x="8" y="6" width="38" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="37" id="2et-cx-7wT"/>
+                                            <constraint firstAttribute="width" constant="38" id="pri-Ji-u9b"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="40"/>
+                                        <state key="normal" title="x"/>
+                                        <connections>
+                                            <action selector="closeMapView:" destination="iNy-Kl-EeC" eventType="touchUpInside" id="2U5-RB-IOO"/>
+                                            <action selector="closeWebView:" destination="MPI-N6-ST0" eventType="touchUpInside" id="z7g-l4-GZG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.85446579391891897" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="lXt-Mf-mfQ" firstAttribute="leading" secondItem="dkg-SX-v2s" secondAttribute="leading" constant="8" id="MUU-1f-wiG"/>
+                                    <constraint firstAttribute="height" constant="49" id="je1-tg-xs7"/>
+                                    <constraint firstItem="lXt-Mf-mfQ" firstAttribute="top" secondItem="dkg-SX-v2s" secondAttribute="top" constant="6" id="ndQ-I2-Mlx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dkg-SX-v2s" secondAttribute="trailing" id="5DG-0y-eQs"/>
+                            <constraint firstItem="dkg-SX-v2s" firstAttribute="top" secondItem="OKY-Db-Yq5" secondAttribute="bottom" id="7fo-eX-UAC"/>
+                            <constraint firstAttribute="bottom" secondItem="t7W-K0-g3t" secondAttribute="bottom" id="CsQ-5i-efO"/>
+                            <constraint firstItem="t7W-K0-g3t" firstAttribute="top" secondItem="OKY-Db-Yq5" secondAttribute="bottom" id="kc8-SQ-lcg"/>
+                            <constraint firstAttribute="trailing" secondItem="t7W-K0-g3t" secondAttribute="trailing" id="p9h-SZ-EbR"/>
+                            <constraint firstItem="t7W-K0-g3t" firstAttribute="leading" secondItem="auN-k0-jeD" secondAttribute="leading" id="sNf-42-Fjz"/>
+                            <constraint firstItem="dkg-SX-v2s" firstAttribute="leading" secondItem="auN-k0-jeD" secondAttribute="leading" id="zK5-HQ-2fe"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="trafficMapView" destination="t7W-K0-g3t" id="by6-sf-bGl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BYh-jG-3Ps" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="637" y="576"/>
+        </scene>
         <!--WeatherVC-->
         <scene sceneID="TuP-rT-Wus">
             <objects>
@@ -227,11 +288,12 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="trafficMainView" destination="NNj-UW-mtC" id="Dbn-mj-zZz"/>
+                        <segue destination="iNy-Kl-EeC" kind="show" identifier="trafficMapSegue" id="NjE-sf-Hdt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v6G-8N-p3N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1281" y="-78"/>
+            <point key="canvasLocation" x="1038" y="-36"/>
         </scene>
         <!--NewsVC-->
         <scene sceneID="DNL-no-liN">

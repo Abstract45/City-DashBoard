@@ -16,6 +16,7 @@ class TrafficVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         midSize = self.trafficMainView.frame.midX - 51.5
+        trafficMainView.mapBtnView.addTarget(self, action: "segueToTrafficController", forControlEvents: .TouchUpInside)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -24,8 +25,11 @@ class TrafficVC: UIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "changeTrafficXib:", name: "changeMiddleView", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "resetTrafficXib:", name: "resetViews", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "midOpen:", name: "midViewOpen", object: nil)
-       
-           
+    }
+    
+    
+    func segueToTrafficController() {
+        self.performSegueWithIdentifier("trafficMapSegue", sender: self)
     }
     
     func changeTrafficXib(notification:NSNotification) {
@@ -61,6 +65,15 @@ class TrafficVC: UIViewController {
             self.view.layoutIfNeeded()
         }
         
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "trafficMapSegue" {
+            if !trafficMainView.incidentsArray.isEmpty {
+                let destinationVC = segue.destinationViewController as! TrafficMapVC
+                destinationVC.trafficIncidents = self.trafficMainView.incidentsArray
+            }
+        }
     }
     
     

@@ -68,9 +68,6 @@
                                     <include reference="l1v-1e-UHB"/>
                                 </mask>
                             </variation>
-                            <connections>
-                                <action selector="btnMapFlip:" destination="-1" eventType="touchUpInside" id="O9x-Uc-Jau"/>
-                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CURRENT INCIDENTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKM-3J-RkV">
                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
@@ -283,7 +280,7 @@
                     <include reference="kHq-Lc-gUq"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="1076" y="650.5"/>
+            <point key="canvasLocation" x="1094" y="676.5"/>
         </view>
     </objects>
     <resources>

@@ -83,9 +83,7 @@ import UIKit
     }
     
    
-    @IBAction func btnMapFlip(sender: AnyObject) {
    
-    }
     
     
     func populateTrafficCells() -> [Incident] {
