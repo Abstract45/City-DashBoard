@@ -15,10 +15,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="34.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="grg-38-GZJ">
-                        <rect key="frame" x="140.5" y="4" width="39" height="27"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1454840111_icon-8-cloud-sun-snow_360" translatesAutoresizingMaskIntoConstraints="NO" id="grg-38-GZJ">
+                        <rect key="frame" x="160" y="4" width="27" height="27"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="39" id="UlC-0U-BwU"/>
+                            <constraint firstAttribute="width" constant="27" id="UlC-0U-BwU"/>
                             <constraint firstAttribute="height" constant="27" id="hgT-GA-xgB"/>
                         </constraints>
                     </imageView>
@@ -33,7 +33,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-8°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HN3-Ce-ugP">
-                        <rect key="frame" x="248" y="4" width="32" height="27"/>
+                        <rect key="frame" x="243" y="4" width="32" height="27"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="32" id="CJe-VW-kJM"/>
                             <constraint firstAttribute="height" constant="27" id="SkA-Sc-IcM"/>
@@ -43,12 +43,12 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thursday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujl-5E-jFQ">
-                        <rect key="frame" x="8" y="4" width="119" height="27"/>
+                        <rect key="frame" x="12" y="4" width="119" height="27"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="27" id="Dd7-Pa-guA"/>
                             <constraint firstAttribute="width" constant="119" id="ahW-Gk-Cit"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
+                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -57,9 +57,9 @@
                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="ujl-5E-jFQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="1af-Gn-pHd"/>
-                    <constraint firstItem="Qes-UQ-PZ5" firstAttribute="leading" secondItem="HN3-Ce-ugP" secondAttribute="trailing" id="9TW-wa-YCZ"/>
-                    <constraint firstItem="ujl-5E-jFQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Awq-Zp-NhQ"/>
-                    <constraint firstItem="grg-38-GZJ" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="cKY-bD-KQQ"/>
+                    <constraint firstItem="Qes-UQ-PZ5" firstAttribute="leading" secondItem="HN3-Ce-ugP" secondAttribute="trailing" constant="5" id="9TW-wa-YCZ"/>
+                    <constraint firstItem="ujl-5E-jFQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="Awq-Zp-NhQ"/>
+                    <constraint firstItem="grg-38-GZJ" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="13.5" id="cKY-bD-KQQ"/>
                     <constraint firstItem="grg-38-GZJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="ceP-QZ-8Jc"/>
                     <constraint firstItem="HN3-Ce-ugP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="kNc-5R-4r7"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Qes-UQ-PZ5" secondAttribute="trailing" id="lBu-2e-1iO"/>
@@ -76,4 +76,7 @@
             <point key="canvasLocation" x="195" y="215.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="1454840111_icon-8-cloud-sun-snow_360" width="128" height="128"/>
+    </resources>
 </document>

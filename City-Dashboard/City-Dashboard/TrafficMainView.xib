@@ -166,7 +166,9 @@
                         <constraint firstItem="tBu-Oq-D0x" firstAttribute="top" secondItem="Vaj-nR-h8s" secondAttribute="top" constant="8" id="DSB-f1-pHi"/>
                         <constraint firstAttribute="trailing" secondItem="tBu-Oq-D0x" secondAttribute="trailing" constant="22" id="FRP-mf-mww"/>
                         <constraint firstItem="gnH-e6-XJe" firstAttribute="top" secondItem="Vaj-nR-h8s" secondAttribute="top" constant="8" id="fpg-rX-Icg"/>
-                        <constraint firstAttribute="height" constant="43" id="ovK-ot-RhW"/>
+                        <constraint firstAttribute="height" constant="43" id="ovK-ot-RhW">
+                            <variation key="heightClass=regular-widthClass=compact" constant="43"/>
+                        </constraint>
                         <constraint firstItem="ygw-Qc-lrW" firstAttribute="top" secondItem="Vaj-nR-h8s" secondAttribute="top" constant="7" id="rja-2Y-qff">
                             <variation key="heightClass=regular-widthClass=compact" constant="13"/>
                         </constraint>

@@ -35,20 +35,25 @@ class CityNewsCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        
        
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "changeNewsCard:", name: "botViewOpen", object: nil)
-        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "hideCardShadow:", name: "resetViews", object: nil)
         vwNewsCard.enabled = false
     }
     
     
-    
+  
     func changeNewsCard(notification:NSNotification) {
-       
+        
         vwNewsCard.enabled = true
     }
-    
+    func hideCardShadow(notification:NSNotification) {
+        
+        vwNewsCard.enabled = false
+       
+    }
     
    
     @IBAction func newsSegue(sender: AnyObject) {

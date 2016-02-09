@@ -86,6 +86,9 @@ class WeatherView: UIView, UITableViewDataSource, UITableViewDelegate{
         return cell
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 35
+    }
 
     
     private  func cofigLayerView() {
