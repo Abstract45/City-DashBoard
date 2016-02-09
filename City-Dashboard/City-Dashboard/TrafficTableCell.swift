@@ -36,8 +36,11 @@ class TrafficTableCell: UITableViewCell {
     
     func configTrafficCard() {
         
-        vwTrafficCard.layer.cornerRadius = 5
+       vwTrafficCard.layer.cornerRadius = 4
         vwTrafficCard.clipsToBounds = true
+        vwTrafficCard.layer.borderColor = UIColor.whiteColor().CGColor
+        vwTrafficCard.layer.borderWidth = 0.5
+        
         let shadowPath = UIBezierPath(rect: self.vwTrafficCard.bounds)
         vwTrafficCard.layer.masksToBounds = false
         vwTrafficCard.layer.shadowColor = UIColor.blackColor().CGColor
@@ -48,10 +51,10 @@ class TrafficTableCell: UITableViewCell {
     
     
     func changeTrafficCard(notification:NSNotification) {
-        vwTrafficCard.layer.shadowOpacity = 0.5
+       // vwTrafficCard.layer.shadowOpacity = 0.5
     }
     func hideCardShadow(notification:NSNotification) {
-        vwTrafficCard.layer.shadowOpacity = 0
+      //  vwTrafficCard.layer.shadowOpacity = 0
         
     }
     override func setSelected(selected: Bool, animated: Bool) {

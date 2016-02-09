@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15E33e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -15,11 +15,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="grg-38-GZJ">
-                        <rect key="frame" x="140.5" y="8" width="39" height="27"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snow" translatesAutoresizingMaskIntoConstraints="NO" id="grg-38-GZJ">
+                        <rect key="frame" x="160" y="8" width="20" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="39" id="UlC-0U-BwU"/>
-                            <constraint firstAttribute="height" constant="27" id="hgT-GA-xgB"/>
+                            <constraint firstAttribute="width" constant="20" id="UlC-0U-BwU"/>
+                            <constraint firstAttribute="height" constant="20" id="hgT-GA-xgB"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thursday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujl-5E-jFQ">
@@ -28,7 +28,7 @@
                             <constraint firstAttribute="height" constant="27" id="Dd7-Pa-guA"/>
                             <constraint firstAttribute="width" constant="119" id="ahW-Gk-Cit"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="12"/>
+                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="13"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -38,7 +38,7 @@
                             <constraint firstAttribute="height" constant="27" id="A01-QB-SD6"/>
                             <constraint firstAttribute="width" constant="32" id="Ywq-Kd-HJu"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="12"/>
+                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="13"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -48,7 +48,7 @@
                             <constraint firstAttribute="width" constant="32" id="CJe-VW-kJM"/>
                             <constraint firstAttribute="height" constant="27" id="SkA-Sc-IcM"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="12"/>
+                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="13"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -59,7 +59,7 @@
                     <constraint firstItem="ujl-5E-jFQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="1af-Gn-pHd"/>
                     <constraint firstItem="Qes-UQ-PZ5" firstAttribute="leading" secondItem="HN3-Ce-ugP" secondAttribute="trailing" id="9TW-wa-YCZ"/>
                     <constraint firstItem="ujl-5E-jFQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Awq-Zp-NhQ"/>
-                    <constraint firstItem="grg-38-GZJ" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="cKY-bD-KQQ"/>
+                    <constraint firstItem="grg-38-GZJ" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="10" id="cKY-bD-KQQ"/>
                     <constraint firstItem="grg-38-GZJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="ceP-QZ-8Jc"/>
                     <constraint firstItem="HN3-Ce-ugP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="kNc-5R-4r7"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Qes-UQ-PZ5" secondAttribute="trailing" id="lBu-2e-1iO"/>
@@ -76,4 +76,7 @@
             <point key="canvasLocation" x="195" y="230"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="snow" width="26" height="27"/>
+    </resources>
 </document>

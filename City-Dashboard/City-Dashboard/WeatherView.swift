@@ -50,17 +50,16 @@ class WeatherView: UIView, UITableViewDataSource, UITableViewDelegate{
     
     override func awakeFromNib() {
         super.awakeFromNib()
-       
+        
         populateWeeklyForecastLabels()
         populateWeatherLabels()
     }
     
     private func xibSetup() {
         view = loadViewFromNib()
-        
         view.frame = bounds
         view.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
-        
+        cofigLayerView()
         addSubview(view)
     }
     
@@ -87,10 +86,10 @@ class WeatherView: UIView, UITableViewDataSource, UITableViewDelegate{
     }
     
     private  func cofigLayerView() {
-        weatherTable.layer.cornerRadius = 10
+        weatherTable.layer.cornerRadius = 4
         weatherTable.clipsToBounds = true
         
-        forecastView.layer.cornerRadius = 10
+        forecastView.layer.cornerRadius = 4
         forecastView.clipsToBounds = true
     }
     
@@ -141,7 +140,7 @@ class WeatherView: UIView, UITableViewDataSource, UITableViewDelegate{
         
         lblCloudPercent.text = wToday.cloudCoverage
         lblPressure.text = wToday.pressure
- 
+        
     }
     
     
@@ -151,23 +150,29 @@ class WeatherView: UIView, UITableViewDataSource, UITableViewDelegate{
         let date = NSDate()
         let week = calendar.components([.Day], fromDate: date)
         var todayIs = week.day
+        var index = 0
+        print(todayIs)
         
         let weekdays = ["","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
         var forecastDays = [String]()
         
         var findTomorrow = ""
         for _ in 0..<numOfDays {
-            let index = todayIs.advancedBy(1)
+            
+            if todayIs < 7 {
+                index = todayIs.advancedBy(1)
+            } else {
+                index = 1
+            }
+ 
             findTomorrow = weekdays[index]
             todayIs = weekdays.indexOf(findTomorrow)!
             if todayIs == 7 {
                 todayIs = 0
             }
             forecastDays.append(findTomorrow)
-            
-            
+    
         }
         return forecastDays
     }
-    
 }

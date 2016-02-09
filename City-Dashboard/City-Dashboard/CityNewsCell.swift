@@ -42,8 +42,10 @@ class CityNewsCell: UITableViewCell {
     
     
     func configNewsCard() {
-        
-            vwNewsCard.layer.cornerRadius = 5
+        vwNewsCard.layer.borderWidth = 0.5
+        vwNewsCard.layer.borderColor = UIColor.whiteColor().CGColor
+         vwNewsCard.layer.cornerRadius = 4
+
             vwNewsCard.clipsToBounds = true
             let shadowPath = UIBezierPath(rect: self.vwNewsCard.bounds)
             vwNewsCard.layer.masksToBounds = false
@@ -51,20 +53,17 @@ class CityNewsCell: UITableViewCell {
             vwNewsCard.layer.shadowOffset = CGSize(width: 0.0, height: 5)
             vwNewsCard.layer.shadowOpacity = 0
             vwNewsCard.layer.shadowPath = shadowPath.CGPath
-        
+
     
     }
     func changeNewsCard(notification:NSNotification) {
-        vwNewsCard.layer.shadowOpacity = 0.5
         vwNewsCard.enabled = true
     }
+    
     func hideCardShadow(notification:NSNotification) {
-        vwNewsCard.layer.shadowOpacity = 0
         vwNewsCard.enabled = false
-       
     }
     
-   
     @IBAction func newsSegue(sender: AnyObject) {
         
         

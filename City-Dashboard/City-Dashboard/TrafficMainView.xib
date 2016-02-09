@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15E33e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -24,7 +24,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vaj-nR-h8s">
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgToronto" translatesAutoresizingMaskIntoConstraints="NO" id="tBu-Oq-D0x">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Traffic" translatesAutoresizingMaskIntoConstraints="NO" id="tBu-Oq-D0x">
                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="DjH-oS-O0T">
@@ -40,21 +40,21 @@
                                     <exclude reference="FtY-cy-h3g"/>
                                 </mask>
                             </variation>
-                            <variation key="heightClass=regular-widthClass=compact">
+                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                <rect key="frame" x="192" y="8" width="26" height="26"/>
                                 <mask key="constraints">
                                     <include reference="DjH-oS-O0T"/>
                                     <include reference="FtY-cy-h3g"/>
                                 </mask>
                             </variation>
                         </imageView>
-                        <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vwr-nC-Jzx">
-                            <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                        <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vwr-nC-Jzx">
+                            <rect key="frame" x="-42" y="-24" width="84" height="48"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="26.5" id="QBD-G5-oPM"/>
                                 <constraint firstAttribute="width" constant="26" id="l1v-1e-UHB"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                            <state key="normal" title="Map"/>
+                            <state key="normal" title="Map" image="Map"/>
                             <variation key="default">
                                 <mask key="constraints">
                                     <exclude reference="QBD-G5-oPM"/>
@@ -95,7 +95,7 @@
                                 </mask>
                             </variation>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delays" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygw-Qc-lrW">
+                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DELAYS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygw-Qc-lrW">
                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="31" id="FCG-b7-bx5">
@@ -105,7 +105,7 @@
                                     <variation key="heightClass=regular-widthClass=compact" constant="43"/>
                                 </constraint>
                             </constraints>
-                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="11"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                             <variation key="default">
@@ -114,7 +114,8 @@
                                     <exclude reference="FyJ-sD-oOs"/>
                                 </mask>
                             </variation>
-                            <variation key="heightClass=regular-widthClass=compact">
+                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                <rect key="frame" x="164" y="13" width="43" height="21"/>
                                 <mask key="constraints">
                                     <include reference="FCG-b7-bx5"/>
                                     <include reference="FyJ-sD-oOs"/>
@@ -138,7 +139,8 @@
                                     <exclude reference="b3d-dS-KaF"/>
                                 </mask>
                             </variation>
-                            <variation key="heightClass=regular-widthClass=compact">
+                            <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                <rect key="frame" x="136" y="8" width="52" height="30"/>
                                 <mask key="constraints">
                                     <include reference="SBl-5h-ZLo"/>
                                     <include reference="b3d-dS-KaF"/>
@@ -182,19 +184,20 @@
                         </mask>
                         <mask key="constraints">
                             <exclude reference="ovK-ot-RhW"/>
-                            <exclude reference="4vL-aO-9KK"/>
-                            <exclude reference="5rI-oJ-txT"/>
-                            <exclude reference="9mn-GH-tie"/>
                             <exclude reference="41Q-du-bc9"/>
                             <exclude reference="uXF-ln-coO"/>
                             <exclude reference="fpg-rX-Icg"/>
                             <exclude reference="rja-2Y-qff"/>
+                            <exclude reference="4vL-aO-9KK"/>
+                            <exclude reference="5rI-oJ-txT"/>
+                            <exclude reference="9mn-GH-tie"/>
                             <exclude reference="8gZ-QP-KRL"/>
                             <exclude reference="DSB-f1-pHi"/>
                             <exclude reference="FRP-mf-mww"/>
                         </mask>
                     </variation>
-                    <variation key="heightClass=regular-widthClass=compact">
+                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="43"/>
                         <mask key="subviews">
                             <include reference="tBu-Oq-D0x"/>
                             <include reference="Vwr-nC-Jzx"/>
@@ -204,13 +207,13 @@
                         </mask>
                         <mask key="constraints">
                             <include reference="ovK-ot-RhW"/>
-                            <include reference="4vL-aO-9KK"/>
-                            <include reference="5rI-oJ-txT"/>
-                            <include reference="9mn-GH-tie"/>
                             <include reference="41Q-du-bc9"/>
                             <include reference="uXF-ln-coO"/>
                             <include reference="fpg-rX-Icg"/>
                             <include reference="rja-2Y-qff"/>
+                            <include reference="4vL-aO-9KK"/>
+                            <include reference="5rI-oJ-txT"/>
+                            <include reference="9mn-GH-tie"/>
                             <include reference="8gZ-QP-KRL"/>
                             <include reference="DSB-f1-pHi"/>
                             <include reference="FRP-mf-mww"/>
@@ -278,10 +281,11 @@
                     <include reference="kHq-Lc-gUq"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="771.5" y="412"/>
+            <point key="canvasLocation" x="798.5" y="539.5"/>
         </view>
     </objects>
     <resources>
-        <image name="imgToronto" width="627" height="1082"/>
+        <image name="Map" width="54" height="54"/>
+        <image name="Traffic" width="54" height="54"/>
     </resources>
 </document>

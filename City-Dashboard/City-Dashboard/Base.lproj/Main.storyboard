@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E33e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Uwp-Zf-Rbm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Uwp-Zf-Rbm">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgToronto" translatesAutoresizingMaskIntoConstraints="NO" id="pcw-2r-yEA">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pcw-2r-yEA">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o6m-Mn-d4W">
@@ -224,7 +224,7 @@
                     <view key="view" contentMode="scaleToFill" id="VvY-ZW-hth" customClass="WeatherView" customModule="City_Dashboard" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="152"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.22745098039215686" green="0.21568627450980393" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.15285020335091185" green="0.32619883959341583" blue="0.67025308229352343" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -324,13 +324,13 @@
                                 <exclude reference="pRR-Pc-aE5"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="aio-jx-g9B"/>
                                 <exclude reference="5Dy-hS-QIc"/>
                                 <exclude reference="S1I-Hz-D4r"/>
                                 <exclude reference="hPh-z1-bQE"/>
                                 <exclude reference="NhY-l6-H28"/>
                                 <exclude reference="rqT-Er-iE1"/>
                                 <exclude reference="sRw-N8-PtP"/>
-                                <exclude reference="aio-jx-g9B"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -339,13 +339,13 @@
                                 <include reference="pRR-Pc-aE5"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="aio-jx-g9B"/>
                                 <include reference="5Dy-hS-QIc"/>
                                 <include reference="S1I-Hz-D4r"/>
                                 <include reference="hPh-z1-bQE"/>
                                 <include reference="NhY-l6-H28"/>
                                 <include reference="rqT-Er-iE1"/>
                                 <include reference="sRw-N8-PtP"/>
-                                <include reference="aio-jx-g9B"/>
                             </mask>
                         </variation>
                     </view>
@@ -369,7 +369,7 @@
                     <view key="view" contentMode="scaleToFill" id="NNj-UW-mtC" customClass="TrafficMainView" customModule="City_Dashboard" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="138"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.6470588235294118" green="0.49411764705882355" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.047828961930569687" green="0.5384984129614564" blue="0.54867284982174691" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
@@ -391,7 +391,7 @@
                     <view key="view" contentMode="scaleToFill" id="6E9-Dw-U7I" customClass="CityNewsMain" customModule="City_Dashboard" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="174"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.83921568627450982" green="0.55686274509803924" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.16862745098039217" green="0.19215686274509805" blue="0.32156862745098042" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="newsMainView" destination="6E9-Dw-U7I" id="b08-BR-oKd"/>
@@ -402,7 +402,4 @@
             <point key="canvasLocation" x="1281" y="169"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="imgToronto" width="627" height="1082"/>
-    </resources>
 </document>

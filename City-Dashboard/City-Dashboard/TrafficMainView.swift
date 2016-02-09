@@ -84,11 +84,8 @@ import UIKit
     
     
     func populateTrafficCells() -> [Incident] {
-        
-       
-        
+   
         let market = Markets()
-        
         market.downloadMarkets { () -> () in
             
             let upperLat = market.markets[market.marketIndex["Toronto"]!].boxUpperLeftLatitude
@@ -105,8 +102,7 @@ import UIKit
             })
             
         }
-        
-        
+
         return incidentsArray
         
     }
