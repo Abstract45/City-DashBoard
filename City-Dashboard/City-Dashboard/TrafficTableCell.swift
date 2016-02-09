@@ -20,9 +20,7 @@ class TrafficTableCell: UITableViewCell {
         super.awakeFromNib()
         circleView()
         colorBySeverity()
-        configTrafficCard()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "changeTrafficCard:", name: "midViewOpen", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "hideCardShadow:", name: "resetViews", object: nil)
+        
     }
 
    private func circleView() {
@@ -34,27 +32,10 @@ class TrafficTableCell: UITableViewCell {
        vwSeverity.backgroundColor = UIColor.redColor()
     }
     
-    func configTrafficCard() {
-        
-        vwTrafficCard.layer.cornerRadius = 5
-        vwTrafficCard.clipsToBounds = true
-        let shadowPath = UIBezierPath(rect: self.vwTrafficCard.bounds)
-        vwTrafficCard.layer.masksToBounds = false
-        vwTrafficCard.layer.shadowColor = UIColor.blackColor().CGColor
-        vwTrafficCard.layer.shadowOffset = CGSize(width: 0.0, height: 5)
-        vwTrafficCard.layer.shadowOpacity = 0
-        vwTrafficCard.layer.shadowPath = shadowPath.CGPath
-        vwTrafficCard.layoutSubviews()
-    }
+   
     
     
-    func changeTrafficCard(notification:NSNotification) {
-        vwTrafficCard.layer.shadowOpacity = 0.5
-    }
-    func hideCardShadow(notification:NSNotification) {
-        vwTrafficCard.layer.shadowOpacity = 0
-        
-    }
+   
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

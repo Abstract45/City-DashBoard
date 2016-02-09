@@ -232,7 +232,7 @@
             <constraints>
                 <constraint firstItem="Vaj-nR-h8s" firstAttribute="leading" secondItem="OL4-Ty-xm6" secondAttribute="leading" id="7B4-X0-oaj"/>
                 <constraint firstAttribute="bottom" secondItem="67p-JA-dRW" secondAttribute="bottom" id="EZH-Ib-ui4">
-                    <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                    <variation key="heightClass=regular-widthClass=compact" constant="-6"/>
                 </constraint>
                 <constraint firstAttribute="trailing" secondItem="67p-JA-dRW" secondAttribute="trailing" id="KZZ-Xo-dh1">
                     <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
@@ -242,7 +242,7 @@
                     <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
                 </constraint>
                 <constraint firstItem="67p-JA-dRW" firstAttribute="top" secondItem="Vaj-nR-h8s" secondAttribute="bottom" id="hHx-Nm-Mk9">
-                    <variation key="heightClass=regular-widthClass=compact" constant="2"/>
+                    <variation key="heightClass=regular-widthClass=compact" constant="8"/>
                 </constraint>
                 <constraint firstItem="Vaj-nR-h8s" firstAttribute="top" secondItem="OL4-Ty-xm6" secondAttribute="top" id="kHq-Lc-gUq"/>
             </constraints>

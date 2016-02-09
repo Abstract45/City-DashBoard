@@ -954,7 +954,7 @@
                     <include reference="ocB-sC-Ppe"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="807.5" y="2229"/>
+            <point key="canvasLocation" x="800.5" y="2209"/>
         </view>
     </objects>
     <resources>

@@ -86,6 +86,8 @@ class WeatherView: UIView, UITableViewDataSource, UITableViewDelegate{
         return cell
     }
     
+
+    
     private  func cofigLayerView() {
         weatherTable.layer.cornerRadius = 10
         weatherTable.clipsToBounds = true
