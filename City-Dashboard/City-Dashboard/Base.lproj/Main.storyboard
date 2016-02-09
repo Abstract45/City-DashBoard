@@ -35,7 +35,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="160" id="fo9-Ip-34W"/>
+                                                    <constraint firstAttribute="height" constant="160" id="fo9-Ip-34W"/>
                                                 </constraints>
                                                 <connections>
                                                     <outletCollection property="gestureRecognizers" destination="Oi4-9M-8eC" appends="YES" id="WeL-mG-K6X"/>
@@ -46,7 +46,7 @@
                                                 <rect key="frame" x="0.0" y="160" width="320" height="160"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="160" id="rfj-3Y-RKV"/>
+                                                    <constraint firstAttribute="height" constant="160" id="rfj-3Y-RKV"/>
                                                 </constraints>
                                                 <connections>
                                                     <outletCollection property="gestureRecognizers" destination="v6w-ms-rJV" appends="YES" id="sIO-f3-JmX"/>
