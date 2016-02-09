@@ -9,6 +9,7 @@
 import UIKit
 
  class TrafficMainView: UIView, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var mapBtnRightConstraint: NSLayoutConstraint!
     @IBOutlet weak var trafficTableView: UITableView!
     @IBOutlet weak var logoRightConstraint: NSLayoutConstraint!
     

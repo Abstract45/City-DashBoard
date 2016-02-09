@@ -40,8 +40,12 @@ class TrafficVC: UIViewController {
         UIView.animateWithDuration(1) { () -> Void in
             self.trafficMainView.mapBtnView.alpha = 1
             self.trafficMainView.lblTitleDelay.alpha = 1
+            self.trafficMainView.mapBtnRightConstraint.constant = 10
+            self.trafficMainView.logoRightConstraint.constant = 70
+            
             self.trafficMainView.imgLogo.alpha = 0
             self.trafficMainView.lblTraffic.alpha = 0
+            self.view.layoutIfNeeded()
         }
     }
     
@@ -51,6 +55,7 @@ class TrafficVC: UIViewController {
             self.trafficMainView.lblCurrentIncidents.alpha = 1
             self.trafficMainView.lblTitleDelay.alpha = 0
             self.trafficMainView.imgLogo.alpha = 1
+            self.trafficMainView.mapBtnRightConstraint.constant = -77
             self.trafficMainView.lblTraffic.alpha = 1
             self.trafficMainView.mapBtnView.alpha = 0
             self.view.layoutIfNeeded()
