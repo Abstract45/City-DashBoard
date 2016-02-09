@@ -57,7 +57,7 @@
                                                 <rect key="frame" x="0.0" y="320" width="320" height="160"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="160" id="KHt-4b-yaC"/>
+                                                    <constraint firstAttribute="height" constant="160" id="KHt-4b-yaC"/>
                                                 </constraints>
                                                 <connections>
                                                     <outletCollection property="gestureRecognizers" destination="SjG-X5-INK" appends="YES" id="snZ-1p-EaQ"/>
