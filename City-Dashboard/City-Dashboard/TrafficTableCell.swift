@@ -23,12 +23,12 @@ class TrafficTableCell: UITableViewCell {
         
     }
 
-   private func circleView() {
+    private func circleView() {
         vwSeverity.layer.cornerRadius = vwSeverity.bounds.height/2
         vwSeverity.clipsToBounds = true
     }
     
-  private func colorBySeverity() {
+    private func colorBySeverity() {
        vwSeverity.backgroundColor = UIColor.redColor()
     }
     

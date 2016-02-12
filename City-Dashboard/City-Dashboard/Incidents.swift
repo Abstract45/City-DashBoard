@@ -68,7 +68,7 @@ class Incidents {
         _lowerRightLatitude = lrLat
         _lowerRightLongitude = lrLon
         
-        urlString = "http://www.mapquestapi.com/traffic/v2/incidents?key=xJ45BUDAUC9X0QyNQVG5uv9gqHPr9yae&callback=handleIncidentsResponse&boundingBox=43.849529,-79.657187,43.452068,-79.107870&filters=construction,incidents&inFormat=kvp&outFormat=ksp"
+        urlString = "http://www.mapquestapi.com/traffic/v2/incidents?key=xJ45BUDAUC9X0QyNQVG5uv9gqHPr9yae&callback=handleIncidentsResponse&boundingBox=" + "\(ulLat)," + "\(ulLon)," + "\(lrLat)," + "\(lrLon)" + "&filters=construction,incidents&inFormat=kvp&outFormat=ksp"
         
 //            + "\(upperLeftLatitude)," + "\(upperLeftLongitude)," + "\(lowerRightLatitude)," + "\(lowerRightLongitude)," + URL_END
         
