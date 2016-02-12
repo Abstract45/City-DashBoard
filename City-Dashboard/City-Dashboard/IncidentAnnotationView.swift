@@ -28,13 +28,13 @@ class IncidentAnnotationView: MKAnnotationView {
         let incidentAnnotation = self.annotation as! IncidentAnnotation
         switch (incidentAnnotation.type) {
         case .Accident:
-            image = UIImage(named: "Map")
+            image = UIImage(named: "Accident")
         case .Congestion:
             image = UIImage(named: "Worker")
         case .Event:
             image = UIImage(named: "snow")
         default:
-            image = UIImage(named: "Accident")
+            image = UIImage(named: "RoadBlock")
         }
     }
 }

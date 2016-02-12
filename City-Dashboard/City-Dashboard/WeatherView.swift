@@ -85,7 +85,7 @@ class WeatherView: UIView, UITableViewDataSource, UITableViewDelegate, CLLocatio
         
         if !currentWeekDays.isEmpty {
         cell.weekday.text = currentWeekDays[indexPath.row]
-        print(currentWeekDays)
+       
         cell.tempMin.text = wNext[indexPath.row].temperatureMin
         cell.tempMax.text = wNext[indexPath.row].temperatureMax
         }

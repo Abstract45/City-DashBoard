@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
-class TrafficVC: UIViewController {
+class TrafficVC: UIViewController, CLLocationManagerDelegate {
     
+    var locManager = CLLocationManager()
     
     @IBOutlet var trafficMainView: TrafficMainView!
     private var midSize:CGFloat = 0
@@ -21,7 +24,7 @@ class TrafficVC: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
+        configureLocationManager()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "changeTrafficXib:", name: "changeMiddleView", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "resetTrafficXib:", name: "resetViews", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "midOpen:", name: "midViewOpen", object: nil)
@@ -64,6 +67,47 @@ class TrafficVC: UIViewController {
             self.trafficMainView.mapBtnView.alpha = 0
             self.view.layoutIfNeeded()
         }
+        
+    }
+    
+    // Location functions
+    
+    func configureLocationManager() {
+        locManager = CLLocationManager()
+        locManager.delegate = self
+        locManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locManager.requestWhenInUseAuthorization()
+        locManager.startUpdatingLocation()
+        locManager.requestLocation()
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        locManager.stopUpdatingLocation()
+        
+        let userLocation = locations[0]
+        
+        CLGeocoder().reverseGeocodeLocation(userLocation) { (placemarks: [CLPlacemark]?, error: NSError?) -> Void in
+            
+            if error != nil {
+                print("Error: " + (error?.localizedDescription)!)
+                
+            } else {
+                
+                if placemarks != nil {
+                    let p = CLPlacemark(placemark: placemarks![0])
+                    
+                    if p.subAdministrativeArea != nil {
+                        
+                    self.trafficMainView.populateTrafficCells(p.subAdministrativeArea!, lat: userLocation.coordinate.latitude, lon: userLocation.coordinate.longitude)
+                    }
+                }
+            }
+        }
+    }
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print("Error: " + error.localizedDescription)
         
     }
     
