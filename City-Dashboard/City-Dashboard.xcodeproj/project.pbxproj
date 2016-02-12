@@ -21,6 +21,10 @@
 		E8234FDB1C5F4974000C91A9 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8234FDA1C5F4974000C91A9 /* WeatherVC.swift */; };
 		E8234FDD1C5FCA93000C91A9 /* TrafficVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8234FDC1C5FCA93000C91A9 /* TrafficVC.swift */; };
 		E8234FDF1C5FCA9F000C91A9 /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8234FDE1C5FCA9F000C91A9 /* NewsVC.swift */; };
+		E836DC0E1C6D99790066A471 /* TrafficCallOut.xib in Resources */ = {isa = PBXBuildFile; fileRef = E836DC0D1C6D99790066A471 /* TrafficCallOut.xib */; };
+		E836DC101C6D9AE30066A471 /* TrafficCallOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = E836DC0F1C6D9AE30066A471 /* TrafficCallOut.swift */; };
+		E836DC141C6DACBE0066A471 /* IncidentAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E836DC131C6DACBE0066A471 /* IncidentAnnotation.swift */; };
+		E836DC161C6DAE0A0066A471 /* IncidentAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E836DC151C6DAE0A0066A471 /* IncidentAnnotationView.swift */; };
 		E84480D41C556C7D0035DCE6 /* CityNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E84480D31C556C7D0035DCE6 /* CityNewsCell.xib */; };
 		E84480D71C5570CE0035DCE6 /* CityNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84480D61C5570CE0035DCE6 /* CityNewsCell.swift */; };
 		E87089231C4C2A6C0051D868 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87089221C4C2A6C0051D868 /* AppDelegate.swift */; };
@@ -29,8 +33,8 @@
 		E870892D1C4C2A6C0051D868 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E870892B1C4C2A6C0051D868 /* LaunchScreen.storyboard */; };
 		E88C6A451C6515AB0018B1BE /* NewsWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88C6A441C6515AB0018B1BE /* NewsWebVC.swift */; };
 		E88C6A731C6A67C10018B1BE /* TrafficMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88C6A721C6A67C10018B1BE /* TrafficMapVC.swift */; };
+		E88C6C811C6D58AA0018B1BE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E88C6C801C6D58AA0018B1BE /* CoreLocation.framework */; };
 		FA40DF351C5C0B1A008DF6D4 /* TestWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA40DF341C5C0B1A008DF6D4 /* TestWeatherViewController.swift */; };
-		FA5B699B1C5F548F007FCB10 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5B699A1C5F548F007FCB10 /* CoreLocation.framework */; };
 		FA7C8C0C1C589C6000C99352 /* TestTrafficViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7C8C0B1C589C6000C99352 /* TestTrafficViewController.swift */; };
 		FAAD99881C5625AA00C44322 /* Incident.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD99841C5625AA00C44322 /* Incident.swift */; };
 		FAAD99891C5625AA00C44322 /* Incidents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAD99851C5625AA00C44322 /* Incidents.swift */; };
@@ -44,6 +48,19 @@
 		FAC3FB321C538E4200E2642A /* WeatherNext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC3FB2E1C538E4200E2642A /* WeatherNext.swift */; };
 		FAC3FB331C538E4200E2642A /* WeatherToday.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC3FB2F1C538E4200E2642A /* WeatherToday.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E88C6C7F1C6D58810018B1BE /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E80BD97F1C57E12B005D7EAF /* AnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationController.swift; sourceTree = "<group>"; };
@@ -60,6 +77,10 @@
 		E8234FDA1C5F4974000C91A9 /* WeatherVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
 		E8234FDC1C5FCA93000C91A9 /* TrafficVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrafficVC.swift; sourceTree = "<group>"; };
 		E8234FDE1C5FCA9F000C91A9 /* NewsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
+		E836DC0D1C6D99790066A471 /* TrafficCallOut.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TrafficCallOut.xib; sourceTree = "<group>"; };
+		E836DC0F1C6D9AE30066A471 /* TrafficCallOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrafficCallOut.swift; sourceTree = "<group>"; };
+		E836DC131C6DACBE0066A471 /* IncidentAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IncidentAnnotation.swift; path = ../IncidentAnnotation.swift; sourceTree = "<group>"; };
+		E836DC151C6DAE0A0066A471 /* IncidentAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncidentAnnotationView.swift; sourceTree = "<group>"; };
 		E84480D31C556C7D0035DCE6 /* CityNewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CityNewsCell.xib; path = ../CityNewsCell.xib; sourceTree = "<group>"; };
 		E84480D61C5570CE0035DCE6 /* CityNewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityNewsCell.swift; sourceTree = "<group>"; };
 		E870891F1C4C2A6C0051D868 /* City-Dashboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "City-Dashboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,8 +91,8 @@
 		E870892E1C4C2A6C0051D868 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E88C6A441C6515AB0018B1BE /* NewsWebVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsWebVC.swift; sourceTree = "<group>"; };
 		E88C6A721C6A67C10018B1BE /* TrafficMapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrafficMapVC.swift; sourceTree = "<group>"; };
+		E88C6C801C6D58AA0018B1BE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		FA40DF341C5C0B1A008DF6D4 /* TestWeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestWeatherViewController.swift; sourceTree = "<group>"; };
-		FA5B699A1C5F548F007FCB10 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		FA7C8C0B1C589C6000C99352 /* TestTrafficViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTrafficViewController.swift; sourceTree = "<group>"; };
 		FAAD99841C5625AA00C44322 /* Incident.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Incident.swift; sourceTree = "<group>"; };
 		FAAD99851C5625AA00C44322 /* Incidents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Incidents.swift; sourceTree = "<group>"; };
@@ -91,7 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA5B699B1C5F548F007FCB10 /* CoreLocation.framework in Frameworks */,
+				E88C6C811C6D58AA0018B1BE /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,10 +122,13 @@
 		E8234FA51C5C2F07000C91A9 /* Traffic */ = {
 			isa = PBXGroup;
 			children = (
-				E8234FA81C5C2F76000C91A9 /* TrafficTableCell.swift */,
 				E8234FA91C5C2F76000C91A9 /* TrafficTableCell.xib */,
+				E8234FA81C5C2F76000C91A9 /* TrafficTableCell.swift */,
 				E8234FAC1C5C2F93000C91A9 /* TrafficMainView.swift */,
 				E8234FAE1C5C2FA0000C91A9 /* TrafficMainView.xib */,
+				E836DC0D1C6D99790066A471 /* TrafficCallOut.xib */,
+				E836DC0F1C6D9AE30066A471 /* TrafficCallOut.swift */,
+				E836DC151C6DAE0A0066A471 /* IncidentAnnotationView.swift */,
 			);
 			name = Traffic;
 			sourceTree = "<group>";
@@ -160,7 +184,7 @@
 		E87089161C4C2A6C0051D868 = {
 			isa = PBXGroup;
 			children = (
-				FA5B699A1C5F548F007FCB10 /* CoreLocation.framework */,
+				E88C6C801C6D58AA0018B1BE /* CoreLocation.framework */,
 				E87089211C4C2A6C0051D868 /* City-Dashboard */,
 				E87089201C4C2A6C0051D868 /* Products */,
 			);
@@ -213,6 +237,7 @@
 				FAAD99871C5625AA00C44322 /* Markets.swift */,
 				FAAD99841C5625AA00C44322 /* Incident.swift */,
 				FAAD99851C5625AA00C44322 /* Incidents.swift */,
+				E836DC131C6DACBE0066A471 /* IncidentAnnotation.swift */,
 			);
 			name = Traffic;
 			sourceTree = "<group>";
@@ -248,6 +273,7 @@
 				E870891B1C4C2A6C0051D868 /* Sources */,
 				E870891C1C4C2A6C0051D868 /* Frameworks */,
 				E870891D1C4C2A6C0051D868 /* Resources */,
+				E88C6C7F1C6D58810018B1BE /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -270,6 +296,11 @@
 				TargetAttributes = {
 					E870891E1C4C2A6C0051D868 = {
 						CreatedOnToolsVersion = 7.2;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -300,6 +331,7 @@
 				E870892D1C4C2A6C0051D868 /* LaunchScreen.storyboard in Resources */,
 				E8234FA41C5C272C000C91A9 /* CityNewsMain.xib in Resources */,
 				E80BD98E1C58859C005D7EAF /* WeatherTableCell.xib in Resources */,
+				E836DC0E1C6D99790066A471 /* TrafficCallOut.xib in Resources */,
 				E8234FAF1C5C2FA0000C91A9 /* TrafficMainView.xib in Resources */,
 				E8234FAB1C5C2F76000C91A9 /* TrafficTableCell.xib in Resources */,
 				E870892A1C4C2A6C0051D868 /* Assets.xcassets in Resources */,
@@ -325,7 +357,9 @@
 				FABDF37D1C6160160010C256 /* Multimedia.swift in Sources */,
 				FA40DF351C5C0B1A008DF6D4 /* TestWeatherViewController.swift in Sources */,
 				FAAD99891C5625AA00C44322 /* Incidents.swift in Sources */,
+				E836DC101C6D9AE30066A471 /* TrafficCallOut.swift in Sources */,
 				E88C6A451C6515AB0018B1BE /* NewsWebVC.swift in Sources */,
+				E836DC161C6DAE0A0066A471 /* IncidentAnnotationView.swift in Sources */,
 				E87089231C4C2A6C0051D868 /* AppDelegate.swift in Sources */,
 				FAC3FB331C538E4200E2642A /* WeatherToday.swift in Sources */,
 				E88C6A731C6A67C10018B1BE /* TrafficMapVC.swift in Sources */,
@@ -334,6 +368,7 @@
 				E8234FA21C5C271A000C91A9 /* CityNewsMain.swift in Sources */,
 				FAC3FB321C538E4200E2642A /* WeatherNext.swift in Sources */,
 				E84480D71C5570CE0035DCE6 /* CityNewsCell.swift in Sources */,
+				E836DC141C6DACBE0066A471 /* IncidentAnnotation.swift in Sources */,
 				E80BD98D1C58859C005D7EAF /* WeatherTableCell.swift in Sources */,
 				E8234FDB1C5F4974000C91A9 /* WeatherVC.swift in Sources */,
 				E80BD98A1C587E53005D7EAF /* WeatherView.swift in Sources */,

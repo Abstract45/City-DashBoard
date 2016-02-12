@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15E39d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrafficCallOut" customModule="City_Dashboard" customModuleProvider="target">
+            <connections>
+                <outlet property="incidentInfo" destination="xgh-YE-a6s" id="ezZ-WM-22J"/>
+                <outlet property="streetName" destination="cE9-Cd-r2R" id="D6U-rG-4Fq"/>
+                <outlet property="vwSeverity" destination="fpL-Di-xpB" id="SCv-Az-aXe"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="228" height="96"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Street Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cE9-Cd-r2R">
+                    <rect key="frame" x="41" y="8" width="179" height="21"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fpL-Di-xpB">
+                    <rect key="frame" x="24" y="14" width="9" height="9"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="9" id="GAr-CH-Vzx"/>
+                        <constraint firstAttribute="width" constant="9" id="mtb-lx-Hlu"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is where street info goes but if there is more info" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xgh-YE-a6s">
+                    <rect key="frame" x="8" y="37" width="212" height="51"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="51" id="8cD-v5-TDf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="xgh-YE-a6s" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="198-hk-YZw"/>
+                <constraint firstItem="fpL-Di-xpB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="6Ls-Ir-kEM"/>
+                <constraint firstItem="xgh-YE-a6s" firstAttribute="top" secondItem="cE9-Cd-r2R" secondAttribute="bottom" constant="8" id="GhJ-bn-Vav"/>
+                <constraint firstAttribute="trailing" secondItem="xgh-YE-a6s" secondAttribute="trailing" constant="8" id="Ky7-tf-pWR"/>
+                <constraint firstAttribute="trailing" secondItem="cE9-Cd-r2R" secondAttribute="trailing" constant="8" id="ah8-da-rdo"/>
+                <constraint firstItem="fpL-Di-xpB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="14" id="alc-Xb-PZC"/>
+                <constraint firstAttribute="bottom" secondItem="xgh-YE-a6s" secondAttribute="bottom" constant="8" id="b4s-dh-XgV"/>
+                <constraint firstItem="cE9-Cd-r2R" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="q8p-Wg-HKL"/>
+                <constraint firstItem="cE9-Cd-r2R" firstAttribute="leading" secondItem="fpL-Di-xpB" secondAttribute="trailing" constant="8" id="sXe-iK-ndc"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="82" y="14"/>
+        </view>
+    </objects>
+</document>

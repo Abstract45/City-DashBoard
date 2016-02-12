@@ -35,7 +35,8 @@ class CityNewsCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        
+        vwNewsCard.layer.cornerRadius = 5
+        vwNewsCard.clipsToBounds = true
        
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "changeNewsCard:", name: "botViewOpen", object: nil)

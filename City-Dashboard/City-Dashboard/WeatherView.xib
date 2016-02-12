@@ -118,7 +118,7 @@
                                 </mask>
                             </variation>
                             <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                <rect key="frame" x="80.5" y="29" width="51" height="21"/>
+                                <rect key="frame" x="80" y="29" width="51" height="21"/>
                                 <mask key="constraints">
                                     <include reference="9Tf-B4-tuL"/>
                                     <include reference="xcf-ia-3oA"/>
@@ -215,7 +215,7 @@
                                 </mask>
                             </variation>
                             <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                <rect key="frame" x="66.5" y="75" width="87" height="21"/>
+                                <rect key="frame" x="66" y="75" width="87" height="21"/>
                                 <mask key="constraints">
                                     <include reference="4tE-Mp-fsK"/>
                                     <include reference="HXo-h1-m7y"/>
@@ -238,7 +238,7 @@
                                 </mask>
                             </variation>
                             <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                <rect key="frame" x="80.5" y="90" width="51" height="21"/>
+                                <rect key="frame" x="80" y="90" width="51" height="21"/>
                                 <mask key="constraints">
                                     <include reference="7c1-Nn-JzM"/>
                                     <include reference="U1u-sX-u5d"/>
@@ -648,7 +648,7 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
-                    <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                    <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
                         <rect key="frame" x="10" y="297" width="219" height="52"/>
                     </variation>
                     <connections>
@@ -731,7 +731,9 @@
                                 <constraint firstAttribute="height" constant="57.5" id="1oT-ke-Ju5">
                                     <variation key="heightClass=regular-widthClass=compact" constant="30"/>
                                 </constraint>
-                                <constraint firstAttribute="width" constant="29" id="N5d-9L-EWn"/>
+                                <constraint firstAttribute="width" constant="29" id="N5d-9L-EWn">
+                                    <variation key="heightClass=regular-widthClass=compact" constant="34"/>
+                                </constraint>
                             </constraints>
                             <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -752,7 +754,9 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-1*" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkX-Ze-u6a">
                             <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="29" id="3ll-uL-d3K"/>
+                                <constraint firstAttribute="width" constant="29" id="3ll-uL-d3K">
+                                    <variation key="heightClass=regular-widthClass=compact" constant="34"/>
+                                </constraint>
                                 <constraint firstAttribute="height" constant="57.5" id="w6Q-UL-YB0">
                                     <variation key="heightClass=regular-widthClass=compact" constant="30"/>
                                 </constraint>
@@ -982,7 +986,7 @@
                     <include reference="ocB-sC-Ppe"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="836.5" y="2323.5"/>
+            <point key="canvasLocation" x="883.5" y="2395"/>
         </view>
     </objects>
     <resources>

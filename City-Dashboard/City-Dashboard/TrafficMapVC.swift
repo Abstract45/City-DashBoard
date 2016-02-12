@@ -8,31 +8,72 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class TrafficMapVC: UIViewController {
-
+class TrafficMapVC: UIViewController,CLLocationManagerDelegate, MKMapViewDelegate {
+    
     @IBOutlet weak var trafficMapView: MKMapView!
     var trafficIncidents = [Incident]()
-    let regionRadius: CLLocationDistance = 1000
-     let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
+    
+    let locationManager = CLLocationManager()
+    
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         UIApplication.sharedApplication().statusBarHidden = true
-        centerMapOnLocation(initialLocation)
-   
+        
+      
+        centerToLocation()
+
+        addAnnotation(trafficIncidents)
     }
     
-    func centerMapOnLocation(location: CLLocation) {
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
-            regionRadius * 2.0, regionRadius * 2.0)
-        trafficMapView.setRegion(coordinateRegion, animated: true)
+    func centerToLocation() {
+        
+        self.locationManager.requestAlwaysAuthorization()
+        self.locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }
     }
+    
+
+    
+    
+    
+    func addAnnotation(incidents:[Incident]) {
+        
+        for incident in incidents {
+            
+            let coordinate = CLLocationCoordinate2D(latitude: incident.latitude, longitude: incident.longitude)
+            let title = incident.roadName
+            let subtitle = incident.descriptionShort
+            if let type = IncidentType(rawValue: incident.typeIndex) {
+            
+            let annotation = IncidentAnnotation(coordinate: coordinate, title: title, subtitle: subtitle, type: type)
+               
+                trafficMapView.addAnnotation(annotation)
+            }
+            
+        }
+    }
+    
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        let annotationView = IncidentAnnotationView(annotation: annotation, reuseIdentifier: "Attraction")
+        annotationView.canShowCallout = true
+        return annotationView
+    }
+    
+    
     @IBAction func closeMapView(sender: AnyObject) {
         
         dismissViewControllerAnimated(true, completion: nil)
         UIApplication.sharedApplication().statusBarHidden = false
     }
-
+    
 }
