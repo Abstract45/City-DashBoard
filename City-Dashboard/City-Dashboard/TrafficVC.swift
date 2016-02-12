@@ -45,7 +45,7 @@ class TrafficVC: UIViewController {
             self.trafficMainView.mapBtnView.alpha = 1
             self.trafficMainView.lblTitleDelay.alpha = 1
             self.trafficMainView.mapBtnRightConstraint.constant = 10
-            self.trafficMainView.logoRightConstraint.constant = 70
+            self.trafficMainView.logoRightConstraint.constant = 90
             
             self.trafficMainView.imgLogo.alpha = 0
             self.trafficMainView.lblTraffic.alpha = 0

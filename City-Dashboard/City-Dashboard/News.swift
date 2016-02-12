@@ -21,7 +21,7 @@ class News {
     
     func downloadNews(completion: DownloadComplete) {
         
-        let urlString = "http://api.nytimes.com/svc/topstories/v1/home.json?api-key=3ba12a165e9410d1b2dbe69ec21e26f6:17:74262608"
+        let urlString = "http://api.nytimes.com/svc/topstories/v1/world.json?api-key=3ba12a165e9410d1b2dbe69ec21e26f6:17:74262608"
         
         let url = NSURL(string: urlString)
         

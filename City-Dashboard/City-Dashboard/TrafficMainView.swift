@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import CoreLocation
 
- class TrafficMainView: UIView, UITableViewDelegate, UITableViewDataSource {
+ class TrafficMainView: UIView, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
+    
+    var locManager = CLLocationManager()
+    
     @IBOutlet weak var mapBtnRightConstraint: NSLayoutConstraint!
     @IBOutlet weak var trafficTableView: UITableView!
     @IBOutlet weak var logoRightConstraint: NSLayoutConstraint!
@@ -18,12 +22,14 @@ import UIKit
     @IBOutlet weak var imgLogo: UIImageView!
     @IBOutlet weak var mapBtnView: UIButton!
     @IBOutlet weak var lblCurrentIncidents: UILabel!
+    
     private var view: UIView!
+    
     var incidentsArray = [Incident()]
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        populateTrafficCells()
+        configureLocationManager()
       
     }
     
@@ -84,33 +90,93 @@ import UIKit
     
    
    
+    // Function that populates Traffic TableView Cells
     
-    
-    func populateTrafficCells() -> [Incident] {
-        
-       
+    func populateTrafficCells(city: String, lat: Double, lon: Double) -> [Incident] {
         
         let market = Markets()
         
         market.downloadMarkets { () -> () in
             
-            let upperLat = market.markets[market.marketIndex["Toronto"]!].boxUpperLeftLatitude
-            let upperLon = market.markets[market.marketIndex["Toronto"]!].boxUpperLeftLongitude
-            let lowerLat = market.markets[market.marketIndex["Toronto"]!].boxLowerRightLatitude
-            let lowerLon = market.markets[market.marketIndex["Toronto"]!].boxLowerRightLongitude
-            
-            let incidents = Incidents(ulLat: upperLat, ulLon: upperLon, lrLat: lowerLat, lrLon: lowerLon)
-            
-            incidents.downloadTrafficEvents({ () -> () in
+            if market.marketIndex[city] != nil {
                 
-                self.incidentsArray = incidents.incidents
-                self.trafficTableView.reloadData()
-            })
+                let upperLat = market.markets[market.marketIndex[city]!].boxUpperLeftLatitude
+                let upperLon = market.markets[market.marketIndex[city]!].boxUpperLeftLongitude
+                let lowerLat = market.markets[market.marketIndex[city]!].boxLowerRightLatitude
+                let lowerLon = market.markets[market.marketIndex[city]!].boxLowerRightLongitude
+                
+                let incidents = Incidents(ulLat: upperLat, ulLon: upperLon, lrLat: lowerLat, lrLon: lowerLon)
+                
+                incidents.downloadTrafficEvents({ () -> () in
+                    
+                    self.incidentsArray = incidents.incidents
+                    self.trafficTableView.reloadData()
+                })
+
+            } else {
+                
+                let upperLat = lat - 1
+                let upperLon = lon + 1
+                let lowerLat = lat + 1
+                let lowerLon = lon - 1
+                
+                let incidents = Incidents(ulLat: upperLat, ulLon: upperLon, lrLat: lowerLat, lrLon: lowerLon)
+                
+                incidents.downloadTrafficEvents({ () -> () in
+                    
+                    self.incidentsArray = incidents.incidents
+                    self.trafficTableView.reloadData()
+                })
+            }
+                        
+            
+            
             
         }
         
         
         return incidentsArray
+        
+    }
+    
+    // Location functions
+    
+    func configureLocationManager() {
+        locManager = CLLocationManager()
+        locManager.delegate = self
+        locManager.desiredAccuracy = kCLLocationAccuracyBest
+        locManager.requestWhenInUseAuthorization()
+        locManager.startUpdatingLocation()
+        locManager.requestLocation()
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        locManager.stopUpdatingLocation()
+        
+        let userLocation = locations[0]
+        
+        CLGeocoder().reverseGeocodeLocation(userLocation) { (placemarks: [CLPlacemark]?, error: NSError?) -> Void in
+            
+            if error != nil {
+                print("Error: " + (error?.localizedDescription)!)
+                
+            } else {
+                
+                if placemarks != nil {
+                    let p = CLPlacemark(placemark: placemarks![0])
+                    
+                    if p.subAdministrativeArea != nil {
+                        
+                        self.populateTrafficCells(p.subAdministrativeArea!, lat: userLocation.coordinate.latitude, lon: userLocation.coordinate.longitude)
+                    }
+                }
+            }
+        }
+    }
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print("Error: " + error.localizedDescription)
         
     }
 

@@ -21,8 +21,8 @@ class WeatherForecast {
     private let URL_LON = "&lon="
     private let URL_API = "&appid="
     
-    private var urlStringT: String?
-    private var urlStringN: String?
+    private var urlStringT: String = ""
+    private var urlStringN: String = ""
     
     internal typealias DownloadComplete = () -> ()
     
@@ -56,13 +56,13 @@ class WeatherForecast {
     init(lat: Double, lon: Double) {
         _latitude = lat
         _longitude = lon
-        urlStringT = URL_BASE + URL_WEATHER + URL_LAT + "\(_latitude)" + URL_LON + "\(_longitude)" + URL_API + KEY_API
-        urlStringN = URL_BASE + URL_DAILY + URL_LAT + "\(_latitude)" + URL_LON + "\(_longitude)" + URL_API + KEY_API
+        urlStringT = URL_BASE + URL_WEATHER + URL_LAT + "\(_latitude!)" + URL_LON + "\(_longitude!)" + URL_API + KEY_API
+        urlStringN = URL_BASE + URL_DAILY + URL_LAT + "\(_latitude!)" + URL_LON + "\(_longitude!)" + URL_API + KEY_API
     }
     
     func downloadTodaysWeather(completion: DownloadComplete) {
         
-        let url = NSURL(string: urlStringT!)
+        let url = NSURL(string: urlStringT)
         
         _ = NSURLSession.sharedSession().dataTaskWithURL(url!) { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
             
@@ -183,7 +183,7 @@ class WeatherForecast {
         var wLatitude: Double = 0
         var wLongitude: Double = 0
         
-        let url = NSURL(string: urlStringN!)
+        let url = NSURL(string: urlStringN)
         
         _ = NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler: { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
             

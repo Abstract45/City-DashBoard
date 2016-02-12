@@ -10,8 +10,34 @@ import Foundation
 
 class Markets {
     
-    var markets = [Market]()
-    var marketIndex = [String: Int]()
+    private var _markets: [Market]?
+    private var _marketIndex: [String: Int]?
+    
+    var markets: [Market] {
+        get {
+            if _markets != nil {
+                return _markets!
+            } else {
+                return [Market()]
+            }
+        }
+        set(newValue) {
+            _markets = newValue
+        }
+    }
+    
+    var marketIndex: [String: Int] {
+        get {
+            if _marketIndex != nil {
+                return _marketIndex!
+            } else {
+                return ["Empty": 0]
+            }
+        }
+        set(newValue) {
+            _marketIndex = newValue
+        }
+    }
     
     private var KEY_API = "xJ45BUDAUC9X0QyNQVG5uv9gqHPr9yae"
     private let urlString = "http://www.mapquestapi.com/traffic/v2/markets?key=xJ45BUDAUC9X0QyNQVG5uv9gqHPr9yae"
@@ -31,9 +57,11 @@ class Markets {
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 
                 do {
+                    
                     guard let data = data else {
                         return
                     }
+                    
                     let json = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments)
                     
                     if let marketsDict = json as? Dictionary<String, AnyObject> {
@@ -41,6 +69,7 @@ class Markets {
                         if let markets = marketsDict["markets"] as? Array<AnyObject> {
                             
                             var counter = -1
+                            self.marketIndex.removeAll()
                             
                             for m in markets {
                                 let tempMarket = Market()

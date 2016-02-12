@@ -68,6 +68,10 @@ class WeatherToday: Weather {
         super.init(lat: lat, lon: lon)
     }
     
+    override init() {
+        super.init()
+    }
+    
     func timeReadable(time:Double) -> String{
         let date = NSDate(timeIntervalSince1970: time)
         let dateString = String(date)

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15E33e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -69,8 +69,8 @@
             <color key="backgroundColor" white="1" alpha="0.34013407939189189" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="imgDayIcon" destination="grg-38-GZJ" id="BYP-e0-HPh"/>
-                <outlet property="tempMax" destination="Qes-UQ-PZ5" id="Zuu-sg-ru1"/>
-                <outlet property="tempMin" destination="HN3-Ce-ugP" id="vfx-5J-TTs"/>
+                <outlet property="tempMax" destination="HN3-Ce-ugP" id="gbl-zD-WPs"/>
+                <outlet property="tempMin" destination="Qes-UQ-PZ5" id="bRR-DE-PWB"/>
                 <outlet property="weekday" destination="ujl-5E-jFQ" id="LBX-I6-tRC"/>
             </connections>
             <point key="canvasLocation" x="195" y="215.5"/>
