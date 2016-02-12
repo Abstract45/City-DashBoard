@@ -30,7 +30,6 @@ import CoreLocation
     override func awakeFromNib() {
         super.awakeFromNib()
         configureLocationManager()
-//        populateTrafficCells()
       
     }
     

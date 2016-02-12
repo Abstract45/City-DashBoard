@@ -56,8 +56,9 @@ class WeatherForecast {
     init(lat: Double, lon: Double) {
         _latitude = lat
         _longitude = lon
-        urlStringT = URL_BASE + URL_WEATHER + URL_LAT + "\(_latitude)" + URL_LON + "\(_longitude)" + URL_API + KEY_API
-        urlStringN = URL_BASE + URL_DAILY + URL_LAT + "\(_latitude)" + URL_LON + "\(_longitude)" + URL_API + KEY_API
+        urlStringT = URL_BASE + URL_WEATHER + URL_LAT + "\(_latitude!)" + URL_LON + "\(_longitude!)" + URL_API + KEY_API
+        urlStringN = URL_BASE + URL_DAILY + URL_LAT + "\(_latitude!)" + URL_LON + "\(_longitude!)" + URL_API + KEY_API
+        print(urlStringT)
     }
     
     func downloadTodaysWeather(completion: DownloadComplete) {

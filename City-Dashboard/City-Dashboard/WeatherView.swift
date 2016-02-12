@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CoreLocation
 
-class WeatherView: UIView, UITableViewDataSource, UITableViewDelegate{
+class WeatherView: UIView, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate {
+    
+    var locManager = CLLocationManager()
     
     @IBOutlet weak var imgWeatherLogo: UIImageView!
     @IBOutlet weak var lblWeatherCategory: UILabel!
@@ -30,13 +33,10 @@ class WeatherView: UIView, UITableViewDataSource, UITableViewDelegate{
     @IBOutlet weak var lblSunriseTime: UILabel!
     private var view: UIView!
     
-    var wToday = WeatherToday(city: "Toronto")
-    var wNext = [WeatherNext]()
+    var wToday = WeatherToday()
+    var wNext = [WeatherNext()]
     
     private var currentWeekDays = [String]()
-    
-    
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -50,9 +50,11 @@ class WeatherView: UIView, UITableViewDataSource, UITableViewDelegate{
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        configureLocationManager()
        
-        populateWeeklyForecastLabels()
-        populateWeatherLabels()
+//        populateWeeklyForecastLabels()
+//        populateWeatherLabels()
     }
     
     private func xibSetup() {
@@ -99,11 +101,9 @@ class WeatherView: UIView, UITableViewDataSource, UITableViewDelegate{
         forecastView.clipsToBounds = true
     }
     
-    func populateWeatherLabels() -> WeatherToday {
+    func populateWeatherLabels(city: String, lat: Double, lon: Double) -> WeatherToday {
         
-        
-        
-        let weatherToday = WeatherForecast(city: "Toronto")
+        let weatherToday = WeatherForecast(lat: lat, lon: lon)
         
         weatherToday.downloadTodaysWeather { () -> () in
             
@@ -116,9 +116,9 @@ class WeatherView: UIView, UITableViewDataSource, UITableViewDelegate{
         return self.wToday
     }
     
-    func populateWeeklyForecastLabels() -> [WeatherNext] {
+    func populateWeeklyForecastLabels(city: String, lat: Double, lon: Double) -> [WeatherNext] {
         
-        let weatherNext = WeatherForecast(city: "Toronto")
+        let weatherNext = WeatherForecast(lat: lat, lon: lon)
         
         weatherNext.downloadWeeklyForecast { () -> () in
             
@@ -183,6 +183,51 @@ class WeatherView: UIView, UITableViewDataSource, UITableViewDelegate{
             
         }
         return forecastDays
+    }
+    
+    // Location function
+    
+    func configureLocationManager() {
+        locManager = CLLocationManager()
+        locManager.delegate = self
+        locManager.desiredAccuracy = kCLLocationAccuracyBest
+        locManager.requestWhenInUseAuthorization()
+        locManager.startUpdatingLocation()
+        locManager.requestLocation()
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        locManager.stopUpdatingLocation()
+        
+        let userLocation = locations[0]
+        
+        CLGeocoder().reverseGeocodeLocation(userLocation) { (placemarks: [CLPlacemark]?, error: NSError?) -> Void in
+            
+            if error != nil {
+                
+                print("Error " + error!.localizedDescription)
+                
+            } else {
+                
+                if placemarks != nil {
+                    
+                    let p = CLPlacemark(placemark: placemarks![0])
+                    
+                    if p.subAdministrativeArea != nil {
+                        
+                        self.populateWeeklyForecastLabels(p.subAdministrativeArea!, lat: userLocation.coordinate.latitude, lon: userLocation.coordinate.longitude)
+                        
+                        self.populateWeatherLabels(p.subAdministrativeArea!, lat: userLocation.coordinate.latitude, lon: userLocation.coordinate.longitude)
+                    }
+                    
+                }
+            }
+        }
+    }
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print("Error: " + error.localizedDescription)
     }
     
 }
