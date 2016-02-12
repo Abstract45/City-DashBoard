@@ -18,6 +18,8 @@ class TrafficTableCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        vwTrafficCard.layer.cornerRadius = 5
+        vwTrafficCard.clipsToBounds = true
         circleView()
         colorBySeverity()
         

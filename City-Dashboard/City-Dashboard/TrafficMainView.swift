@@ -9,9 +9,9 @@
 import UIKit
 import CoreLocation
 
- class TrafficMainView: UIView, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate {
+ class TrafficMainView: UIView, UITableViewDelegate, UITableViewDataSource {
     
-    var locManager = CLLocationManager()
+   
     
     @IBOutlet weak var mapBtnRightConstraint: NSLayoutConstraint!
     @IBOutlet weak var trafficTableView: UITableView!
@@ -29,7 +29,7 @@ import CoreLocation
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        configureLocationManager()
+        
       
     }
     
@@ -128,56 +128,13 @@ import CoreLocation
                     self.trafficTableView.reloadData()
                 })
             }
-                        
-            
-            
-            
+    
         }
-        
-        
+     
         return incidentsArray
         
     }
     
-    // Location functions
-    
-    func configureLocationManager() {
-        locManager = CLLocationManager()
-        locManager.delegate = self
-        locManager.desiredAccuracy = kCLLocationAccuracyBest
-        locManager.requestWhenInUseAuthorization()
-        locManager.startUpdatingLocation()
-        locManager.requestLocation()
-    }
-    
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        locManager.stopUpdatingLocation()
-        
-        let userLocation = locations[0]
-        
-        CLGeocoder().reverseGeocodeLocation(userLocation) { (placemarks: [CLPlacemark]?, error: NSError?) -> Void in
-            
-            if error != nil {
-                print("Error: " + (error?.localizedDescription)!)
-                
-            } else {
-                
-                if placemarks != nil {
-                    let p = CLPlacemark(placemark: placemarks![0])
-                    
-                    if p.subAdministrativeArea != nil {
-                        
-                        self.populateTrafficCells(p.subAdministrativeArea!, lat: userLocation.coordinate.latitude, lon: userLocation.coordinate.longitude)
-                    }
-                }
-            }
-        }
-    }
-    
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
-        print("Error: " + error.localizedDescription)
-        
-    }
+   
 
 }
