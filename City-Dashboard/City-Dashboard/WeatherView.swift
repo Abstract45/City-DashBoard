@@ -82,9 +82,14 @@ class WeatherView: UIView, UITableViewDataSource, UITableViewDelegate, CLLocatio
         
         weatherTable.registerNib(UINib.init(nibName: "WeatherTableCell", bundle: nil), forCellReuseIdentifier:"weather")
         let cell = weatherTable.dequeueReusableCellWithIdentifier("weather") as! WeatherTableCell
+        
+        if !currentWeekDays.isEmpty {
         cell.weekday.text = currentWeekDays[indexPath.row]
+        print(currentWeekDays)
         cell.tempMin.text = wNext[indexPath.row].temperatureMin
         cell.tempMax.text = wNext[indexPath.row].temperatureMax
+        }
+        
         return cell
     }
     
