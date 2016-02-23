@@ -29,7 +29,7 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate, C
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        print("THis is weather next \(wNext[0].temperature)")
+       
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "changeWeatherXib:", name: "changeTopView", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "resetWeatherXib:", name: "resetViews", object: nil)
@@ -69,7 +69,7 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate, C
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return self.wNext.count
     }
     
     
@@ -79,6 +79,8 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate, C
         tableView.registerNib(UINib(nibName: "WeatherTableCell", bundle: nil), forCellReuseIdentifier: "weather")
        
          let cell = tableView.dequeueReusableCellWithIdentifier("weather") as! WeatherTableCell
+        
+       
         
         if !currentWeekDays.isEmpty {
             cell.weekday.text = currentWeekDays[indexPath.row]
@@ -96,6 +98,8 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate, C
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 35
     }
+    
+    
     
     private  func cofigLayerView() {
         weatherTable.layer.cornerRadius = 10
