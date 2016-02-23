@@ -32,8 +32,7 @@ class TrafficMapVC: UIViewController,CLLocationManagerDelegate, MKMapViewDelegat
     
     func centerToLocation() {
         
-        self.locationManager.requestAlwaysAuthorization()
-        self.locationManager.requestWhenInUseAuthorization()
+       
         
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self

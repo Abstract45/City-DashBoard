@@ -68,7 +68,7 @@ class Markets {
                         
                         if let markets = marketsDict["markets"] as? Array<AnyObject> {
                             
-                            var counter = -1
+                            var counter = 0
                             self.marketIndex.removeAll()
                             
                             for m in markets {

@@ -114,7 +114,7 @@ import CoreLocation
                 })
 
             } else {
-                
+                print("else hit")
                 let upperLat = lat - 1
                 let upperLon = lon + 1
                 let lowerLat = lat + 1
