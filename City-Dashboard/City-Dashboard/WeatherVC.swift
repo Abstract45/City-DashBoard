@@ -14,7 +14,7 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate, C
     @IBOutlet weak var weatherTable: UITableView!
     
     @IBOutlet var weatherMainView: WeatherView!
-     private var midSize:CGFloat = 0
+    
     var wToday = WeatherToday()
     var wNext = [WeatherNext()]
     var locManager = CLLocationManager()
@@ -22,7 +22,7 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate, C
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.midSize = self.view.bounds.midX - 51.5
+       
        configureLocationManager() 
     }
     
@@ -40,8 +40,7 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate, C
         UIView.animateWithDuration(1) { () -> Void in
             
             self.weatherMainView.vwWeatherToday.alpha = 0
-            self.weatherMainView.logoRightConstraint.constant = self.midSize
-            
+            self.weatherMainView.logoRightConstraint.constant = ConstraintSize.midSizeLogo
             self.view.layoutIfNeeded()
         }
     }
@@ -76,6 +75,9 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate, C
         return self.wNext.count
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 35
+    }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
        
@@ -84,27 +86,18 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate, C
        
          let cell = tableView.dequeueReusableCellWithIdentifier("weather") as! WeatherTableCell
         
-       
-        
         if !currentWeekDays.isEmpty {
             cell.weekday.text = currentWeekDays[indexPath.row]
             
             cell.tempMin.text = wNext[indexPath.row].temperatureMin
             cell.tempMax.text = wNext[indexPath.row].temperatureMax
         }
-     
-     
-        
+ 
         return cell
     }
     
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 35
-    }
-    
-    
-    
+  
     private  func cofigLayerView() {
         weatherTable.layer.cornerRadius = 10
         weatherTable.clipsToBounds = true

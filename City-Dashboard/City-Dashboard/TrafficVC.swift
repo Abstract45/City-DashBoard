@@ -15,12 +15,12 @@ class TrafficVC: UIViewController, CLLocationManagerDelegate, UITableViewDelegat
     var locManager = CLLocationManager()
     @IBOutlet weak var trafficTableView: UITableView!
     @IBOutlet var trafficMainView: TrafficMainView!
-    private var midSize:CGFloat = 0
+  
     var incidentsArray = [Incident()]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        midSize = self.view.bounds.midX - 51.5
+     
         trafficMainView.mapBtnView.addTarget(self, action: "segueToTrafficController", forControlEvents: .TouchUpInside)
     }
     
@@ -39,7 +39,7 @@ class TrafficVC: UIViewController, CLLocationManagerDelegate, UITableViewDelegat
     
     func changeTrafficXib(notification:NSNotification) {
         UIView.animateWithDuration(1) { () -> Void in
-            self.trafficMainView.logoRightConstraint.constant = self.midSize
+            self.trafficMainView.logoRightConstraint.constant = ConstraintSize.midSizeLogo
              self.trafficMainView.lblCurrentIncidents.alpha = 0
                 self.view.layoutIfNeeded()
         }

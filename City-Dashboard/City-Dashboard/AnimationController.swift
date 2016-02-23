@@ -21,28 +21,22 @@ class AnimationController: UIViewController {
     @IBOutlet weak var middleView: UIView!
     @IBOutlet weak var bottomView: UIView!
     
-    private var smallHeight:CGFloat = 0
-    private var tallHeight:CGFloat = 0
-    
-    static var mainViewSize: CGFloat {
-        return self.init().view.frame.midX - 51.5
-    }
-    
     
     
     @IBAction func topTap(sender: AnyObject) {
         
-        self.changeViewConstraints(tallHeight, secondViewHeight: smallHeight, thirdViewHeight: smallHeight)
+        self.changeViewConstraints(ConstraintSize.viewTallHeight, secondViewHeight: ConstraintSize.viewSmallHeight, thirdViewHeight: ConstraintSize.viewSmallHeight)
     }
     
     @IBAction func middleTap(sender: AnyObject) {
-        self.changeViewConstraints(smallHeight, secondViewHeight: tallHeight, thirdViewHeight: smallHeight)
+        self.changeViewConstraints(ConstraintSize.viewSmallHeight, secondViewHeight: ConstraintSize.viewTallHeight, thirdViewHeight: ConstraintSize.viewSmallHeight)
     }
     
     @IBAction func bottomTap(sender: AnyObject) {
-        self.changeViewConstraints(smallHeight, secondViewHeight: smallHeight, thirdViewHeight: tallHeight)
+        self.changeViewConstraints(ConstraintSize.viewSmallHeight, secondViewHeight: ConstraintSize.viewSmallHeight, thirdViewHeight: ConstraintSize.viewTallHeight)
         
     }
+    
     var isFirstTap = true
     
     private func changeViewConstraints(firstViewHeight:CGFloat,secondViewHeight:CGFloat, thirdViewHeight:CGFloat) {
@@ -75,13 +69,13 @@ class AnimationController: UIViewController {
         
         
         if self.menuStackView.distribution == .FillProportionally {
-            if firstView == tallHeight {
+            if firstView == ConstraintSize.viewTallHeight {
                 NSNotificationCenter.defaultCenter().postNotificationName("topViewOpen", object: nil)
                 NSNotificationCenter.defaultCenter().postNotificationName("changeMiddleView", object: nil)
                 NSNotificationCenter.defaultCenter().postNotificationName("changeBottomView", object: nil)
                
                 
-            } else if secondView == tallHeight {
+            } else if secondView == ConstraintSize.viewTallHeight {
                 NSNotificationCenter.defaultCenter().postNotificationName("changeTopView", object: nil)
                 NSNotificationCenter.defaultCenter().postNotificationName("changeBottomView", object: nil)
                 NSNotificationCenter.defaultCenter().postNotificationName("midViewOpen", object: nil)
@@ -102,11 +96,7 @@ class AnimationController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        smallHeight = 43
-        tallHeight = self.view.bounds.height - smallHeight
-        
-        
-        
+
         //Turn off constraint errors
         NSUserDefaults.standardUserDefaults().setValue(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
         
