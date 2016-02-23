@@ -54,7 +54,6 @@
                     </label>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="ujl-5E-jFQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="1af-Gn-pHd"/>
                     <constraint firstItem="Qes-UQ-PZ5" firstAttribute="leading" secondItem="HN3-Ce-ugP" secondAttribute="trailing" constant="5" id="9TW-wa-YCZ"/>
@@ -66,7 +65,7 @@
                     <constraint firstAttribute="topMargin" secondItem="Qes-UQ-PZ5" secondAttribute="top" constant="4" id="ncL-oj-w17"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" white="1" alpha="0.34013407939189189" colorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="1" alpha="0.34026313266871167" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="imgDayIcon" destination="grg-38-GZJ" id="BYP-e0-HPh"/>
                 <outlet property="tempMax" destination="HN3-Ce-ugP" id="gbl-zD-WPs"/>

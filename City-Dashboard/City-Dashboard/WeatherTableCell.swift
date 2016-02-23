@@ -16,23 +16,6 @@ class WeatherTableCell: UITableViewCell {
     @IBOutlet weak var tempMin: UILabel!
     @IBOutlet weak var imgDayIcon: UIImageView!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-  
-        
-        
-    }
-    
-    
 
-   
-    
-    
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
 }
