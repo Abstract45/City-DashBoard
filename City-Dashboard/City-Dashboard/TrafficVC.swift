@@ -10,15 +10,17 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class TrafficVC: UIViewController, CLLocationManagerDelegate {
+class TrafficVC: UIViewController, CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource {
     
     var locManager = CLLocationManager()
-    
+    @IBOutlet weak var trafficTableView: UITableView!
     @IBOutlet var trafficMainView: TrafficMainView!
     private var midSize:CGFloat = 0
+    var incidentsArray = [Incident()]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        midSize = self.trafficMainView.frame.midX - 51.5
+        midSize = self.view.bounds.midX - 51.5
         trafficMainView.mapBtnView.addTarget(self, action: "segueToTrafficController", forControlEvents: .TouchUpInside)
     }
     
@@ -99,7 +101,7 @@ class TrafficVC: UIViewController, CLLocationManagerDelegate {
                     
                     if p.subAdministrativeArea != nil {
                         
-                    self.trafficMainView.populateTrafficCells(p.subAdministrativeArea!, lat: userLocation.coordinate.latitude, lon: userLocation.coordinate.longitude)
+                    self.populateTrafficCells(p.subAdministrativeArea!, lat: userLocation.coordinate.latitude, lon: userLocation.coordinate.longitude)
                     }
                 }
             }
@@ -113,12 +115,81 @@ class TrafficVC: UIViewController, CLLocationManagerDelegate {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "trafficMapSegue" {
-            if !trafficMainView.incidentsArray.isEmpty {
+            if !self.incidentsArray.isEmpty {
                 let destinationVC = segue.destinationViewController as! TrafficMapVC
-                destinationVC.trafficIncidents = self.trafficMainView.incidentsArray
+                destinationVC.trafficIncidents = self.incidentsArray
             }
         }
     }
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return incidentsArray.count
+    }
     
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        trafficTableView.registerNib(UINib.init(nibName: "TrafficTableCell", bundle: nil), forCellReuseIdentifier: "traffic")
+        
+        let cell = trafficTableView.dequeueReusableCellWithIdentifier("traffic") as! TrafficTableCell
+        
+        
+        cell.lblTrafficDescription.text = incidentsArray[indexPath.row].descriptionShort
+        cell.lblDelayTime.text = "\(incidentsArray[indexPath.row].delayFromFreeFlow) mins"
+        
+        return cell
+        
+    }
+    
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 64
+    }
+    
+    
+    
+    // Function that populates Traffic TableView Cells
+    
+    func populateTrafficCells(city: String, lat: Double, lon: Double) -> [Incident] {
+        
+        let market = Markets()
+        
+        market.downloadMarkets { () -> () in
+            
+            if market.marketIndex[city] != nil {
+                
+                let upperLat = market.markets[market.marketIndex[city]!].boxUpperLeftLatitude
+                let upperLon = market.markets[market.marketIndex[city]!].boxUpperLeftLongitude
+                let lowerLat = market.markets[market.marketIndex[city]!].boxLowerRightLatitude
+                let lowerLon = market.markets[market.marketIndex[city]!].boxLowerRightLongitude
+                
+                let incidents = Incidents(ulLat: upperLat, ulLon: upperLon, lrLat: lowerLat, lrLon: lowerLon)
+                
+                incidents.downloadTrafficEvents({ () -> () in
+                    
+                    self.incidentsArray = incidents.incidents
+                    self.trafficTableView.reloadData()
+                })
+                
+            } else {
+                print("else hit")
+                let upperLat = lat - 1
+                let upperLon = lon + 1
+                let lowerLat = lat + 1
+                let lowerLon = lon - 1
+                
+                let incidents = Incidents(ulLat: upperLat, ulLon: upperLon, lrLat: lowerLat, lrLon: lowerLon)
+                
+                incidents.downloadTrafficEvents({ () -> () in
+                    
+                    self.incidentsArray = incidents.incidents
+                    self.trafficTableView.reloadData()
+                })
+            }
+            
+        }
+        
+        return incidentsArray
+        
+    }
+    
+
     
 }

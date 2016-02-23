@@ -22,7 +22,7 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate, C
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.midSize = self.weatherMainView.frame.midX - 51.5
+        self.midSize = self.view.bounds.midX - 51.5
        configureLocationManager() 
     }
     
@@ -38,8 +38,10 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate, C
     
     func changeWeatherXib(notification:NSNotification) {
         UIView.animateWithDuration(1) { () -> Void in
+            
+            self.weatherMainView.vwWeatherToday.alpha = 0
             self.weatherMainView.logoRightConstraint.constant = self.midSize
-        
+            
             self.view.layoutIfNeeded()
         }
     }
@@ -51,7 +53,8 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate, C
             self.weatherTable.alpha = 1
             self.weatherMainView.lblWeatherCategory.alpha = 0
             self.weatherMainView.imgWeatherLogo.alpha = 0
-            self.view.backgroundColor = UIColor.clearColor()
+            
+            
         }
     }
     
@@ -63,6 +66,7 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate, C
         self.weatherMainView.lblWeatherCategory.alpha = 1
         self.weatherMainView.imgWeatherLogo.alpha = 1
         self.view.backgroundColor = UIColor(red: 67/255, green: 151/255, blue: 219/255, alpha: 1)
+        self.weatherMainView.vwWeatherToday.alpha = 1
         self.view.layoutIfNeeded()
         }
     }

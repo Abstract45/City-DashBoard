@@ -23,6 +23,7 @@
                 <outlet property="lblWeatherDescription" destination="Idw-o8-IaT" id="aZX-hx-EAp"/>
                 <outlet property="lblWindSpeed" destination="R3j-dM-6ay" id="vFH-96-SKh"/>
                 <outlet property="logoRightConstraint" destination="lPo-A5-ZSy" id="DJ0-o5-yGR"/>
+                <outlet property="vwWeatherToday" destination="aLW-Pv-mKl" id="NB5-3P-YKQ"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -298,12 +299,12 @@
                             <exclude reference="CKP-XA-wdc"/>
                         </mask>
                         <mask key="constraints">
-                            <exclude reference="X5z-eD-HkV"/>
-                            <exclude reference="ou2-fh-Ahb"/>
                             <exclude reference="lJg-1m-nLk"/>
                             <exclude reference="uBT-BX-dsQ"/>
                             <exclude reference="1cL-2z-SU0"/>
                             <exclude reference="PZc-1g-fFK"/>
+                            <exclude reference="X5z-eD-HkV"/>
+                            <exclude reference="ou2-fh-Ahb"/>
                             <exclude reference="Xha-lG-Gc6"/>
                             <exclude reference="tic-Nt-i7u"/>
                             <exclude reference="0gX-cT-9CV"/>
@@ -324,12 +325,12 @@
                             <include reference="CKP-XA-wdc"/>
                         </mask>
                         <mask key="constraints">
-                            <include reference="X5z-eD-HkV"/>
-                            <include reference="ou2-fh-Ahb"/>
                             <include reference="lJg-1m-nLk"/>
                             <include reference="uBT-BX-dsQ"/>
                             <include reference="1cL-2z-SU0"/>
                             <include reference="PZc-1g-fFK"/>
+                            <include reference="X5z-eD-HkV"/>
+                            <include reference="ou2-fh-Ahb"/>
                             <include reference="Xha-lG-Gc6"/>
                             <include reference="tic-Nt-i7u"/>
                             <include reference="0gX-cT-9CV"/>

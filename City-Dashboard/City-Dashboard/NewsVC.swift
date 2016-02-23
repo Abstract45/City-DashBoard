@@ -8,16 +8,21 @@
 
 import UIKit
 
-class NewsVC: UIViewController {
+class NewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet var newsMainView: CityNewsMain!
+    @IBOutlet weak var newsTableView: UITableView!
+    
     private var midSize:CGFloat = 0
+    var indexValue: NSIndexPath?
+    var currentURL:String? = ""
+    var newsArray = [NewsItem]()
   
     override func viewDidLoad() {
         super.viewDidLoad()
-         midSize = self.newsMainView.frame.midX - 51.5
+         midSize = self.view.bounds.midX - 51.5
       
-       
+       self.populateNews()
         
         
     }
@@ -74,6 +79,55 @@ class NewsVC: UIViewController {
         self.presentViewController(vc, animated: true, completion: nil)
        
     }
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return  newsArray.count
+    }
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        newsTableView.registerNib(UINib.init(nibName: "CityNewsCell", bundle: nil), forCellReuseIdentifier:"news")
+        let cell = newsTableView.dequeueReusableCellWithIdentifier("news") as! CityNewsCell
+        cell.headlines.text = newsArray[indexPath.row].title
+        cell.timeCategory.text = newsArray[indexPath.row].dateCreated
+        
+        cell.url = newsArray[indexPath.row].url
+        
+        dispatch_async(dispatch_get_main_queue()) { () -> Void in
+            if let url  = NSURL(string: self.newsArray[indexPath.row].multimedia[0].url),
+                data = NSData(contentsOfURL: url)
+            {
+                
+                cell.imgCityNews.image = UIImage(data: data)
+            }
+        }
+        
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 91
+    }
+    
+    
+    
+    
+    
+    
+    func populateNews() -> [NewsItem] {
+        let news = News()
+        
+        news.downloadNews { () -> () in
+            
+            self.newsArray = news.news
+            
+            
+            self.newsTableView.reloadData()
+        }
+        return newsArray
+    }
+    
     
     
     

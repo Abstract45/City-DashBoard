@@ -501,20 +501,91 @@
                         <viewControllerLayoutGuide type="top" id="W9B-8R-VFA"/>
                         <viewControllerLayoutGuide type="bottom" id="jkx-xM-UNI"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="NNj-UW-mtC" customClass="TrafficMainView" customModule="City_Dashboard" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="NNj-UW-mtC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qqf-RG-Bgu" customClass="TrafficMainView" customModule="City_Dashboard" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="7wD-2x-jEl"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7wD-2x-jEl"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="7wD-2x-jEl"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7pX-gX-IaE">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ofS-PY-GSb" id="cYr-ml-Y1h"/>
+                                    <outlet property="delegate" destination="ofS-PY-GSb" id="AfN-xQ-NIW"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="0.078431372550000003" green="0.47058823529999999" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Qqf-RG-Bgu" firstAttribute="top" secondItem="W9B-8R-VFA" secondAttribute="bottom" id="44h-2A-YtD"/>
+                            <constraint firstItem="Qqf-RG-Bgu" firstAttribute="leading" secondItem="NNj-UW-mtC" secondAttribute="leading" id="AvH-nK-8LH"/>
+                            <constraint firstItem="7pX-gX-IaE" firstAttribute="top" secondItem="Qqf-RG-Bgu" secondAttribute="bottom" id="Mgq-HC-ZuT"/>
+                            <constraint firstItem="7pX-gX-IaE" firstAttribute="leading" secondItem="NNj-UW-mtC" secondAttribute="leading" id="bby-rn-nED"/>
+                            <constraint firstAttribute="trailing" secondItem="7pX-gX-IaE" secondAttribute="trailing" id="lhE-eT-t9Q"/>
+                            <constraint firstItem="jkx-xM-UNI" firstAttribute="top" secondItem="7pX-gX-IaE" secondAttribute="bottom" id="vIE-Cw-Fo5"/>
+                            <constraint firstAttribute="trailing" secondItem="Qqf-RG-Bgu" secondAttribute="trailing" id="wym-oX-fcR"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Qqf-RG-Bgu"/>
+                                <exclude reference="7pX-gX-IaE"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="44h-2A-YtD"/>
+                                <exclude reference="AvH-nK-8LH"/>
+                                <exclude reference="wym-oX-fcR"/>
+                                <exclude reference="Mgq-HC-ZuT"/>
+                                <exclude reference="bby-rn-nED"/>
+                                <exclude reference="lhE-eT-t9Q"/>
+                                <exclude reference="vIE-Cw-Fo5"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Qqf-RG-Bgu"/>
+                                <include reference="7pX-gX-IaE"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="44h-2A-YtD"/>
+                                <include reference="AvH-nK-8LH"/>
+                                <include reference="wym-oX-fcR"/>
+                                <include reference="Mgq-HC-ZuT"/>
+                                <include reference="bby-rn-nED"/>
+                                <include reference="lhE-eT-t9Q"/>
+                                <include reference="vIE-Cw-Fo5"/>
+                            </mask>
+                        </variation>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="500"/>
                     <connections>
-                        <outlet property="trafficMainView" destination="NNj-UW-mtC" id="Dbn-mj-zZz"/>
+                        <outlet property="trafficMainView" destination="Qqf-RG-Bgu" id="PYU-ed-W2S"/>
+                        <outlet property="trafficTableView" destination="7pX-gX-IaE" id="Ma7-7g-9Cb"/>
                         <segue destination="iNy-Kl-EeC" kind="show" identifier="trafficMapSegue" id="NjE-sf-Hdt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v6G-8N-p3N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1281" y="-70"/>
+            <point key="canvasLocation" x="1281" y="-118.5"/>
         </scene>
         <!--NewsVC-->
         <scene sceneID="DNL-no-liN">
@@ -524,18 +595,89 @@
                         <viewControllerLayoutGuide type="top" id="Jeb-wP-6RO"/>
                         <viewControllerLayoutGuide type="bottom" id="6Ro-ha-M9A"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="6E9-Dw-U7I" customClass="CityNewsMain" customModule="City_Dashboard" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="6E9-Dw-U7I">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chF-Y2-omO" customClass="CityNewsMain" customModule="City_Dashboard" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="3ly-IT-s3h"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3ly-IT-s3h"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="3ly-IT-s3h"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oJ4-Up-aho">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="J8L-Tl-WM9" id="8m0-e1-d05"/>
+                                    <outlet property="delegate" destination="J8L-Tl-WM9" id="FoI-MM-dNq"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="0.33346843533748977" green="0.16809421438731928" blue="0.56543955176767668" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="chF-Y2-omO" firstAttribute="top" secondItem="Jeb-wP-6RO" secondAttribute="bottom" id="28G-sU-KeB"/>
+                            <constraint firstItem="6Ro-ha-M9A" firstAttribute="top" secondItem="oJ4-Up-aho" secondAttribute="bottom" id="BCs-B9-VSA"/>
+                            <constraint firstItem="chF-Y2-omO" firstAttribute="leading" secondItem="6E9-Dw-U7I" secondAttribute="leading" id="Gd0-mw-uBa"/>
+                            <constraint firstAttribute="trailing" secondItem="oJ4-Up-aho" secondAttribute="trailing" id="HNW-3G-ryl"/>
+                            <constraint firstAttribute="trailing" secondItem="chF-Y2-omO" secondAttribute="trailing" id="aXe-V7-z6f"/>
+                            <constraint firstItem="oJ4-Up-aho" firstAttribute="leading" secondItem="6E9-Dw-U7I" secondAttribute="leading" id="eU6-cw-Wt7"/>
+                            <constraint firstItem="oJ4-Up-aho" firstAttribute="top" secondItem="chF-Y2-omO" secondAttribute="bottom" id="xcT-BW-3wk"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="chF-Y2-omO"/>
+                                <exclude reference="oJ4-Up-aho"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="28G-sU-KeB"/>
+                                <exclude reference="Gd0-mw-uBa"/>
+                                <exclude reference="aXe-V7-z6f"/>
+                                <exclude reference="HNW-3G-ryl"/>
+                                <exclude reference="eU6-cw-Wt7"/>
+                                <exclude reference="xcT-BW-3wk"/>
+                                <exclude reference="BCs-B9-VSA"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="chF-Y2-omO"/>
+                                <include reference="oJ4-Up-aho"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="28G-sU-KeB"/>
+                                <include reference="Gd0-mw-uBa"/>
+                                <include reference="aXe-V7-z6f"/>
+                                <include reference="HNW-3G-ryl"/>
+                                <include reference="eU6-cw-Wt7"/>
+                                <include reference="xcT-BW-3wk"/>
+                                <include reference="BCs-B9-VSA"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="500"/>
                     <connections>
-                        <outlet property="newsMainView" destination="6E9-Dw-U7I" id="b08-BR-oKd"/>
+                        <outlet property="newsMainView" destination="chF-Y2-omO" id="6Pn-cl-kv9"/>
+                        <outlet property="newsTableView" destination="oJ4-Up-aho" id="Inj-yU-piM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bkF-Au-6cr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1281" y="142"/>
+            <point key="canvasLocation" x="1281" y="306"/>
         </scene>
     </scenes>
     <resources>

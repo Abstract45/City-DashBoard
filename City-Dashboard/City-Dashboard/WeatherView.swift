@@ -12,7 +12,9 @@ import UIKit
 class WeatherView: UIView {
     
     
+
     
+    @IBOutlet weak var vwWeatherToday: UIView!
     @IBOutlet weak var imgWeatherLogo: UIImageView!
     @IBOutlet weak var lblWeatherCategory: UILabel!
     @IBOutlet weak var logoRightConstraint: NSLayoutConstraint!

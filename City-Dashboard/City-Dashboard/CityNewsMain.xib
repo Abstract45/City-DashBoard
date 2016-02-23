@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15E33e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15E39d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -11,7 +11,6 @@
                 <outlet property="lblDailyHeadlines" destination="Io6-zX-NbL" id="hUa-Aq-AfL"/>
                 <outlet property="lblNewsCategory" destination="avI-CM-0B2" id="dbh-tB-cq0"/>
                 <outlet property="logoRightConstraint" destination="0ne-SH-h5B" id="mY4-9p-Ekw"/>
-                <outlet property="newsTableView" destination="Vnp-nY-6ge" id="0y8-8J-iZ3"/>
                 <outlet property="vwTop" destination="L6F-0s-jST" id="4bV-FT-WGk"/>
             </connections>
         </placeholder>
@@ -144,28 +143,10 @@
                         </mask>
                     </variation>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vnp-nY-6ge">
-                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="W4P-tO-Wh0"/>
-                        <outlet property="delegate" destination="-1" id="LY7-JD-dhW"/>
-                    </connections>
-                </tableView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="Vnp-nY-6ge" firstAttribute="leading" secondItem="1d1-hj-K3k" secondAttribute="leading" id="NVn-Ag-7eh"/>
                 <constraint firstItem="L6F-0s-jST" firstAttribute="top" secondItem="1d1-hj-K3k" secondAttribute="top" id="TMl-uY-m2h"/>
-                <constraint firstItem="Vnp-nY-6ge" firstAttribute="top" secondItem="L6F-0s-jST" secondAttribute="bottom" id="ZSF-21-tiC">
-                    <variation key="heightClass=regular-widthClass=compact" constant="2"/>
-                </constraint>
-                <constraint firstAttribute="bottom" secondItem="Vnp-nY-6ge" secondAttribute="bottom" id="bCw-f6-m8d">
-                    <variation key="heightClass=regular-widthClass=compact" constant="104"/>
-                </constraint>
-                <constraint firstAttribute="trailing" secondItem="Vnp-nY-6ge" secondAttribute="trailing" id="jw1-M7-dDA"/>
                 <constraint firstAttribute="trailing" secondItem="L6F-0s-jST" secondAttribute="trailing" id="rj7-6b-Pb6"/>
                 <constraint firstItem="L6F-0s-jST" firstAttribute="leading" secondItem="1d1-hj-K3k" secondAttribute="leading" id="ryS-2C-xAr"/>
             </constraints>
@@ -174,34 +155,24 @@
             <variation key="default">
                 <mask key="subviews">
                     <exclude reference="L6F-0s-jST"/>
-                    <exclude reference="Vnp-nY-6ge"/>
                 </mask>
                 <mask key="constraints">
                     <exclude reference="TMl-uY-m2h"/>
                     <exclude reference="rj7-6b-Pb6"/>
                     <exclude reference="ryS-2C-xAr"/>
-                    <exclude reference="NVn-Ag-7eh"/>
-                    <exclude reference="ZSF-21-tiC"/>
-                    <exclude reference="bCw-f6-m8d"/>
-                    <exclude reference="jw1-M7-dDA"/>
                 </mask>
             </variation>
             <variation key="heightClass=regular-widthClass=compact">
                 <mask key="subviews">
                     <include reference="L6F-0s-jST"/>
-                    <include reference="Vnp-nY-6ge"/>
                 </mask>
                 <mask key="constraints">
                     <include reference="TMl-uY-m2h"/>
                     <include reference="rj7-6b-Pb6"/>
                     <include reference="ryS-2C-xAr"/>
-                    <include reference="NVn-Ag-7eh"/>
-                    <include reference="ZSF-21-tiC"/>
-                    <include reference="bCw-f6-m8d"/>
-                    <include reference="jw1-M7-dDA"/>
                 </mask>
             </variation>
-            <point key="canvasLocation" x="246" y="121"/>
+            <point key="canvasLocation" x="246" y="-157.5"/>
         </view>
     </objects>
     <resources>
