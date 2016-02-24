@@ -288,11 +288,11 @@
                         <viewControllerLayoutGuide type="bottom" id="BTr-Oz-dUl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="auN-k0-jeD">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="t7W-K0-g3t">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                                 <connections>
                                     <outlet property="delegate" destination="iNy-Kl-EeC" id="qPE-5c-ddQ"/>
                                 </connections>
@@ -374,7 +374,7 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <tableView clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vi1-fz-hFq">
+                            <tableView alpha="0.0" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vi1-fz-hFq">
                                 <rect key="frame" x="88" y="234" width="240" height="128"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -502,7 +502,7 @@
                         <viewControllerLayoutGuide type="bottom" id="jkx-xM-UNI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="NNj-UW-mtC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qqf-RG-Bgu" customClass="TrafficMainView" customModule="City_Dashboard" customModuleProvider="target">
@@ -549,13 +549,13 @@
                                 <exclude reference="7pX-gX-IaE"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="44h-2A-YtD"/>
-                                <exclude reference="AvH-nK-8LH"/>
-                                <exclude reference="wym-oX-fcR"/>
+                                <exclude reference="vIE-Cw-Fo5"/>
                                 <exclude reference="Mgq-HC-ZuT"/>
                                 <exclude reference="bby-rn-nED"/>
                                 <exclude reference="lhE-eT-t9Q"/>
-                                <exclude reference="vIE-Cw-Fo5"/>
+                                <exclude reference="44h-2A-YtD"/>
+                                <exclude reference="AvH-nK-8LH"/>
+                                <exclude reference="wym-oX-fcR"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -564,13 +564,13 @@
                                 <include reference="7pX-gX-IaE"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="44h-2A-YtD"/>
-                                <include reference="AvH-nK-8LH"/>
-                                <include reference="wym-oX-fcR"/>
+                                <include reference="vIE-Cw-Fo5"/>
                                 <include reference="Mgq-HC-ZuT"/>
                                 <include reference="bby-rn-nED"/>
                                 <include reference="lhE-eT-t9Q"/>
-                                <include reference="vIE-Cw-Fo5"/>
+                                <include reference="44h-2A-YtD"/>
+                                <include reference="AvH-nK-8LH"/>
+                                <include reference="wym-oX-fcR"/>
                             </mask>
                         </variation>
                     </view>
@@ -596,7 +596,7 @@
                         <viewControllerLayoutGuide type="bottom" id="6Ro-ha-M9A"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6E9-Dw-U7I">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chF-Y2-omO" customClass="CityNewsMain" customModule="City_Dashboard" customModuleProvider="target">
@@ -643,13 +643,13 @@
                                 <exclude reference="oJ4-Up-aho"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="BCs-B9-VSA"/>
                                 <exclude reference="28G-sU-KeB"/>
                                 <exclude reference="Gd0-mw-uBa"/>
                                 <exclude reference="aXe-V7-z6f"/>
                                 <exclude reference="HNW-3G-ryl"/>
                                 <exclude reference="eU6-cw-Wt7"/>
                                 <exclude reference="xcT-BW-3wk"/>
-                                <exclude reference="BCs-B9-VSA"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -658,13 +658,13 @@
                                 <include reference="oJ4-Up-aho"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="BCs-B9-VSA"/>
                                 <include reference="28G-sU-KeB"/>
                                 <include reference="Gd0-mw-uBa"/>
                                 <include reference="aXe-V7-z6f"/>
                                 <include reference="HNW-3G-ryl"/>
                                 <include reference="eU6-cw-Wt7"/>
                                 <include reference="xcT-BW-3wk"/>
-                                <include reference="BCs-B9-VSA"/>
                             </mask>
                         </variation>
                     </view>

@@ -18,6 +18,10 @@ class TrafficTableCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        self.frame = UIScreen.mainScreen().bounds
+        self.autoresizingMask = [UIViewAutoresizing.FlexibleHeight, UIViewAutoresizing.FlexibleWidth]
+        
         vwTrafficCard.layer.cornerRadius = 5
         vwTrafficCard.clipsToBounds = true
         circleView()
@@ -25,6 +29,9 @@ class TrafficTableCell: UITableViewCell {
         
     }
 
+    
+  
+    
     private func circleView() {
         vwSeverity.layer.cornerRadius = vwSeverity.bounds.height/2
         vwSeverity.clipsToBounds = true

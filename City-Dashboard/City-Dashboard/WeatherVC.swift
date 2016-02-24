@@ -75,9 +75,7 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate, C
         return self.wNext.count
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 35
-    }
+
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
        
@@ -92,7 +90,8 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate, C
             cell.tempMin.text = wNext[indexPath.row].temperatureMin
             cell.tempMax.text = wNext[indexPath.row].temperatureMax
         }
- 
+      
+        
         return cell
     }
     
@@ -144,7 +143,7 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate, C
         let week = calendar.components([.Weekday], fromDate: date)
         var todayIs = week.weekday
         var index = 0
-        print(todayIs)
+      
         
         let weekdays = ["","Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
         var forecastDays = [String]()

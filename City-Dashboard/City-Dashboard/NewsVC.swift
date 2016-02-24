@@ -50,6 +50,7 @@ class NewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         newsTableView.registerNib(UINib.init(nibName: "CityNewsCell", bundle: nil), forCellReuseIdentifier:"news")
         let cell = newsTableView.dequeueReusableCellWithIdentifier("news") as! CityNewsCell
+        
         cell.headlines.text = newsArray[indexPath.row].title
         cell.timeCategory.text = newsArray[indexPath.row].dateCreated
         cell.url = newsArray[indexPath.row].url
@@ -61,6 +62,8 @@ class NewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 cell.imgCityNews.image = UIImage(data: data)
             }
         }
+        
+        
         return cell
     }
     

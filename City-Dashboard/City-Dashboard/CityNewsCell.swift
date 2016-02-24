@@ -35,6 +35,11 @@ class CityNewsCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        
+     
+        self.frame = UIScreen.mainScreen().bounds
+        self.autoresizingMask = [UIViewAutoresizing.FlexibleHeight, UIViewAutoresizing.FlexibleWidth]
+        
         vwNewsCard.layer.cornerRadius = 5
         vwNewsCard.clipsToBounds = true
        
