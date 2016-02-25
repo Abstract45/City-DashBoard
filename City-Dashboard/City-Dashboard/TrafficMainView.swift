@@ -29,13 +29,10 @@ import CoreLocation
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-      
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         xibSetup()
     }
     
@@ -46,10 +43,7 @@ import CoreLocation
     }
     private func xibSetup() {
         view = loadViewFromNib()
-        
-        view.frame = UIScreen.mainScreen().bounds 
-//        view.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
-    
+        view.frame = UIScreen.mainScreen().bounds
         addSubview(view)
         
     }
@@ -63,7 +57,6 @@ import CoreLocation
        
         return view
         
-        
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -72,10 +65,8 @@ import CoreLocation
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
            trafficTableView.registerNib(UINib.init(nibName: "TrafficTableCell", bundle: nil), forCellReuseIdentifier: "traffic")
-        
         let cell = trafficTableView.dequeueReusableCellWithIdentifier("traffic") as! TrafficTableCell
         
-
         cell.lblTrafficDescription.text = incidentsArray[indexPath.row].descriptionShort
         cell.lblDelayTime.text = "\(incidentsArray[indexPath.row].delayFromFreeFlow) mins"
         

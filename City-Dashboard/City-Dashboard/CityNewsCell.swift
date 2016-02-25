@@ -35,7 +35,7 @@ class CityNewsCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        vwNewsCard.layer.cornerRadius = 5
+        vwNewsCard.layer.cornerRadius = 3
         vwNewsCard.clipsToBounds = true
        
         

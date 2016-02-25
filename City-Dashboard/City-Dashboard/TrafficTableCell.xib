@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15E39d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -11,18 +11,18 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="63.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TpF-im-R4b">
-                        <rect key="frame" x="8" y="4" width="304" height="55.5"/>
+                    <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TpF-im-R4b">
+                        <rect key="frame" x="8" y="3" width="304" height="56"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bovaird Dr.interminent lane closures between Lake Louise  Dr and Regional Rd-1 " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4wn-UC-o84">
                                 <rect key="frame" x="33" y="3" width="199" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="W80-w8-uPz"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -47,13 +47,13 @@
                                     <constraint firstAttribute="height" constant="21" id="l6s-HJ-ogc"/>
                                     <constraint firstAttribute="width" constant="42" id="txb-H2-Whv"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="10"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="10"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.32156862745098042" green="0.69019607843137254" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.32156862745098042" green="0.69019607843137254" blue="0.69019607843137254" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.086274509803921567" green="0.23921568627450981" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="M1L-NZ-eIB" secondAttribute="trailing" constant="8" id="2dk-qI-1de"/>
                             <constraint firstItem="4wn-UC-o84" firstAttribute="leading" secondItem="SJ0-Xt-eBo" secondAttribute="trailing" constant="4" id="45G-Qu-prh"/>
@@ -67,12 +67,11 @@
                         </constraints>
                     </view>
                 </subviews>
-                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="TpF-im-R4b" secondAttribute="trailing" constant="8" id="0tI-9z-Kkx"/>
                     <constraint firstItem="TpF-im-R4b" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="7La-fW-PBe"/>
-                    <constraint firstItem="TpF-im-R4b" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="O0U-FL-VAG"/>
-                    <constraint firstAttribute="bottom" secondItem="TpF-im-R4b" secondAttribute="bottom" constant="4" id="foP-mu-77T"/>
+                    <constraint firstItem="TpF-im-R4b" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="O0U-FL-VAG"/>
+                    <constraint firstAttribute="bottom" secondItem="TpF-im-R4b" secondAttribute="bottom" constant="5" id="foP-mu-77T"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

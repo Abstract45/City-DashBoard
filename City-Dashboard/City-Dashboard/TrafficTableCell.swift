@@ -18,7 +18,7 @@ class TrafficTableCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        vwTrafficCard.layer.cornerRadius = 5
+        vwTrafficCard.layer.cornerRadius = 3
         vwTrafficCard.clipsToBounds = true
         circleView()
         colorBySeverity()
@@ -32,16 +32,9 @@ class TrafficTableCell: UITableViewCell {
     
     private func colorBySeverity() {
        vwSeverity.backgroundColor = UIColor.redColor()
+    
+        
     }
     
-   
-    
-    
-   
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
-    }
-    
 }

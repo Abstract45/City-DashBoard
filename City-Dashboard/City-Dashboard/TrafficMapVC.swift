@@ -39,6 +39,8 @@ class TrafficMapVC: UIViewController,CLLocationManagerDelegate, MKMapViewDelegat
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
+            trafficMapView.showsUserLocation = true
+            
         }
     }
     
