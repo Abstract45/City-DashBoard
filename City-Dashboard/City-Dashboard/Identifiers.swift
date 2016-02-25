@@ -8,8 +8,11 @@
 
 import UIKit
 
+
+
 struct ConstraintSize {
     static let midSizeLogo = UIScreen.mainScreen().bounds.midX - 51
     static let viewTallHeight = UIScreen.mainScreen().bounds.height - 43
     static let viewSmallHeight: CGFloat = 43
 }
+

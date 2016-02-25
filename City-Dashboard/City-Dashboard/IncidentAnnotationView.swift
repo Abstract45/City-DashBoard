@@ -25,7 +25,7 @@ class IncidentAnnotationView: MKAnnotationView {
     
     override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
-        let incidentAnnotation = self.annotation as! IncidentAnnotation
+        if let incidentAnnotation = self.annotation as? IncidentAnnotation {
         switch (incidentAnnotation.type) {
         case .Accident:
             image = UIImage(named: "Accident")
@@ -35,6 +35,7 @@ class IncidentAnnotationView: MKAnnotationView {
             image = UIImage(named: "snow")
         default:
             image = UIImage(named: "RoadBlock")
+        }
         }
     }
 }

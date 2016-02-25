@@ -31,13 +31,12 @@ class TrafficMapVC: UIViewController,CLLocationManagerDelegate, MKMapViewDelegat
     }
     
     func centerToLocation() {
-        
-       
-        
+   
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
+           self.trafficMapView.setUserTrackingMode(MKUserTrackingMode.Follow, animated: true)
         }
     }
     
