@@ -34,6 +34,7 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate, C
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "changeWeatherXib:", name: "changeTopView", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "resetWeatherXib:", name: "resetViews", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "topOpen:", name: "topViewOpen", object: nil)
+        weatherTable.layoutIfNeeded()
     }
     
     func changeWeatherXib(notification:NSNotification) {
@@ -75,7 +76,9 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate, C
         return self.wNext.count
     }
     
-
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 35
+    }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
        
@@ -91,6 +94,7 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate, C
             cell.tempMax.text = wNext[indexPath.row].temperatureMax
         }
       
+        
         
         return cell
     }
