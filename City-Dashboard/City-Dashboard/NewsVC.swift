@@ -16,27 +16,19 @@ class NewsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
          midSize = self.newsMainView.frame.midX - 51.5
-      
-       
-        
-        
+   
     }
 
-    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
        
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "changeNewsXib:", name: "changeBottomView", object: nil)
+       NSNotificationCenter.defaultCenter().addObserver(self, selector: "changeNewsXib:", name: "changeBottomView", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "resetNewsXib:", name: "resetViews", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "botOpen:", name: "botViewOpen", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "segueToWeb:", name: "segueToWebView", object: nil)
    
     }
-    
-    
-    
-    
+
     
     func changeNewsXib(notification:NSNotification) {
         UIView.animateWithDuration(1) { () -> Void in

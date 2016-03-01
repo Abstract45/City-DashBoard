@@ -1,4 +1,4 @@
-//
+
 //  IncidentAnnotationView.swift
 //  City-Dashboard
 //

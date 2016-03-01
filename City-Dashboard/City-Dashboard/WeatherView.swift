@@ -42,6 +42,7 @@ class WeatherView: UIView, UITableViewDataSource, UITableViewDelegate, CLLocatio
         super.init(frame: frame)
         xibSetup()
         
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -54,6 +55,7 @@ class WeatherView: UIView, UITableViewDataSource, UITableViewDelegate, CLLocatio
         super.awakeFromNib()
         configureLocationManager()
         configWeatherView()
+        addGradient()
     }
     
     private func xibSetup() {
@@ -63,6 +65,19 @@ class WeatherView: UIView, UITableViewDataSource, UITableViewDelegate, CLLocatio
         view.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
         addSubview(view)
     }
+    //----------Apply Gradient on whole view----------------
+    func addGradient(){
+        
+        let gradient:CAGradientLayer = CAGradientLayer()
+        gradient.frame.size = self.view.bounds.size
+        gradient.colors =
+            [UIColor(red: 168/255, green: 65/255, blue: 31/255, alpha: 1).CGColor,
+                UIColor(red: 233/255, green: 153/255, blue: 83/255, alpha: 0.9).CGColor];
+        //[UIColor.grayColor().CGColor,UIColor.blackColor().colorWithAlphaComponent(0).CGColor] //Or any colors
+        self.view.layer.addSublayer(gradient)
+        
+    }
+
     
     private func loadViewFromNib() -> UIView {
         

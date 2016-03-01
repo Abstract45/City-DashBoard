@@ -49,11 +49,11 @@ class Markets {
     }
     
     func downloadMarkets(competion: DownloadComplete) {
-                
+        
         let url = NSURL(string: urlString)
         
         _ = NSURLSession.sharedSession().dataTaskWithURL(url!, completionHandler: { (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
-                        
+            
             dispatch_async(dispatch_get_main_queue(), { () -> Void in
                 
                 do {
@@ -68,7 +68,7 @@ class Markets {
                         
                         if let markets = marketsDict["markets"] as? Array<AnyObject> {
                             
-                            var counter = -1
+                            var counter = 0
                             self.marketIndex.removeAll()
                             
                             for m in markets {
@@ -133,7 +133,7 @@ class Markets {
                 }
                 
                 competion()
-
+                
             })
             
         }).resume()

@@ -23,30 +23,19 @@ class TrafficMapVC: UIViewController,CLLocationManagerDelegate, MKMapViewDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         UIApplication.sharedApplication().statusBarHidden = true
-        
-      
         centerToLocation()
-
         addAnnotation(trafficIncidents)
     }
     
     func centerToLocation() {
         
-        self.locationManager.requestAlwaysAuthorization()
-        self.locationManager.requestWhenInUseAuthorization()
-        
         if CLLocationManager.locationServicesEnabled() {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
             locationManager.startUpdatingLocation()
-            trafficMapView.showsUserLocation = true
-            
         }
     }
-    
 
-    
-    
     
     func addAnnotation(incidents:[Incident]) {
         

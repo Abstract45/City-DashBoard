@@ -9,10 +9,8 @@
 import UIKit
 import CoreLocation
 
- class TrafficMainView: UIView, UITableViewDelegate, UITableViewDataSource {
-    
-   
-    
+class TrafficMainView: UIView, UITableViewDelegate, UITableViewDataSource {
+
     @IBOutlet weak var mapBtnRightConstraint: NSLayoutConstraint!
     @IBOutlet weak var trafficTableView: UITableView!
     @IBOutlet weak var logoRightConstraint: NSLayoutConstraint!
@@ -24,11 +22,11 @@ import CoreLocation
     @IBOutlet weak var lblCurrentIncidents: UILabel!
     
     private var view: UIView!
-    
     var incidentsArray = [Incident()]
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        addGradient()
     }
     
     override init(frame: CGRect) {
@@ -38,24 +36,30 @@ import CoreLocation
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
         xibSetup()
     }
     private func xibSetup() {
         view = loadViewFromNib()
         view.frame = UIScreen.mainScreen().bounds
         addSubview(view)
-        
+
     }
-    
-    
-    
-    private func loadViewFromNib() -> UIView {
+       private func loadViewFromNib() -> UIView {
         let bundle = NSBundle(forClass: self.dynamicType)
         let nib = UINib.init(nibName: "TrafficMainView", bundle: bundle)
-         view = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
-       
+        view = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
         return view
+    }
+    //----------Apply Gradient on whole view----------------
+    func addGradient(){
+        
+        let gradient:CAGradientLayer = CAGradientLayer()
+        gradient.frame.size = self.view.frame.size
+        gradient.colors =
+            [UIColor(red: 168/255, green: 65/255, blue: 31/255, alpha: 1).CGColor,
+                UIColor(red: 233/255, green: 153/255, blue: 83/255, alpha: 0.9).CGColor];
+        //[UIColor.grayColor().CGColor,UIColor.blackColor().colorWithAlphaComponent(0).CGColor] //Or any colors
+        self.view.layer.addSublayer(gradient)
         
     }
     
@@ -64,8 +68,10 @@ import CoreLocation
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-           trafficTableView.registerNib(UINib.init(nibName: "TrafficTableCell", bundle: nil), forCellReuseIdentifier: "traffic")
+        trafficTableView.registerNib(UINib.init(nibName: "TrafficTableCell", bundle: nil), forCellReuseIdentifier: "traffic")
+        
         let cell = trafficTableView.dequeueReusableCellWithIdentifier("traffic") as! TrafficTableCell
+        
         
         cell.lblTrafficDescription.text = incidentsArray[indexPath.row].descriptionShort
         cell.lblDelayTime.text = "\(incidentsArray[indexPath.row].delayFromFreeFlow) mins"
@@ -74,13 +80,10 @@ import CoreLocation
         
     }
     
-    
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 64
     }
     
-   
-   
     // Function that populates Traffic TableView Cells
     
     func populateTrafficCells(city: String, lat: Double, lon: Double) -> [Incident] {
@@ -103,9 +106,9 @@ import CoreLocation
                     self.incidentsArray = incidents.incidents
                     self.trafficTableView.reloadData()
                 })
-
-            } else {
                 
+            } else {
+                print("else hit")
                 let upperLat = lat - 1
                 let upperLon = lon + 1
                 let lowerLat = lat + 1
@@ -119,13 +122,13 @@ import CoreLocation
                     self.trafficTableView.reloadData()
                 })
             }
-    
+            
         }
-     
+        
         return incidentsArray
         
     }
     
-   
-
+    
+    
 }

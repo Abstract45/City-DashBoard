@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -15,26 +16,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view alpha="0.94999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TpF-im-R4b">
-                        <rect key="frame" x="8" y="3" width="304" height="56"/>
+                        <rect key="frame" x="6" y="5" width="309" height="56"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bovaird Dr.interminent lane closures between Lake Louise  Dr and Regional Rd-1 " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4wn-UC-o84">
-                                <rect key="frame" x="33" y="3" width="199" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="W80-w8-uPz"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Worker" translatesAutoresizingMaskIntoConstraints="NO" id="SJ0-Xt-eBo">
-                                <rect key="frame" x="7" y="16" width="22" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="5oW-D1-Kkz"/>
-                                    <constraint firstAttribute="width" constant="22" id="6pr-gh-mPO"/>
-                                </constraints>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Byf-nE-zs2">
-                                <rect key="frame" x="239" y="14" width="9" height="9"/>
+                                <rect key="frame" x="239" y="16" width="9" height="9"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="9" id="Hyj-Aa-NGd"/>
@@ -42,7 +27,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 mins" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="M1L-NZ-eIB">
-                                <rect key="frame" x="254" y="8" width="42" height="21"/>
+                                <rect key="frame" x="254" y="11" width="42" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="l6s-HJ-ogc"/>
                                     <constraint firstAttribute="width" constant="42" id="txb-H2-Whv"/>
@@ -51,32 +36,35 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bovaird Dr.interminent lane closures between Lake Louise  Dr and Regional Rd-1 " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4wn-UC-o84">
+                                <rect key="frame" x="8" y="3" width="225" height="49"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.086274509803921567" green="0.23921568627450981" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="M1L-NZ-eIB" secondAttribute="trailing" constant="8" id="2dk-qI-1de"/>
-                            <constraint firstItem="4wn-UC-o84" firstAttribute="leading" secondItem="SJ0-Xt-eBo" secondAttribute="trailing" constant="4" id="45G-Qu-prh"/>
-                            <constraint firstItem="Byf-nE-zs2" firstAttribute="leading" secondItem="4wn-UC-o84" secondAttribute="trailing" constant="7" id="DC4-hi-Ayk"/>
-                            <constraint firstItem="SJ0-Xt-eBo" firstAttribute="top" secondItem="TpF-im-R4b" secondAttribute="top" constant="16" id="Xp0-pG-5yP"/>
-                            <constraint firstItem="SJ0-Xt-eBo" firstAttribute="leading" secondItem="TpF-im-R4b" secondAttribute="leading" constant="7" id="iT8-Vr-Ghp"/>
-                            <constraint firstItem="4wn-UC-o84" firstAttribute="top" secondItem="TpF-im-R4b" secondAttribute="top" constant="3" id="kGW-aY-bi0"/>
+                            <constraint firstAttribute="trailing" secondItem="M1L-NZ-eIB" secondAttribute="trailing" constant="13" id="2dk-qI-1de"/>
+                            <constraint firstItem="4wn-UC-o84" firstAttribute="leading" secondItem="TpF-im-R4b" secondAttribute="leadingMargin" id="Nfc-Pe-Ock"/>
+                            <constraint firstItem="Byf-nE-zs2" firstAttribute="leading" secondItem="4wn-UC-o84" secondAttribute="trailing" constant="6" id="gjN-Gc-8lR"/>
+                            <constraint firstItem="4wn-UC-o84" firstAttribute="centerY" secondItem="TpF-im-R4b" secondAttribute="centerY" id="ltT-ge-KwE"/>
                             <constraint firstItem="M1L-NZ-eIB" firstAttribute="leading" secondItem="Byf-nE-zs2" secondAttribute="trailing" constant="6" id="mVt-uv-pjq"/>
-                            <constraint firstItem="Byf-nE-zs2" firstAttribute="top" secondItem="TpF-im-R4b" secondAttribute="top" constant="14" id="qY0-3z-uCm"/>
-                            <constraint firstItem="M1L-NZ-eIB" firstAttribute="top" secondItem="TpF-im-R4b" secondAttribute="top" constant="8" id="xx1-Re-0vL"/>
+                            <constraint firstItem="4wn-UC-o84" firstAttribute="top" secondItem="TpF-im-R4b" secondAttribute="top" constant="3" id="meU-3q-fZV"/>
+                            <constraint firstItem="Byf-nE-zs2" firstAttribute="top" secondItem="TpF-im-R4b" secondAttribute="top" constant="16" id="qY0-3z-uCm"/>
+                            <constraint firstItem="M1L-NZ-eIB" firstAttribute="top" secondItem="TpF-im-R4b" secondAttribute="top" constant="11" id="xx1-Re-0vL"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="TpF-im-R4b" secondAttribute="trailing" constant="8" id="0tI-9z-Kkx"/>
-                    <constraint firstItem="TpF-im-R4b" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="7La-fW-PBe"/>
-                    <constraint firstItem="TpF-im-R4b" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="O0U-FL-VAG"/>
-                    <constraint firstAttribute="bottom" secondItem="TpF-im-R4b" secondAttribute="bottom" constant="5" id="foP-mu-77T"/>
+                    <constraint firstAttribute="trailing" secondItem="TpF-im-R4b" secondAttribute="trailing" constant="5" id="0tI-9z-Kkx"/>
+                    <constraint firstItem="TpF-im-R4b" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="6" id="7La-fW-PBe"/>
+                    <constraint firstItem="TpF-im-R4b" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="O0U-FL-VAG"/>
+                    <constraint firstAttribute="bottom" secondItem="TpF-im-R4b" secondAttribute="bottom" constant="2.5" id="foP-mu-77T"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
-                <outlet property="imgIncidentType" destination="SJ0-Xt-eBo" id="4JL-rV-J2V"/>
                 <outlet property="lblDelayTime" destination="M1L-NZ-eIB" id="UJx-5y-hDE"/>
                 <outlet property="lblTrafficDescription" destination="4wn-UC-o84" id="dcT-ul-05b"/>
                 <outlet property="vwSeverity" destination="Byf-nE-zs2" id="LBt-PC-bsw"/>
@@ -85,7 +73,4 @@
             <point key="canvasLocation" x="378" y="230"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="Worker" width="30" height="30"/>
-    </resources>
 </document>

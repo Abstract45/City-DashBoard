@@ -21,21 +21,16 @@ class NewsWebVC: UIViewController {
         loadWebView()
         
     }
-    
-    
-    
-    
+
     func loadWebView() {
-        
-        
+    
         if let url = NSURL(string: newsUrl) {
             let request = NSURLRequest(URL: url)
             
             newsWebView.loadRequest(request)
         }
     }
-    
-    
+
     
     @IBAction func closeWebView(sender: AnyObject) {
         

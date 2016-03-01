@@ -144,7 +144,7 @@
                             </variation>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" red="0.054901960784313725" green="0.45098039215686275" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.9137254901960784" green="0.40000000000000002" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="CKM-3J-RkV" firstAttribute="top" secondItem="Vaj-nR-h8s" secondAttribute="top" constant="10" id="41Q-du-bc9">
                             <variation key="heightClass=regular-widthClass=compact" constant="13"/>

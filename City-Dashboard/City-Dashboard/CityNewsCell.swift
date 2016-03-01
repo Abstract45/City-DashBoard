@@ -37,7 +37,10 @@ class CityNewsCell: UITableViewCell {
         
         vwNewsCard.layer.cornerRadius = 3
         vwNewsCard.clipsToBounds = true
-       
+         vwNewsCard.layer.cornerRadius = 2
+         vwNewsCard.layer.borderWidth = 1.0
+         vwNewsCard.layer.borderColor = UIColor(white: 1.0, alpha: 0.3).CGColor
+        
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "changeNewsCard:", name: "botViewOpen", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "hideCardShadow:", name: "resetViews", object: nil)
