@@ -32,6 +32,10 @@ class TrafficVC: UIViewController, CLLocationManagerDelegate, UITableViewDelegat
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "midOpen:", name: "midViewOpen", object: nil)
     }
     
+    override func viewDidDisappear(animated: Bool) {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
     
     func segueToTrafficController() {
         self.performSegueWithIdentifier("trafficMapSegue", sender: self)

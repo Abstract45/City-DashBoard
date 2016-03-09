@@ -20,22 +20,30 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate, C
     var locManager = CLLocationManager()
     private var currentWeekDays = [String]()
     
+ 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+       weatherTable.registerNib(UINib(nibName: "WeatherTableCell", bundle: nil), forCellReuseIdentifier: "weather")
+        
        
-       configureLocationManager() 
+        configureLocationManager()
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-       
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "changeWeatherXib:", name: "changeTopView", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "resetWeatherXib:", name: "resetViews", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "topOpen:", name: "topViewOpen", object: nil)
-        weatherTable.layoutIfNeeded()
     }
+    
+    override func viewDidDisappear(animated: Bool) {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+    
+    
     
     func changeWeatherXib(notification:NSNotification) {
         UIView.animateWithDuration(1) { () -> Void in
@@ -48,12 +56,15 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate, C
     
     
     func topOpen(notification:NSNotification) {
+        
+   
         UIView.animateWithDuration(1) { () -> Void in
+           
             self.weatherMainView.forecastView.alpha = 1
             self.weatherTable.alpha = 1
             self.weatherMainView.lblWeatherCategory.alpha = 0
             self.weatherMainView.imgWeatherLogo.alpha = 0
-            
+           
             
         }
     }
@@ -73,7 +84,7 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate, C
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.wNext.count
+        return 3
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -83,9 +94,8 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate, C
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
        
        
-        tableView.registerNib(UINib(nibName: "WeatherTableCell", bundle: nil), forCellReuseIdentifier: "weather")
        
-         let cell = tableView.dequeueReusableCellWithIdentifier("weather") as! WeatherTableCell
+         let cell = weatherTable.dequeueReusableCellWithIdentifier("weather") as! WeatherTableCell
         
         if !currentWeekDays.isEmpty {
             cell.weekday.text = currentWeekDays[indexPath.row]
@@ -94,7 +104,8 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate, C
             cell.tempMax.text = wNext[indexPath.row].temperatureMax
         }
       
-        
+        cell.layoutIfNeeded()
+        cell.layoutSubviews()
         
         return cell
     }
@@ -135,7 +146,9 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate, C
             self.currentWeekDays = self.getDaysOfWeek(self.wNext.count)
             
             self.weatherTable.reloadData()
+    
         }
+        
         
         return self.wNext
     }
@@ -209,6 +222,8 @@ class WeatherVC: UIViewController, UITableViewDataSource, UITableViewDelegate, C
                         self.populateWeeklyForecastLabels(p.subAdministrativeArea!, lat: userLocation.coordinate.latitude, lon: userLocation.coordinate.longitude)
                         
                         self.populateWeatherLabels(p.subAdministrativeArea!, lat: userLocation.coordinate.latitude, lon: userLocation.coordinate.longitude)
+                        
+                        
                     }
                     
                 }

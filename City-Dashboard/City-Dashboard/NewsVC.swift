@@ -35,6 +35,9 @@ class NewsVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
     }
     
+    override func viewDidDisappear(animated: Bool) {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
     
     // Table functions
     

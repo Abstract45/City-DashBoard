@@ -16,5 +16,15 @@ class WeatherTableCell: UITableViewCell {
     @IBOutlet weak var tempMin: UILabel!
     @IBOutlet weak var imgDayIcon: UIImageView!
    
-  
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.frame = UIScreen.mainScreen().bounds
+        self.autoresizingMask = [UIViewAutoresizing.FlexibleHeight, UIViewAutoresizing.FlexibleWidth]
+    }
+    
+
+
+    
+    
 }
